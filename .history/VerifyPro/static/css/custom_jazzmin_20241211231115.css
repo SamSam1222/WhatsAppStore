@@ -1,0 +1,82 @@
+/* Target the entire login page container */
+.login-container {
+    max-width: 300px; /* Narrower container */
+    margin: auto;
+    padding: 10px;
+    transform: scale(0.8); /* Scale down the whole form */
+    background: rgba(109, 21, 21, 0.9); /* Optional light background */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Target the input fields */
+input.form-control {
+    font-size: 0.75rem; /* Make text smaller */
+    height: 30px; /* Reduce height */
+    padding: 5px 8px; /* Adjust padding */
+}
+
+/* Reduce button size */
+button.btn {
+    font-size: 0.75rem; /* Smaller text */
+    padding: 5px 10px; /* Adjust button size */
+    height: 30px; /* Reduce button height */
+}
+
+/* Adjust label text size */
+label {
+    font-size: 0.75rem;
+}
+
+/* Reduce spacing between form groups */
+.form-group {
+    margin-bottom: 10px; /* Smaller spacing */
+}
+
+/* Ensure everything is centered vertically */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+}
+
+/* Video background full screen */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Ensure video stays behind content */
+    object-fit: cover; /* Make video fit the entire screen */
+}
+
+
+
+/* Add the video as a full-screen background */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#background-video source {
+    display: block;
+}
+
+
+
+
+img {
+    width: 100px !important;
+    height: auto !important;
+    border-radius: 50%; /* Ensure the image is circular */
+
+}

@@ -1,0 +1,30 @@
+{
+    "sourceFile": "VerifyPro/static/js/ckeditor_custom.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1734642268822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734642674984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,6 @@\n-// Wait for the CKEditor instance to be ready\n-CKEDITOR.on('instanceReady', function (evt) {\n-    var editor = evt.editor;  // Get the CKEditor instance\n-    var editorBody = editor.document.getBody();  // Get the body of the editor content\n-    \n-    // Set the background color and text color for the editor\n-    editorBody.setStyle('background-color', '#f0f0f0');  // Set the background color\n-    editorBody.setStyle('color', '#333333');  // Optionally, change the text color\n+CKEDITOR.on('instanceReady', function(ev) {\n+    var editor = ev.editor;\n+    editor.document.getBody().setStyle('background-color', '#ffffff');\n+    editor.document.getBody().setStyle('font-family', 'Calibri');\n+    editor.document.getBody().setStyle('font-size', '14px');\n });\n"
+                },
+                {
+                    "date": 1734642727695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,14 @@\n+CKEDITOR.replace('editor', {\n+    contentsCss: '{% static \"ckeditor/ckeditor_custom.css\" %}',  // Make sure custom CSS is linked\n+    height: 400,\n+    width: '100%',\n+});\n+\n CKEDITOR.on('instanceReady', function(ev) {\n     var editor = ev.editor;\n+    \n+    // Apply styles directly if needed\n     editor.document.getBody().setStyle('background-color', '#ffffff');\n     editor.document.getBody().setStyle('font-family', 'Calibri');\n     editor.document.getBody().setStyle('font-size', '14px');\n-});\n+});\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734642814653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,25 @@\n-CKEDITOR.replace('editor', {\n-    contentsCss: '{% static \"ckeditor/ckeditor_custom.css\" %}',  // Make sure custom CSS is linked\n-    height: 400,\n-    width: '100%',\n+// Example: Custom JavaScript for CKEditor\n+CKEDITOR.on('instanceReady', function(ev) {\n+    var editor = ev.editor;\n+\n+    // Custom behavior: changing editor's background color\n+    editor.document.getBody().setStyle('background-color', '#f4f4f4'); // Light gray background\n+    editor.document.getBody().setStyle('font-family', 'Arial'); // Change font to Arial\n });\n \n-CKEDITOR.on('instanceReady', function(ev) {\n\\ No newline at end of file\n-    var editor = ev.editor;\n-    \n-    // Apply styles directly if needed\n-    editor.document.getBody().setStyle('background-color', '#ffffff');\n-    editor.document.getBody().setStyle('font-family', 'Calibri');\n-    editor.document.getBody().setStyle('font-size', '14px');\n-});\n+// Example: Adding a custom toolbar button\n+CKEDITOR.plugins.add('myplugin', {\n+    init: function(editor) {\n+        editor.ui.addButton('MyButton', {\n+            label: 'My Button',\n+            command: 'myCommand',\n+            toolbar: 'insert'\n+        });\n+\n+        editor.addCommand('myCommand', {\n+            exec: function(editor) {\n+                alert('My custom button clicked!');\n+            }\n+        });\n+    }\n+});\n"
+                }
+            ],
+            "date": 1734642268822,
+            "name": "Commit-0",
+            "content": "// Wait for the CKEditor instance to be ready\nCKEDITOR.on('instanceReady', function (evt) {\n    var editor = evt.editor;  // Get the CKEditor instance\n    var editorBody = editor.document.getBody();  // Get the body of the editor content\n    \n    // Set the background color and text color for the editor\n    editorBody.setStyle('background-color', '#f0f0f0');  // Set the background color\n    editorBody.setStyle('color', '#333333');  // Optionally, change the text color\n});\n"
+        }
+    ]
+}

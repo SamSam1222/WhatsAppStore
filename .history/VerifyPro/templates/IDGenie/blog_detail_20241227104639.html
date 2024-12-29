@@ -1,0 +1,498 @@
+{% extends "IDGenie/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+  /* Make iframes responsive */
+  .responsive-iframe-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;  /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      width: 100%;
+      background: #000;
+  }
+
+  .responsive-iframe-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+
+  /* Make images responsive */
+  .responsive-img-wrapper {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+  }
+
+  .entry-content img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  .profile-img {
+    width: 50px;         /* Adjust the size as needed */
+    height: 50px;        /* Keep it square to maintain the round shape */
+    border-radius: 50%;  /* Makes the image round */
+    object-fit: cover;   /* Ensures the image fits within the circle without stretching */
+}
+
+.comment-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.comment-actions span {
+  cursor: pointer;
+  color: #555;
+  font-size: 14px;
+}
+
+.comment-actions span i {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.comment-actions span:hover {
+  color: #007BFF;
+}
+
+</style>
+
+<div class="blog-page area-padding">
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="page-head-blog">
+                    <div class="single-blog-page">
+                        <!-- Search option -->
+                        <form action="#">
+                            <div class="search-option">
+                                <input type="text" placeholder="Search...">
+                                <button class="button" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="single-blog-page">
+                        <!-- Recent posts -->
+                              <div class="left-blog">
+                <h4>recent post</h4>
+                <div class="recent-post">
+                  <!-- start single post -->
+                  <div class="recent-single-post">
+                    <div class="post-img">
+                      <a href="#">
+												   <img src="{% static 'img/blog/1.jpg' %}" alt="">
+												</a>
+                    </div>
+                    <div class="pst-content">
+                      <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
+                    </div>
+                  </div>
+                  <!-- End single post -->
+                  <!-- start single post -->
+                  <div class="recent-single-post">
+                    <div class="post-img">
+                      <a href="#">
+												   <img src="{% static 'img/blog/2.jpg' %}" alt="">
+												</a>
+                    </div>
+                    <div class="pst-content">
+                      <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
+                    </div>
+                  </div>
+                  <!-- End single post -->
+                  <!-- start single post -->
+                  <div class="recent-single-post">
+                    <div class="post-img">
+                      <a href="#">
+												   <img src="{% static 'img/blog/3.jpg' %}" alt="">
+												</a>
+                    </div>
+                    <div class="pst-content">
+                      <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
+                    </div>
+                  </div>
+                  <!-- End single post -->
+                  <!-- start single post -->
+                  <div class="recent-single-post">
+                    <div class="post-img">
+                      <a href="#">
+												   <img src="{% static 'img/blog/4.jpg' %}" alt="">
+												</a>
+                    </div>
+                    <div class="pst-content">
+                      <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
+                    </div>
+                  </div>
+                  <!-- End single post -->
+                </div>
+              </div>
+              <!-- recent end -->
+            </div>
+
+
+
+            <div class="single-blog-page">
+              <div class="left-blog">
+                <h4>categories</h4>
+                <ul>
+                  <li>
+                    <a href="#">Portfolio</a>
+                  </li>
+                  <li>
+                    <a href="#">Project</a>
+                  </li>
+                  <li>
+                    <a href="#">Design</a>
+                  </li>
+                  <li>
+                    <a href="#">wordpress</a>
+                  </li>
+                  <li>
+                    <a href="#">Joomla</a>
+                  </li>
+                  <li>
+                    <a href="#">Html</a>
+                  </li>
+                  <li>
+                    <a href="#">Website</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="single-blog-page">
+              <div class="left-blog">
+                <h4>archive</h4>
+                <ul>
+                  <li>
+                    <a href="#">07 July 2016</a>
+                  </li>
+                  <li>
+                    <a href="#">29 June 2016</a>
+                  </li>
+                  <li>
+                    <a href="#">13 May 2016</a>
+                  </li>
+                  <li>
+                    <a href="#">20 March 2016</a>
+                  </li>
+                  <li>
+                    <a href="#">09 Fabruary 2016</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="single-blog-page">
+              <div class="left-tags blog-tags">
+                <div class="popular-tag left-side-tags left-blog">
+                  <h4>popular tags</h4>
+                  <ul>
+                    <li>
+                      <a href="#">Portfolio</a>
+                    </li>
+                    <li>
+                      <a href="#">Project</a>
+                    </li>
+                    <li>
+                      <a href="#">Design</a>
+                    </li>
+                    <li>
+                      <a href="#">wordpress</a>
+                    </li>
+                    <li>
+                      <a href="#">Joomla</a>
+                    </li>
+                    <li>
+                      <a href="#">Html</a>
+                    </li>
+                    <li>
+                      <a href="#">Masonry</a>
+                    </li>
+                    <li>
+                      <a href="#">Website</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End left sidebar -->
+
+            <!-- End Sidebar -->
+
+            <!-- Main Content -->
+            <div class="col-md-8 col-sm-8 col-xs-12">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <!-- Blog Post -->
+                        <article class="blog-post-wrapper">
+                            <div class="post-thumbnail">
+                                {% if blog_post.image %}
+                                    <img src="{{ blog_post.image.url }}" alt="Blog Image" />
+                                {% else %}
+                                    <img src="{% static 'img/blog/6.jpg' %}" alt="Default Image" />
+                                {% endif %}
+                            </div>
+                            <div class="post-information">
+                                <h2>{{ blog_post.title }}</h2>
+                                <div class="entry-meta">
+                                    <span class="author-meta">
+                                        <i class="fa fa-user"></i> <a href="#">{{ blog_post.author.username }}</a>
+                                    </span>
+                                    <span>
+                                        <i class="fa fa-clock-o"></i> {{ blog_post.created_at|date:"F j, Y" }}
+                                    </span>
+                                </div>
+                                <div class="entry-content">
+                                    {{ blog_post.content|safe }}
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Comments Section -->
+                        <div class="single-post-comments">
+                            <div class="comments-area">
+                                <div class="comments-heading">
+                                  <h3 id="comment-count">{{ blog_post.comments.count }} Comments</h3>
+                                </div>
+                                <div class="comments-list">
+                                  <ul id="comments-container">
+                                      {% for comment in comments %}
+                                      <li class="threaded-comments">
+                                          <div class="comments-details">
+                                              <div class="comments-list-img">
+                                                  {% if comment.author.profile_picture %}
+                                                      <img src="{{ comment.author.profile_picture.url }}" alt="Profile Picture" class="profile-img">
+                                                  {% else %}
+                                                      <img src="{% static 'img/default-profile.jpg' %}" alt="Default Profile Picture" class="profile-img">
+                                                  {% endif %}
+                                              </div>
+                                              <div class="comments-content-wrap">
+                                                  <span>
+                                                      <b><a href="#">{{ comment.author.username }}</a></b>
+                                                      <span class="post-time">{{ comment.created_at|date:"F j, Y at g:i A" }}</span>
+                                                  </span>
+                                                  <p>{{ comment.content }}</p>
+                              
+                                                  <!-- Thumbs Up and Thumbs Down -->
+                                                  <div class="reaction-icons">
+                                                      <span class="thumbs-up" data-comment-id="{{ comment.id }}">👍 <span class="thumbs-up-count">{{ comment.thumbs_up_count }}</span></span>
+                                                      <span class="thumbs-down" data-comment-id="{{ comment.id }}">👎 <span class="thumbs-down-count">{{ comment.thumbs_down_count }}</span></span>
+                                                      <span class="reply-button">⬇ Reply</span>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </li>
+                                      {% endfor %}
+                                  </ul>
+                              </div>
+                               
+                              
+                            </div>
+
+                            <!-- Comment Form -->
+                            <div class="comment-respond">
+                                <h3 class="comment-reply-title">Leave a Reply</h3>
+                                <form id="comment-form" method="post" action="{% url 'IDGenie:blog_detail' blog_post.id %}">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 comment-form-comment">
+                                            <textarea id="message-box" cols="30" rows="10" name="content" required></textarea>
+                                            <input type="submit" value="Post Comment" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- End Comments Section -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Script for responsive iframe and images
+    window.onload = function() {
+        var iframes = document.querySelectorAll('iframe');
+        iframes.forEach(function(iframe) {
+            if (iframe.src.includes("youtube.com/embed")) {
+                var wrapper = document.createElement('div');
+                wrapper.classList.add('responsive-iframe-wrapper');
+                iframe.parentNode.insertBefore(wrapper, iframe);
+                wrapper.appendChild(iframe);
+            }
+        });
+
+        var images = document.querySelectorAll('.entry-content img');
+        images.forEach(function(img) {
+            img.classList.add('responsive-img-wrapper');
+        });
+    };
+
+
+
+
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const commentForm = document.querySelector('#comment-form'); // Ensure this ID matches
+      const commentInput = document.querySelector('#message-box'); // Updated to match the textarea's ID
+      const commentsContainer = document.querySelector('#comments-container'); // Ensure this container exists
+      const commentCountElement = document.querySelector('#comment-count'); // Ensure this ID matches the count display
+  
+      // Thumbs Up and Thumbs Down functionality
+      const commentContainer = document.querySelector('#comments-container');
+  
+      if (commentForm) {
+          commentForm.addEventListener('submit', async function (event) {
+              event.preventDefault(); // Prevent page reload
+  
+              if (!commentsContainer) {
+                  console.error('Comments container not found.');
+                  return;
+              }
+  
+              const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+              const content = commentInput.value.trim();
+  
+              if (!content) {
+                  alert('Comment cannot be empty.');
+                  return;
+              }
+  
+              try {
+                  const response = await fetch(commentForm.action, {
+                      method: 'POST',
+                      headers: {
+                          'Content-Type': 'application/x-www-form-urlencoded',
+                          'X-CSRFToken': csrfToken, // CSRF Token
+                          'X-Requested-With': 'XMLHttpRequest', // AJAX indicator
+                      },
+                      body: new URLSearchParams({
+                          'content': content,
+                          'csrfmiddlewaretoken': csrfToken,
+                      }),
+                  });
+  
+                  if (!response.ok) {
+                      const errorData = await response.json();
+                      console.log("Error Data:", errorData);
+  
+                      if (response.status === 403 && errorData.login_url) {
+                          console.log("Redirecting to login:", errorData.login_url);
+                          window.location.href = errorData.login_url;
+                          return;
+                      }
+  
+                      throw new Error(errorData.error || 'An error occurred.');
+                  }
+  
+                  const data = await response.json();
+                  console.log('New Comment:', data);
+  
+                  // Add the new comment dynamically
+                  const newComment = document.createElement('li');
+                  newComment.classList.add('threaded-comments');
+                  newComment.innerHTML = `
+                      <div class="comments-details">
+                          <div class="comments-list-img">
+                              <img src="${data.profile_picture_url || '/static/img/default-profile.jpg'}" alt="Profile Picture" class="profile-img">
+                          </div>
+                          <div class="comments-content-wrap">
+                              <span>
+                                  <b><a href="#">${data.author}</a></b>
+                                  <span class="post-time">${data.created_at}</span>
+                              </span>
+                              <p>${data.content}</p>
+                              <!-- Thumbs Up and Thumbs Down -->
+                              <div class="reaction-icons">
+                                  <span class="thumbs-up" data-comment-id="${data.comment_id}">👍 <span class="thumbs-up-count">${data.thumbs_up_count}</span></span>
+                                  <span class="thumbs-down" data-comment-id="${data.comment_id}">👎 <span class="thumbs-down-count">${data.thumbs_down_count}</span></span>
+                                  <span class="reply-button">⬇ Reply</span>
+                              </div>
+                          </div>
+                      </div>
+                  `;
+  
+                  commentsContainer.prepend(newComment);
+  
+                  // Update the comment count dynamically
+                  if (commentCountElement) {
+                      const currentCount = parseInt(commentCountElement.textContent, 10);
+                      if (!isNaN(currentCount)) {
+                          commentCountElement.textContent = `${currentCount + 1} Comments`;
+                      }
+                  }
+  
+                  // Clear the input field
+                  commentInput.value = '';
+              } catch (error) {
+                  console.error('Error:', error.message);
+                  alert(error.message);
+              }
+          });
+      }
+  
+if (commentContainer) {
+        commentContainer.addEventListener('click', async function (event) {
+            // Check if thumbs up or thumbs down icon was clicked
+            if (event.target.classList.contains('thumbs-up') || event.target.classList.contains('thumbs-down')) {
+                const icon = event.target;
+                const commentId = icon.getAttribute('data-comment-id');
+                const action = icon.classList.contains('thumbs-up') ? 'up' : 'down';
+                const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+                try {
+                    const response = await fetch('/update-thumbs/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                            'X-CSRFToken': csrfToken,
+                            'X-Requested-With': 'XMLHttpRequest',  // Make sure this is included
+                        },
+                        body: new URLSearchParams({
+                            'comment_id': commentId,
+                            'action': action,
+                        }),
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+
+                        // Update the thumbs-up or thumbs-down count
+                        if (action === 'up') {
+                            icon.querySelector('.thumbs-up-count').textContent = data.thumbs_up_count;
+                        } else {
+                            icon.querySelector('.thumbs-down-count').textContent = data.thumbs_down_count;
+                        }
+                    } else {
+                        alert('Failed to update the thumbs count.');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('An error occurred while updating the thumbs count.');
+                }
+            }
+        });
+      }
+  });
+  
+</script>
+
+{% endblock %}

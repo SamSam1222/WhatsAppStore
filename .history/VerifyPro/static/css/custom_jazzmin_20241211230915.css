@@ -1,0 +1,67 @@
+/* Target the form container and reduce its size */
+#login-form {
+    max-width: 300px; /* Narrower form width */
+    margin: auto; /* Center it */
+    transform: scale(0.8); /* Scale down the form size */
+    padding: 10px; /* Adjust internal padding */
+    background: rgba(255, 255, 255, 0.9); /* Light background for visibility */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+}
+
+/* Adjust input fields and buttons to be smaller */
+#login-form input, 
+#login-form button {
+    font-size: 0.75rem; /* Smaller text */
+    padding: 5px 8px; /* Smaller padding */
+    height: 30px; /* Smaller field height */
+    margin-bottom: 8px; /* Reduce space between fields */
+}
+
+/* Make labels smaller */
+#login-form label {
+    font-size: 0.75rem; /* Smaller text */
+    margin-bottom: 4px; /* Reduce space below labels */
+}
+
+/* Reduce the spacing inside form groups */
+.form-group {
+    margin-bottom: 10px; /* Reduce spacing between fields */
+}
+
+/* Center the form vertically and horizontally */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.5); /* Slight overlay for better contrast */
+}
+
+
+
+/* Add the video as a full-screen background */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#background-video source {
+    display: block;
+}
+
+
+
+
+img {
+    width: 100px !important;
+    height: auto !important;
+    border-radius: 50%; /* Ensure the image is circular */
+
+}

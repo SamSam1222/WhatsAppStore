@@ -1,0 +1,75 @@
+/* Default login form styling */
+.card-body, .auth-card, .login-box .card {
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */
+    border-radius: 10px !important;
+    color: #ffffff !important; /* White text */
+}
+
+/* Update input fields inside the login card */
+.card-body input.form-control, .auth-card input {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: #000 !important; /* Black text */
+    border: 1px solid #ccc !important;
+}
+
+/* Submit button styling */
+.card-body button, .auth-card button {
+    background-color: #007bff !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    border-radius: 5px !important;
+    padding: 10px !important;
+    border: none !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.card-body button:hover, .auth-card button:hover {
+    background-color: #0056b3 !important;
+}
+
+/* Media query for mobile view (screens less than 768px) */
+@media (max-width: 768px) {
+    .card-body, .auth-card, .login-box .card {
+        max-width: 80% !important; /* Reduce the card's width */
+        margin: 0 auto !important; /* Center the card */
+        padding: 10px !important; /* Reduce padding */
+        border-radius: 8px !important;
+    }
+
+    /* Reduce font size for inputs and buttons */
+    .card-body input.form-control, .auth-card input {
+        font-size: 14px !important;
+        padding: 8px !important;
+    }
+
+    .card-body button, .auth-card button {
+        font-size: 14px !important;
+        padding: 8px !important;
+    }
+}
+
+
+/* Add the video as a full-screen background */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#background-video source {
+    display: block;
+}
+
+
+
+
+img {
+    width: 100px !important;
+    height: auto !important;
+    border-radius: 50%; /* Ensure the image is circular */
+
+}

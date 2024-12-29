@@ -1,0 +1,56 @@
+/* Target the login form container */
+#login-form {
+    max-width: 300px; /* Reduce the form width */
+    padding: 10px; /* Add padding inside the form */
+    margin: auto; /* Center the form */
+    transform: scale(0.9); /* Scale down the form size */
+}
+
+/* Reduce font size for input fields and buttons */
+#login-form input, 
+#login-form button {
+    font-size: 0.8rem; /* Smaller font size */
+    padding: 6px 10px; /* Adjust input padding */
+}
+
+/* Optional: Adjust form container to center better */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.5); /* Optional dark overlay for better contrast */
+}
+
+/* Optional: Make the labels and form text smaller */
+#login-form label {
+    font-size: 0.8rem; /* Smaller label text */
+}
+
+
+
+/* Add the video as a full-screen background */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#background-video source {
+    display: block;
+}
+
+
+
+
+img {
+    width: 100px !important;
+    height: auto !important;
+    border-radius: 50%; /* Ensure the image is circular */
+
+}

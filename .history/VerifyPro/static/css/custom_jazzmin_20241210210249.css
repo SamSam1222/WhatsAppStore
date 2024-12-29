@@ -1,0 +1,13 @@
+.custom-logo-size {
+    width: 150px !important;
+    height: auto !important;
+    max-width: 100% !important;
+}
+
+
+img {
+    width: 300px !important;
+    height: auto !important;
+    border-radius: 50%; /* Ensure the image is circular */
+
+}

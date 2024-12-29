@@ -1,0 +1,59 @@
+{% extends "IDGenie/login_base.html" %}
+
+{% block content %}
+<div class="bg-img">
+    <div class="content">
+       <header>Login Form</header>
+       <form method="POST" action="{% url 'index' %}">
+          {% csrf_token %}
+          
+          <!-- Displaying the form fields dynamically -->
+          <div class="field">
+             <span class="fa fa-user"></span>
+             {{ form.username }}
+          </div>
+          <div class="field space">
+             <span class="fa fa-lock"></span>
+             {{ form.password }}
+             <span class="show">SHOW</span>
+          </div>
+          <div class="pass">
+             <a href="{% url 'password_reset' %}">Forgot Password?</a>
+          </div>
+          <div class="field">
+             <input type="submit" value="LOGIN">
+          </div>
+       </form>
+       <div class="login">
+          Or login with
+       </div>
+       <div class="links">
+          <div class="facebook">
+             <i class="fab fa-facebook-f"><span>Facebook</span></i>
+          </div>
+          <div class="google">
+             <i class="fab fa-google"><span>Google</span></i>
+          </div>
+       </div>
+       <div class="signup">
+          Don't have an account?
+          <a href="{% url 'signup' %}">Signup Now</a>
+       </div>
+    </div>
+ </div>
+ <script>
+    const pass_field = document.querySelector('.pass-key');
+    const showBtn = document.querySelector('.show');
+    showBtn.addEventListener('click', function(){
+       if(pass_field.type === "password"){
+           pass_field.type = "text";
+           showBtn.textContent = "HIDE";
+           showBtn.style.color = "#3498db";
+       }else{
+           pass_field.type = "password";
+           showBtn.textContent = "SHOW";
+           showBtn.style.color = "#222";
+       }
+    });
+ </script>
+{% endblock %}

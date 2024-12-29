@@ -1,0 +1,9 @@
+/* ckeditor_custom.css */
+
+/* Set body background color to white */
+body {
+    background-color: #912828 !important;
+    font-size: 14px;  /* Similar font size to Word's default */
+    line-height: 1.5;
+    margin: 10px;
+}

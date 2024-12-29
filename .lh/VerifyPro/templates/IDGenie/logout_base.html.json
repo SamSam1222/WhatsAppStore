@@ -1,0 +1,26 @@
+{
+    "sourceFile": "VerifyPro/templates/IDGenie/logout_base.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1734904455071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734904463831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n <!-- Created By CodingNepal -->\n <html lang=\"en\" dir=\"ltr\">\n    <head>\n       <meta charset=\"utf-8\">\n-      <title>Multi Step Form | CodingNepal</title>\n+      <title>{% block title %}My Site{% endblock %}</title>\n       <link rel=\"stylesheet\" href=\"style.css\">\n       <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css\"/>\n    </head>\n    <body>\n"
+                },
+                {
+                    "date": 1734904490409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,16 +4,16 @@\n <html lang=\"en\" dir=\"ltr\">\n    <head>\n       <meta charset=\"utf-8\">\n       <title>{% block title %}My Site{% endblock %}</title>\n-      <link rel=\"stylesheet\" href=\"style.css\">\n+      <link rel=\"stylesheet\" href=\"{% static 'css/logoutstyle.css' %}\">\n       <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css\"/>\n    </head>\n    <body>\n     {% block content %}\n \n \n     {% endblock %}\n     \n-      <script src=\"script.js\"></script>\n+      <script src=\"{% static 'script.js' %}\"></script>\n    </body>\n </html>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1734904455071,
+            "name": "Commit-0",
+            "content": "{% load static %}\n<!DOCTYPE html>\n<!-- Created By CodingNepal -->\n<html lang=\"en\" dir=\"ltr\">\n   <head>\n      <meta charset=\"utf-8\">\n      <title>Multi Step Form | CodingNepal</title>\n      <link rel=\"stylesheet\" href=\"style.css\">\n      <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css\"/>\n   </head>\n   <body>\n    {% block content %}\n\n\n    {% endblock %}\n    \n      <script src=\"script.js\"></script>\n   </body>\n</html>"
+        }
+    ]
+}

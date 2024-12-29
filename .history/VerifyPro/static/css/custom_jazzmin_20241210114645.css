@@ -1,0 +1,5 @@
+/* Force the custom size for the login logo */
+.img-circle, .custom-logo-size {
+    width: 150px !important;
+    height: auto !important;
+}

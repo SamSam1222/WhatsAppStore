@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(178, 226, 225) !important; /* Light gray background */
+}
+
+.img-circle {
+    width: 150px !important;
+    height: auto !important;
+    border-radius: 50%; /* Ensure the image is circular */
+}
+
+.custom-logo-size {
+    width: 100px;
+    height: auto;
+}

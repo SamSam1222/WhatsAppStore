@@ -1,0 +1,61 @@
+/* Stronger selector for the login box */
+#login-form, .card, .auth-card {
+    max-width: 350px !important; /* Smaller width */
+    margin: 10% auto !important; /* Center the box */
+    padding: 20px !important;
+    background-color: rgba(157, 28, 28, 0.8) !important; /* Light transparent background */
+    border-radius: 10px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important; /* Add depth */
+    backdrop-filter: blur(10px) !important; /* Blurred effect */
+}
+
+/* Stronger selector for input fields */
+#login-form input.form-control, .card input {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid #ccc !important;
+    color: #333 !important;
+    border-radius: 5px !important;
+}
+
+/* Stronger selector for the submit button */
+#login-form button, .card button {
+    background-color: #007bff !important; /* Primary blue */
+    color: #fff !important;
+    border: none !important;
+    border-radius: 5px !important;
+    padding: 10px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+}
+
+#login-form button:hover, .card button:hover {
+    background-color: #0056b3 !important; /* Darker blue on hover */
+}
+
+
+
+/* Add the video as a full-screen background */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#background-video source {
+    display: block;
+}
+
+
+
+
+img {
+    width: 100px !important;
+    height: auto !important;
+    border-radius: 50%; /* Ensure the image is circular */
+
+}

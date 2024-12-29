@@ -1,0 +1,454 @@
+{
+    "sourceFile": "VerifyPro/static/css/custom_jazzmin.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 109,
+            "patches": [
+                {
+                    "date": 1733818144603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1733859612989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n /* Custom CSS for Jazzmin logos */\n .custom-logo-size {\n     max-width: 200px; /* Adjust the width as needed */\n-    height: auto;     /* Keeps the aspect ratio */\n+    height: 200px;     /* Keeps the aspect ratio */\n }\n"
+                },
+                {
+                    "date": 1733859629623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,10 @@\n-/* Custom CSS for Jazzmin logos */\n+/* Resize the login logo */\n .custom-logo-size {\n-    max-width: 200px; /* Adjust the width as needed */\n-    height: 200px;     /* Keeps the aspect ratio */\n+    width: 150px !important;\n+    height: auto !important;\n }\n+\n+/* General logo tweaks */\n+.img-circle {\n+    border-radius: 0; /* Remove rounded corners if any */\n+}\n"
+                },
+                {
+                    "date": 1733860005178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,5 @@\n-/* Resize the login logo */\n-.custom-logo-size {\n+/* Force the custom size for the login logo */\n+.img-circle, .custom-logo-size {\n     width: 150px !important;\n     height: auto !important;\n }\n-\n-/* General logo tweaks */\n-.img-circle {\n-    border-radius: 0; /* Remove rounded corners if any */\n-}\n"
+                },
+                {
+                    "date": 1733860144050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,14 @@\n-/* Force the custom size for the login logo */\n-.img-circle, .custom-logo-size {\n+body {\n+    background-color: #f8f9fa !important; /* Light gray background */\n+}\n+\n+.img-circle {\n     width: 150px !important;\n     height: auto !important;\n+    border-radius: 50%; /* Ensure the image is circular */\n }\n+\n+.custom-logo-size {\n+    width: 100px;\n+    height: auto;\n+}\n"
+                },
+                {
+                    "date": 1733860301944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n body {\n-    background-color: #f8f9fa !important; /* Light gray background */\n+    background-color: yellow !important; /* Light gray background */\n }\n \n .img-circle {\n     width: 150px !important;\n"
+                },
+                {
+                    "date": 1733860362119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n body {\n-    background-color: yellow !important; /* Light gray background */\n+    background-color: rgb(7, 240, 232) !important; /* Light gray background */\n }\n \n .img-circle {\n     width: 150px !important;\n"
+                },
+                {
+                    "date": 1733860372295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n body {\n-    background-color: rgb(7, 240, 232) !important; /* Light gray background */\n+    background-color: rgb(178, 226, 225) !important; /* Light gray background */\n }\n \n .img-circle {\n     width: 150px !important;\n"
+                },
+                {
+                    "date": 1733860380557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n body {\n-    background-color: rgb(178, 226, 225) !important; /* Light gray background */\n+    background-color: rgb(202, 230, 229) !important; /* Light gray background */\n }\n \n .img-circle {\n     width: 150px !important;\n"
+                },
+                {
+                    "date": 1733860403840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n     border-radius: 50%; /* Ensure the image is circular */\n }\n \n .custom-logo-size {\n-    width: 100px;\n+    width: 10px;\n     height: auto;\n }\n"
+                },
+                {
+                    "date": 1733860529934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n     border-radius: 50%; /* Ensure the image is circular */\n }\n \n .custom-logo-size {\n-    width: 10px;\n-    height: auto;\n+    width: 150px !important; /* Adjust width */\n+    height: auto !important; /* Maintain aspect ratio */\n }\n"
+                },
+                {
+                    "date": 1733860544264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,6 @@\n }\n \n .custom-logo-size {\n     width: 150px !important; /* Adjust width */\n-    height: auto !important; /* Maintain aspect ratio */\n+    height: 10px !important; /* Maintain aspect ratio */\n }\n"
+                },
+                {
+                    "date": 1733860554009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n     border-radius: 50%; /* Ensure the image is circular */\n }\n \n .custom-logo-size {\n-    width: 150px !important; /* Adjust width */\n+    width: 10px !important; /* Adjust width */\n     height: 10px !important; /* Maintain aspect ratio */\n }\n"
+                },
+                {
+                    "date": 1733860589105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,8 @@\n     border-radius: 50%; /* Ensure the image is circular */\n }\n \n .custom-logo-size {\n-    width: 10px !important; /* Adjust width */\n-    height: 10px !important; /* Maintain aspect ratio */\n+    width: 150px !important;\n+    height: auto !important;\n+    max-width: 100% !important;\n }\n"
+                },
+                {
+                    "date": 1733860618032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,4 +12,10 @@\n     width: 150px !important;\n     height: auto !important;\n     max-width: 100% !important;\n }\n+\n+\n+img {\n+    width: 150px !important;\n+    height: auto !important;\n+}\n"
+                },
+                {
+                    "date": 1733860623818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,13 @@\n     height: auto !important;\n     border-radius: 50%; /* Ensure the image is circular */\n }\n \n-.custom-logo-size {\n+/* .custom-logo-size {\n     width: 150px !important;\n     height: auto !important;\n     max-width: 100% !important;\n-}\n+} */\n \n \n img {\n     width: 150px !important;\n"
+                },
+                {
+                    "date": 1733860678125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     height: auto !important;\n     max-width: 100% !important;\n } */\n \n-\n-img {\n+.custom-logo-size img {\n     width: 150px !important;\n     height: auto !important;\n }\n+\n"
+                },
+                {
+                    "date": 1733860707758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     height: auto !important;\n     max-width: 100% !important;\n } */\n \n-.custom-logo-size img {\n+\n+img {\n     width: 150px !important;\n     height: auto !important;\n }\n-\n"
+                },
+                {
+                    "date": 1733860715620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,6 +16,6 @@\n \n \n img {\n     width: 150px !important;\n-    height: auto !important;\n+    height: 400px !important;\n }\n"
+                },
+                {
+                    "date": 1733860727058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,7 @@\n } */\n \n \n img {\n-    width: 150px !important;\n-    height: 400px !important;\n+    width: 3000px !important;\n+    height: auto !important;\n }\n"
+                },
+                {
+                    "date": 1733860764726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,7 +15,9 @@\n } */\n \n \n img {\n-    width: 3000px !important;\n+    width: 300px !important;\n     height: auto !important;\n+    border-radius: 50%; /* Ensure the image is circular */\n+\n }\n"
+                },
+                {
+                    "date": 1733860777529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,10 @@\n body {\n     background-color: rgb(202, 230, 229) !important; /* Light gray background */\n }\n \n-.img-circle {\n-    width: 150px !important;\n-    height: auto !important;\n-    border-radius: 50%; /* Ensure the image is circular */\n-}\n \n-/* .custom-logo-size {\n-    width: 150px !important;\n-    height: auto !important;\n-    max-width: 100% !important;\n-} */\n \n-\n img {\n     width: 300px !important;\n     height: auto !important;\n     border-radius: 50%; /* Ensure the image is circular */\n"
+                },
+                {
+                    "date": 1733860857074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n body {\n-    background-color: rgb(202, 230, 229) !important; /* Light gray background */\n+    background-image: url('/static/images/your-background.jpg') !important;\n+    background-size: cover !important;\n+    background-position: center !important;\n+    background-repeat: no-repeat !important;\n }\n \n \n-\n img {\n     width: 300px !important;\n     height: auto !important;\n     border-radius: 50%; /* Ensure the image is circular */\n"
+                },
+                {
+                    "date": 1733892028184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,29 @@\n+/* Fullscreen Background Video */\n+#background-video {\n+    position: fixed; /* Stays in place */\n+    top: 0;\n+    left: 0;\n+    width: 100vw; /* Full viewport width */\n+    height: 100vh; /* Full viewport height */\n+    object-fit: cover; /* Prevents video distortion */\n+    z-index: -1; /* Places video behind all other content */\n+}\n+\n+/* Ensure content is above the video */\n body {\n-    background-image: url('/static/images/your-background.jpg') !important;\n-    background-size: cover !important;\n-    background-position: center !important;\n-    background-repeat: no-repeat !important;\n+    margin: 0;\n+    font-family: Arial, sans-serif;\n+    color: white; /* Adjust text color for visibility */\n }\n \n+#content-wrapper {\n+    position: relative;\n+    z-index: 1; /* Content stays above video */\n+    padding: 20px;\n+}\n \n+\n img {\n     width: 300px !important;\n     height: auto !important;\n     border-radius: 50%; /* Ensure the image is circular */\n"
+                },
+                {
+                    "date": 1733892062103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n body {\n     margin: 0;\n     font-family: Arial, sans-serif;\n     color: white; /* Adjust text color for visibility */\n+    background-color: aqua;\n }\n \n #content-wrapper {\n     position: relative;\n"
+                },
+                {
+                    "date": 1733892072225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,8 @@\n body {\n     margin: 0;\n     font-family: Arial, sans-serif;\n     color: white; /* Adjust text color for visibility */\n-    background-color: aqua;\n }\n \n #content-wrapper {\n     position: relative;\n"
+                },
+                {
+                    "date": 1733892797807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n     left: 0;\n     width: 100vw; /* Full viewport width */\n     height: 100vh; /* Full viewport height */\n     object-fit: cover; /* Prevents video distortion */\n-    z-index: -1; /* Places video behind all other content */\n }\n \n /* Ensure content is above the video */\n body {\n"
+                },
+                {
+                    "date": 1733893369767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,28 +1,11 @@\n-/* Fullscreen Background Video */\n-#background-video {\n-    position: fixed; /* Stays in place */\n-    top: 0;\n-    left: 0;\n-    width: 100vw; /* Full viewport width */\n-    height: 100vh; /* Full viewport height */\n-    object-fit: cover; /* Prevents video distortion */\n+.custom-logo-size {\n+    width: 150px !important;\n+    height: auto !important;\n+    max-width: 100% !important;\n }\n \n-/* Ensure content is above the video */\n-body {\n-    margin: 0;\n-    font-family: Arial, sans-serif;\n-    color: white; /* Adjust text color for visibility */\n-}\n \n-#content-wrapper {\n-    position: relative;\n-    z-index: 1; /* Content stays above video */\n-    padding: 20px;\n-}\n-\n-\n img {\n     width: 300px !important;\n     height: auto !important;\n     border-radius: 50%; /* Ensure the image is circular */\n"
+                },
+                {
+                    "date": 1733893384734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n-.custom-logo-size {\n-    width: 150px !important;\n-    height: auto !important;\n-    max-width: 100% !important;\n+.custom-logo-size img {\n+    width: 150px !important; \n+    height: auto !important; \n }\n \n \n img {\n"
+                },
+                {
+                    "date": 1733893394580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n }\n \n \n img {\n-    width: 300px !important;\n+    width: 30px !important;\n     height: auto !important;\n     border-radius: 50%; /* Ensure the image is circular */\n \n }\n"
+                },
+                {
+                    "date": 1733893419120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n .custom-logo-size img {\n-    width: 150px !important; \n+    width: 10px !important; \n     height: auto !important; \n }\n \n \n"
+                },
+                {
+                    "date": 1733893431130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     height: auto !important; \n }\n \n \n-img {\n+.img {\n     width: 30px !important;\n     height: auto !important;\n     border-radius: 50%; /* Ensure the image is circular */\n \n"
+                },
+                {
+                    "date": 1733893470327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     height: auto !important; \n }\n \n \n-.img {\n+img {\n     width: 30px !important;\n     height: auto !important;\n     border-radius: 50%; /* Ensure the image is circular */\n \n"
+                },
+                {
+                    "date": 1733893496587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,4 @@\n-.custom-logo-size img {\n-    width: 10px !important; \n-    height: auto !important; \n-}\n \n \n img {\n     width: 30px !important;\n"
+                },
+                {
+                    "date": 1733893663704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,34 @@\n+body, html {\n+    margin: 0;\n+    padding: 0;\n+    width: 100%;\n+    height: 100%;\n+    overflow: hidden;\n+}\n \n+/* Add the video as a full-screen background */\n+#background-video {\n+    position: fixed;\n+    top: 0;\n+    left: 0;\n+    width: 100vw;\n+    height: 100vh;\n+    object-fit: cover;\n+    z-index: -1;\n+}\n \n+/* Ensure login form and content appear above the video */\n+.card {\n+    position: relative;\n+    z-index: 1;\n+    background: rgba(255, 255, 255, 0.85); /* Add transparency for readability */\n+    border-radius: 10px;\n+}\n+\n+\n+\n+\n img {\n     width: 30px !important;\n     height: auto !important;\n     border-radius: 50%; /* Ensure the image is circular */\n"
+                },
+                {
+                    "date": 1733893880749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \n \n \n img {\n-    width: 30px !important;\n+    width: 300px !important;\n     height: auto !important;\n     border-radius: 50%; /* Ensure the image is circular */\n \n }\n"
+                },
+                {
+                    "date": 1733894238723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,21 +16,17 @@\n     object-fit: cover;\n     z-index: -1;\n }\n \n-/* Ensure login form and content appear above the video */\n-.card {\n-    position: relative;\n-    z-index: 1;\n-    background: rgba(255, 255, 255, 0.85); /* Add transparency for readability */\n-    border-radius: 10px;\n+#background-video source {\n+    display: block;\n }\n \n \n \n \n img {\n-    width: 300px !important;\n+    width: 100px !important;\n     height: auto !important;\n     border-radius: 50%; /* Ensure the image is circular */\n \n }\n"
+                },
+                {
+                    "date": 1733894853889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n-body, html {\n+/* body, html {\n     margin: 0;\n     padding: 0;\n     width: 100%;\n     height: 100%;\n     overflow: hidden;\n-}\n+} */\n \n /* Add the video as a full-screen background */\n #background-video {\n     position: fixed;\n"
+                },
+                {
+                    "date": 1733894863640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n-/* body, html {\n+body, html {\n     margin: 0;\n     padding: 0;\n     width: 100%;\n     height: 100%;\n     overflow: hidden;\n-} */\n+}\n \n /* Add the video as a full-screen background */\n #background-video {\n     position: fixed;\n"
+                },
+                {
+                    "date": 1733896047882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,7 @@\n-body, html {\n-    margin: 0;\n-    padding: 0;\n-    width: 100%;\n-    height: 100%;\n-    overflow: hidden;\n-}\n \n+\n+\n /* Add the video as a full-screen background */\n #background-video {\n     position: fixed;\n     top: 0;\n"
+                },
+                {
+                    "date": 1733896072643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,13 @@\n+body, html {\n+    margin: 0;\n+    padding: 0;\n+    width: 100%;\n+    height: 100%;\n+    overflow: hidden;\n+}\n \n \n-\n /* Add the video as a full-screen background */\n #background-video {\n     position: fixed;\n     top: 0;\n"
+                },
+                {
+                    "date": 1733896678887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-body, html {\n+/* body, html {\n     margin: 0;\n     padding: 0;\n     width: 100%;\n     height: 100%;\n@@ -29,5 +29,5 @@\n     width: 100px !important;\n     height: auto !important;\n     border-radius: 50%; /* Ensure the image is circular */\n \n-}\n+} */\n"
+                },
+                {
+                    "date": 1733896688693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-/* body, html {\n+body, html {\n     margin: 0;\n     padding: 0;\n     width: 100%;\n     height: 100%;\n@@ -29,5 +29,5 @@\n     width: 100px !important;\n     height: auto !important;\n     border-radius: 50%; /* Ensure the image is circular */\n \n-} */\n+}\n"
+                },
+                {
+                    "date": 1733896700695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,33 +0,0 @@\n-body, html {\n-    margin: 0;\n-    padding: 0;\n-    width: 100%;\n-    height: 100%;\n-    overflow: hidden;\n-}\n-\n-\n-/* Add the video as a full-screen background */\n-#background-video {\n-    position: fixed;\n-    top: 0;\n-    left: 0;\n-    width: 100vw;\n-    height: 100vh;\n-    object-fit: cover;\n-    z-index: -1;\n-}\n-\n-#background-video source {\n-    display: block;\n-}\n-\n-\n-\n-\n-img {\n-    width: 100px !important;\n-    height: auto !important;\n-    border-radius: 50%; /* Ensure the image is circular */\n-\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1733896748041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,33 @@\n+body, html {\n+    margin: 0;\n+    padding: 0;\n+    width: 100%;\n+    height: 100%;\n+    overflow: hidden;\n+}\n \n+\n+/* Add the video as a full-screen background */\n+#background-video {\n+    position: fixed;\n+    top: 0;\n+    left: 0;\n+    width: 100vw;\n+    height: 100vh;\n+    object-fit: cover;\n+    z-index: -1;\n+}\n+\n+#background-video source {\n+    display: block;\n+}\n+\n+\n+\n+\n+img {\n+    width: 100px !important;\n+    height: auto !important;\n+    border-radius: 50%; /* Ensure the image is circular */\n+\n+}\n"
+                },
+                {
+                    "date": 1733897755942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n \n \n \n img {\n-    width: 100px !important;\n+    width: 10px !important;\n     height: auto !important;\n     border-radius: 50%; /* Ensure the image is circular */\n \n }\n"
+                },
+                {
+                    "date": 1733897761694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n \n \n \n img {\n-    width: 10px !important;\n+    width: 100px !important;\n     height: auto !important;\n     border-radius: 50%; /* Ensure the image is circular */\n \n }\n"
+                },
+                {
+                    "date": 1733897773391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n body, html {\n     margin: 0;\n     padding: 0;\n-    width: 100%;\n-    height: 100%;\n+\n     overflow: hidden;\n }\n \n \n"
+                },
+                {
+                    "date": 1733984821508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n body, html {\n     margin: 0;\n     padding: 0;\n-\n+    width: 100%;\n+    height: 100%;\n     overflow: hidden;\n }\n \n \n@@ -23,10 +24,10 @@\n \n \n \n \n-img {\n+/* img {\n     width: 100px !important;\n     height: auto !important;\n     border-radius: 50%; /* Ensure the image is circular */\n \n-}\n+} */\n"
+                },
+                {
+                    "date": 1733984827828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,4 @@\n \n \n \n \n-/* img {\n-    width: 100px !important;\n-    height: auto !important;\n-    border-radius: 50%; /* Ensure the image is circular */\n-\n-} */\n"
+                },
+                {
+                    "date": 1733984840825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,4 +24,10 @@\n \n \n \n \n+img {\n+    width: 100px !important;\n+    height: auto !important;\n+    border-radius: 50%; /* Ensure the image is circular */\n+\n+}\n"
+                },
+                {
+                    "date": 1733987250896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,36 @@\n-body, html {\n+/* Target the login form container */\n+#login-form {\n+    max-width: 300px; /* Reduce the form width */\n+    padding: 10px; /* Add padding inside the form */\n+    margin: auto; /* Center the form */\n+    transform: scale(0.9); /* Scale down the form size */\n+}\n+\n+/* Reduce font size for input fields and buttons */\n+#login-form input, \n+#login-form button {\n+    font-size: 0.8rem; /* Smaller font size */\n+    padding: 6px 10px; /* Adjust input padding */\n+}\n+\n+/* Optional: Adjust form container to center better */\n+body {\n+    display: flex;\n+    justify-content: center;\n+    align-items: center;\n+    height: 100vh;\n     margin: 0;\n-    padding: 0;\n-    width: 100%;\n-    height: 100%;\n-    overflow: hidden;\n+    background: rgba(0, 0, 0, 0.5); /* Optional dark overlay for better contrast */\n }\n \n+/* Optional: Make the labels and form text smaller */\n+#login-form label {\n+    font-size: 0.8rem; /* Smaller label text */\n+}\n \n+\n+\n /* Add the video as a full-screen background */\n #background-video {\n     position: fixed;\n     top: 0;\n"
+                },
+                {
+                    "date": 1733987355777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,36 +1,47 @@\n-/* Target the login form container */\n+/* Target the form container and reduce its size */\n #login-form {\n-    max-width: 300px; /* Reduce the form width */\n-    padding: 10px; /* Add padding inside the form */\n-    margin: auto; /* Center the form */\n-    transform: scale(0.9); /* Scale down the form size */\n+    max-width: 300px; /* Narrower form width */\n+    margin: auto; /* Center it */\n+    transform: scale(0.8); /* Scale down the form size */\n+    padding: 10px; /* Adjust internal padding */\n+    background: rgba(255, 255, 255, 0.9); /* Light background for visibility */\n+    border-radius: 8px; /* Add rounded corners */\n+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow effect */\n }\n \n-/* Reduce font size for input fields and buttons */\n+/* Adjust input fields and buttons to be smaller */\n #login-form input, \n #login-form button {\n-    font-size: 0.8rem; /* Smaller font size */\n-    padding: 6px 10px; /* Adjust input padding */\n+    font-size: 0.75rem; /* Smaller text */\n+    padding: 5px 8px; /* Smaller padding */\n+    height: 30px; /* Smaller field height */\n+    margin-bottom: 8px; /* Reduce space between fields */\n }\n \n-/* Optional: Adjust form container to center better */\n+/* Make labels smaller */\n+#login-form label {\n+    font-size: 0.75rem; /* Smaller text */\n+    margin-bottom: 4px; /* Reduce space below labels */\n+}\n+\n+/* Reduce the spacing inside form groups */\n+.form-group {\n+    margin-bottom: 10px; /* Reduce spacing between fields */\n+}\n+\n+/* Center the form vertically and horizontally */\n body {\n     display: flex;\n     justify-content: center;\n     align-items: center;\n     height: 100vh;\n     margin: 0;\n-    background: rgba(0, 0, 0, 0.5); /* Optional dark overlay for better contrast */\n+    background: rgba(0, 0, 0, 0.5); /* Slight overlay for better contrast */\n }\n \n-/* Optional: Make the labels and form text smaller */\n-#login-form label {\n-    font-size: 0.8rem; /* Smaller label text */\n-}\n \n \n-\n /* Add the video as a full-screen background */\n #background-video {\n     position: fixed;\n     top: 0;\n"
+                },
+                {
+                    "date": 1733987460777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,47 +1,62 @@\n-/* Target the form container and reduce its size */\n-#login-form {\n-    max-width: 300px; /* Narrower form width */\n-    margin: auto; /* Center it */\n-    transform: scale(0.8); /* Scale down the form size */\n-    padding: 10px; /* Adjust internal padding */\n-    background: rgba(255, 255, 255, 0.9); /* Light background for visibility */\n-    border-radius: 8px; /* Add rounded corners */\n-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow effect */\n+/* Target the entire login page container */\n+.login-container {\n+    max-width: 300px; /* Narrower container */\n+    margin: auto;\n+    padding: 10px;\n+    transform: scale(0.8); /* Scale down the whole form */\n+    background: rgba(255, 255, 255, 0.9); /* Optional light background */\n+    border-radius: 8px;\n+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n }\n \n-/* Adjust input fields and buttons to be smaller */\n-#login-form input, \n-#login-form button {\n-    font-size: 0.75rem; /* Smaller text */\n-    padding: 5px 8px; /* Smaller padding */\n-    height: 30px; /* Smaller field height */\n-    margin-bottom: 8px; /* Reduce space between fields */\n+/* Target the input fields */\n+input.form-control {\n+    font-size: 0.75rem; /* Make text smaller */\n+    height: 30px; /* Reduce height */\n+    padding: 5px 8px; /* Adjust padding */\n }\n \n-/* Make labels smaller */\n-#login-form label {\n+/* Reduce button size */\n+button.btn {\n     font-size: 0.75rem; /* Smaller text */\n-    margin-bottom: 4px; /* Reduce space below labels */\n+    padding: 5px 10px; /* Adjust button size */\n+    height: 30px; /* Reduce button height */\n }\n \n-/* Reduce the spacing inside form groups */\n+/* Adjust label text size */\n+label {\n+    font-size: 0.75rem;\n+}\n+\n+/* Reduce spacing between form groups */\n .form-group {\n-    margin-bottom: 10px; /* Reduce spacing between fields */\n+    margin-bottom: 10px; /* Smaller spacing */\n }\n \n-/* Center the form vertically and horizontally */\n+/* Ensure everything is centered vertically */\n body {\n     display: flex;\n     justify-content: center;\n     align-items: center;\n     height: 100vh;\n     margin: 0;\n-    background: rgba(0, 0, 0, 0.5); /* Slight overlay for better contrast */\n+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */\n }\n \n+/* Video background full screen */\n+#background-video {\n+    position: fixed;\n+    top: 0;\n+    left: 0;\n+    min-width: 100%;\n+    min-height: 100%;\n+    z-index: -1; /* Ensure video stays behind content */\n+    object-fit: cover; /* Make video fit the entire screen */\n+}\n \n \n+\n /* Add the video as a full-screen background */\n #background-video {\n     position: fixed;\n     top: 0;\n"
+                },
+                {
+                    "date": 1733987475141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     max-width: 300px; /* Narrower container */\n     margin: auto;\n     padding: 10px;\n     transform: scale(0.8); /* Scale down the whole form */\n-    background: rgba(255, 255, 255, 0.9); /* Optional light background */\n+    background: rgba(109, 21, 21, 0.9); /* Optional light background */\n     border-radius: 8px;\n     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n }\n \n"
+                },
+                {
+                    "date": 1734108449267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,62 +1,41 @@\n-/* Target the entire login page container */\n-.login-container {\n-    max-width: 300px; /* Narrower container */\n-    margin: auto;\n-    padding: 10px;\n-    transform: scale(0.8); /* Scale down the whole form */\n-    background: rgba(109, 21, 21, 0.9); /* Optional light background */\n-    border-radius: 8px;\n-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n+/* Smaller login box with background color and transparency */\n+#login-form {\n+    max-width: 350px; /* Adjust width as needed */\n+    margin: 10% auto; /* Center the box vertically and horizontally */\n+    padding: 20px;\n+    background-color: rgba(255, 255, 255, 0.8); /* White with transparency */\n+    border-radius: 10px; /* Rounded corners */\n+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */\n+    backdrop-filter: blur(10px); /* Blurred effect behind the box */\n }\n \n-/* Target the input fields */\n-input.form-control {\n-    font-size: 0.75rem; /* Make text smaller */\n-    height: 30px; /* Reduce height */\n-    padding: 5px 8px; /* Adjust padding */\n+/* Style the input fields */\n+#login-form input.form-control {\n+    background-color: rgba(255, 255, 255, 0.9); /* Slightly opaque white */\n+    border: 1px solid #ccc; /* Light border */\n+    color: #333; /* Darker text color */\n+    border-radius: 5px; /* Rounded input corners */\n }\n \n-/* Reduce button size */\n-button.btn {\n-    font-size: 0.75rem; /* Smaller text */\n-    padding: 5px 10px; /* Adjust button size */\n-    height: 30px; /* Reduce button height */\n+/* Style the submit button */\n+#login-form button {\n+    background-color: #007bff; /* Blue color for button */\n+    color: #fff; /* White text */\n+    border: none;\n+    border-radius: 5px;\n+    padding: 10px;\n+    font-weight: bold;\n+    cursor: pointer;\n+    transition: background-color 0.3s ease;\n }\n \n-/* Adjust label text size */\n-label {\n-    font-size: 0.75rem;\n+#login-form button:hover {\n+    background-color: #0056b3; /* Darker blue on hover */\n }\n \n-/* Reduce spacing between form groups */\n-.form-group {\n-    margin-bottom: 10px; /* Smaller spacing */\n-}\n \n-/* Ensure everything is centered vertically */\n-body {\n-    display: flex;\n-    justify-content: center;\n-    align-items: center;\n-    height: 100vh;\n-    margin: 0;\n-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */\n-}\n \n-/* Video background full screen */\n-#background-video {\n-    position: fixed;\n-    top: 0;\n-    left: 0;\n-    min-width: 100%;\n-    min-height: 100%;\n-    z-index: -1; /* Ensure video stays behind content */\n-    object-fit: cover; /* Make video fit the entire screen */\n-}\n-\n-\n-\n /* Add the video as a full-screen background */\n #background-video {\n     position: fixed;\n     top: 0;\n"
+                },
+                {
+                    "date": 1734109013260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,37 +1,37 @@\n-/* Smaller login box with background color and transparency */\n-#login-form {\n-    max-width: 350px; /* Adjust width as needed */\n-    margin: 10% auto; /* Center the box vertically and horizontally */\n-    padding: 20px;\n-    background-color: rgba(255, 255, 255, 0.8); /* White with transparency */\n-    border-radius: 10px; /* Rounded corners */\n-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */\n-    backdrop-filter: blur(10px); /* Blurred effect behind the box */\n+/* Stronger selector for the login box */\n+#login-form, .card, .auth-card {\n+    max-width: 350px !important; /* Smaller width */\n+    margin: 10% auto !important; /* Center the box */\n+    padding: 20px !important;\n+    background-color: rgba(255, 255, 255, 0.8) !important; /* Light transparent background */\n+    border-radius: 10px !important;\n+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important; /* Add depth */\n+    backdrop-filter: blur(10px) !important; /* Blurred effect */\n }\n \n-/* Style the input fields */\n-#login-form input.form-control {\n-    background-color: rgba(255, 255, 255, 0.9); /* Slightly opaque white */\n-    border: 1px solid #ccc; /* Light border */\n-    color: #333; /* Darker text color */\n-    border-radius: 5px; /* Rounded input corners */\n+/* Stronger selector for input fields */\n+#login-form input.form-control, .card input {\n+    background-color: rgba(255, 255, 255, 0.9) !important;\n+    border: 1px solid #ccc !important;\n+    color: #333 !important;\n+    border-radius: 5px !important;\n }\n \n-/* Style the submit button */\n-#login-form button {\n-    background-color: #007bff; /* Blue color for button */\n-    color: #fff; /* White text */\n-    border: none;\n-    border-radius: 5px;\n-    padding: 10px;\n-    font-weight: bold;\n-    cursor: pointer;\n-    transition: background-color 0.3s ease;\n+/* Stronger selector for the submit button */\n+#login-form button, .card button {\n+    background-color: #007bff !important; /* Primary blue */\n+    color: #fff !important;\n+    border: none !important;\n+    border-radius: 5px !important;\n+    padding: 10px !important;\n+    font-weight: bold !important;\n+    cursor: pointer !important;\n+    transition: background-color 0.3s ease !important;\n }\n \n-#login-form button:hover {\n-    background-color: #0056b3; /* Darker blue on hover */\n+#login-form button:hover, .card button:hover {\n+    background-color: #0056b3 !important; /* Darker blue on hover */\n }\n \n \n \n"
+                },
+                {
+                    "date": 1734109054440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n #login-form, .card, .auth-card {\n     max-width: 350px !important; /* Smaller width */\n     margin: 10% auto !important; /* Center the box */\n     padding: 20px !important;\n-    background-color: rgba(255, 255, 255, 0.8) !important; /* Light transparent background */\n+    background-color: rgba(157, 28, 28, 0.8) !important; /* Light transparent background */\n     border-radius: 10px !important;\n     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important; /* Add depth */\n     backdrop-filter: blur(10px) !important; /* Blurred effect */\n }\n"
+                },
+                {
+                    "date": 1734109075574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n }\n \n /* Stronger selector for input fields */\n #login-form input.form-control, .card input {\n-    background-color: rgba(255, 255, 255, 0.9) !important;\n+    background-color: rgba(99, 17, 17, 0.9) !important;\n     border: 1px solid #ccc !important;\n     color: #333 !important;\n     border-radius: 5px !important;\n }\n"
+                },
+                {
+                    "date": 1734109302408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,37 +1,31 @@\n-/* Stronger selector for the login box */\n-#login-form, .card, .auth-card {\n-    max-width: 350px !important; /* Smaller width */\n-    margin: 10% auto !important; /* Center the box */\n-    padding: 20px !important;\n-    background-color: rgba(157, 28, 28, 0.8) !important; /* Light transparent background */\n+/* Specific style for Jazzmin login form card body */\n+.card-body, .auth-card, .login-box .card {\n+    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important; /* Add depth */\n-    backdrop-filter: blur(10px) !important; /* Blurred effect */\n+    color: #ffffff !important; /* White text */\n }\n \n-/* Stronger selector for input fields */\n-#login-form input.form-control, .card input {\n-    background-color: rgba(99, 17, 17, 0.9) !important;\n+/* Update input fields inside the login card */\n+.card-body input.form-control, .auth-card input {\n+    background-color: rgba(255, 255, 255, 0.9) !important;\n+    color: #000 !important; /* Black text */\n     border: 1px solid #ccc !important;\n-    color: #333 !important;\n-    border-radius: 5px !important;\n }\n \n-/* Stronger selector for the submit button */\n-#login-form button, .card button {\n-    background-color: #007bff !important; /* Primary blue */\n+/* Submit button styling */\n+.card-body button, .auth-card button {\n+    background-color: #007bff !important;\n     color: #fff !important;\n-    border: none !important;\n+    font-weight: bold !important;\n     border-radius: 5px !important;\n     padding: 10px !important;\n-    font-weight: bold !important;\n-    cursor: pointer !important;\n+    border: none !important;\n     transition: background-color 0.3s ease !important;\n }\n \n-#login-form button:hover, .card button:hover {\n-    background-color: #0056b3 !important; /* Darker blue on hover */\n+.card-body button:hover, .auth-card button:hover {\n+    background-color: #0056b3 !important;\n }\n \n \n \n"
+                },
+                {
+                    "date": 1734109336456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,11 @@\n .card-body button:hover, .auth-card button:hover {\n     background-color: #0056b3 !important;\n }\n \n+.django-login .card {\n+    background-color: rgba(0, 0, 0, 0.5) !important;\n+}\n \n \n /* Add the video as a full-screen background */\n #background-video {\n"
+                },
+                {
+                    "date": 1734109530557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,38 +1,7 @@\n-/* Specific style for Jazzmin login form card body */\n-.card-body, .auth-card, .login-box .card {\n-    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n-    border-radius: 10px !important;\n-    color: #ffffff !important; /* White text */\n-}\n \n-/* Update input fields inside the login card */\n-.card-body input.form-control, .auth-card input {\n-    background-color: rgba(255, 255, 255, 0.9) !important;\n-    color: #000 !important; /* Black text */\n-    border: 1px solid #ccc !important;\n-}\n \n-/* Submit button styling */\n-.card-body button, .auth-card button {\n-    background-color: #007bff !important;\n-    color: #fff !important;\n-    font-weight: bold !important;\n-    border-radius: 5px !important;\n-    padding: 10px !important;\n-    border: none !important;\n-    transition: background-color 0.3s ease !important;\n-}\n \n-.card-body button:hover, .auth-card button:hover {\n-    background-color: #0056b3 !important;\n-}\n-\n-.django-login .card {\n-    background-color: rgba(0, 0, 0, 0.5) !important;\n-}\n-\n-\n /* Add the video as a full-screen background */\n #background-video {\n     position: fixed;\n     top: 0;\n"
+                },
+                {
+                    "date": 1734109806278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,35 @@\n+/* Specific style for Jazzmin login form card body */\n+.card-body, .auth-card, .login-box .card {\n+    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n+    border-radius: 10px !important;\n+    color: #ffffff !important; /* White text */\n+}\n \n+/* Update input fields inside the login card */\n+.card-body input.form-control, .auth-card input {\n+    background-color: rgba(255, 255, 255, 0.9) !important;\n+    color: #000 !important; /* Black text */\n+    border: 1px solid #ccc !important;\n+}\n \n+/* Submit button styling */\n+.card-body button, .auth-card button {\n+    background-color: #007bff !important;\n+    color: #fff !important;\n+    font-weight: bold !important;\n+    border-radius: 5px !important;\n+    padding: 10px !important;\n+    border: none !important;\n+    transition: background-color 0.3s ease !important;\n+}\n \n+.card-body button:hover, .auth-card button:hover {\n+    background-color: #0056b3 !important;\n+}\n+\n+\n+\n /* Add the video as a full-screen background */\n #background-video {\n     position: fixed;\n     top: 0;\n"
+                },
+                {
+                    "date": 1734109845348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n /* Specific style for Jazzmin login form card body */\n .card-body, .auth-card, .login-box .card {\n-    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n+    background-color: rgba(139, 16, 16, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n }\n \n"
+                },
+                {
+                    "date": 1734109927686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n /* Specific style for Jazzmin login form card body */\n .card-body, .auth-card, .login-box .card {\n-    background-color: rgba(139, 16, 16, 0.5) !important; /* Semi-transparent black */\n+    background-color: rgba(113, 224, 224, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n }\n \n"
+                },
+                {
+                    "date": 1734109947122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n /* Specific style for Jazzmin login form card body */\n .card-body, .auth-card, .login-box .card {\n-    background-color: rgba(113, 224, 224, 0.5) !important; /* Semi-transparent black */\n+    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n }\n \n"
+                },
+                {
+                    "date": 1734110029910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n-/* Specific style for Jazzmin login form card body */\n+/* Default login form styling */\n .card-body, .auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n+    padding: 20px !important;\n }\n \n /* Update input fields inside the login card */\n .card-body input.form-control, .auth-card input {\n@@ -26,10 +27,31 @@\n .card-body button:hover, .auth-card button:hover {\n     background-color: #0056b3 !important;\n }\n \n+/* Media query for mobile view (screens less than 768px) */\n+@media (max-width: 768px) {\n+    .card-body, .auth-card, .login-box .card {\n+        max-width: 80% !important; /* Reduce the card's width */\n+        margin: 0 auto !important; /* Center the card */\n+        padding: 10px !important; /* Reduce padding */\n+        border-radius: 8px !important;\n+    }\n \n+    /* Reduce font size for inputs and buttons */\n+    .card-body input.form-control, .auth-card input {\n+        font-size: 14px !important;\n+        padding: 8px !important;\n+    }\n \n+    .card-body button, .auth-card button {\n+        font-size: 14px !important;\n+        padding: 8px !important;\n+    }\n+}\n+\n+\n+\n /* Add the video as a full-screen background */\n #background-video {\n     position: fixed;\n     top: 0;\n"
+                },
+                {
+                    "date": 1734110144486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,50 +1,30 @@\n-/* Default login form styling */\n-.card-body, .auth-card, .login-box .card {\n+/* Target only the specific login form card */\n+.card-body.auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n     padding: 20px !important;\n }\n \n-/* Update input fields inside the login card */\n-.card-body input.form-control, .auth-card input {\n-    background-color: rgba(255, 255, 255, 0.9) !important;\n-    color: #000 !important; /* Black text */\n-    border: 1px solid #ccc !important;\n-}\n-\n-/* Submit button styling */\n-.card-body button, .auth-card button {\n-    background-color: #007bff !important;\n-    color: #fff !important;\n-    font-weight: bold !important;\n-    border-radius: 5px !important;\n-    padding: 10px !important;\n-    border: none !important;\n-    transition: background-color 0.3s ease !important;\n-}\n-\n-.card-body button:hover, .auth-card button:hover {\n-    background-color: #0056b3 !important;\n-}\n-\n-/* Media query for mobile view (screens less than 768px) */\n+/* Media query for mobile view */\n @media (max-width: 768px) {\n-    .card-body, .auth-card, .login-box .card {\n-        max-width: 80% !important; /* Reduce the card's width */\n+    /* Target the login card only */\n+    .card-body.auth-card, .login-box .card {\n+        max-width: 80% !important; /* Narrower card */\n         margin: 0 auto !important; /* Center the card */\n-        padding: 10px !important; /* Reduce padding */\n+        padding: 10px !important; /* Smaller padding */\n         border-radius: 8px !important;\n     }\n \n-    /* Reduce font size for inputs and buttons */\n-    .card-body input.form-control, .auth-card input {\n+    /* Smaller input fields */\n+    .card-body.auth-card input.form-control, .login-box .card input {\n         font-size: 14px !important;\n         padding: 8px !important;\n     }\n \n-    .card-body button, .auth-card button {\n+    /* Smaller buttons */\n+    .card-body.auth-card button, .login-box .card button {\n         font-size: 14px !important;\n         padding: 8px !important;\n     }\n }\n"
+                },
+                {
+                    "date": 1734110249842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,30 +1,50 @@\n-/* Target only the specific login form card */\n-.card-body.auth-card, .login-box .card {\n+/* Default login form styling */\n+.card-body, .auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n     padding: 20px !important;\n }\n \n-/* Media query for mobile view */\n+/* Update input fields inside the login card */\n+.card-body input.form-control, .auth-card input {\n+    background-color: rgba(255, 255, 255, 0.9) !important;\n+    color: #000 !important; /* Black text */\n+    border: 1px solid #ccc !important;\n+}\n+\n+/* Submit button styling */\n+.card-body button, .auth-card button {\n+    background-color: #007bff !important;\n+    color: #fff !important;\n+    font-weight: bold !important;\n+    border-radius: 5px !important;\n+    padding: 10px !important;\n+    border: none !important;\n+    transition: background-color 0.3s ease !important;\n+}\n+\n+.card-body button:hover, .auth-card button:hover {\n+    background-color: #0056b3 !important;\n+}\n+\n+/* Media query for mobile view (screens less than 768px) */\n @media (max-width: 768px) {\n-    /* Target the login card only */\n-    .card-body.auth-card, .login-box .card {\n-        max-width: 80% !important; /* Narrower card */\n+    .card-body, .auth-card, .login-box .card {\n+        max-width: 80% !important; /* Reduce the card's width */\n         margin: 0 auto !important; /* Center the card */\n-        padding: 10px !important; /* Smaller padding */\n+        padding: 10px !important; /* Reduce padding */\n         border-radius: 8px !important;\n     }\n \n-    /* Smaller input fields */\n-    .card-body.auth-card input.form-control, .login-box .card input {\n+    /* Reduce font size for inputs and buttons */\n+    .card-body input.form-control, .auth-card input {\n         font-size: 14px !important;\n         padding: 8px !important;\n     }\n \n-    /* Smaller buttons */\n-    .card-body.auth-card button, .login-box .card button {\n+    .card-body button, .auth-card button {\n         font-size: 14px !important;\n         padding: 8px !important;\n     }\n }\n"
+                },
+                {
+                    "date": 1734111626544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n \n /* Media query for mobile view (screens less than 768px) */\n @media (max-width: 768px) {\n     .card-body, .auth-card, .login-box .card {\n-        max-width: 80% !important; /* Reduce the card's width */\n+        max-width: 50% !important; /* Reduce the card's width */\n         margin: 0 auto !important; /* Center the card */\n         padding: 10px !important; /* Reduce padding */\n         border-radius: 8px !important;\n     }\n"
+                },
+                {
+                    "date": 1734111651536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n \n /* Media query for mobile view (screens less than 768px) */\n @media (max-width: 768px) {\n     .card-body, .auth-card, .login-box .card {\n-        max-width: 50% !important; /* Reduce the card's width */\n+        max-width: 0% !important; /* Reduce the card's width */\n         margin: 0 auto !important; /* Center the card */\n         padding: 10px !important; /* Reduce padding */\n         border-radius: 8px !important;\n     }\n"
+                },
+                {
+                    "date": 1734111732153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,14 +5,8 @@\n     color: #ffffff !important; /* White text */\n     padding: 20px !important;\n }\n \n-/* Update input fields inside the login card */\n-.card-body input.form-control, .auth-card input {\n-    background-color: rgba(255, 255, 255, 0.9) !important;\n-    color: #000 !important; /* Black text */\n-    border: 1px solid #ccc !important;\n-}\n \n /* Submit button styling */\n .card-body button, .auth-card button {\n     background-color: #007bff !important;\n@@ -30,9 +24,9 @@\n \n /* Media query for mobile view (screens less than 768px) */\n @media (max-width: 768px) {\n     .card-body, .auth-card, .login-box .card {\n-        max-width: 0% !important; /* Reduce the card's width */\n+        max-width: 80% !important; /* Reduce the card's width */\n         margin: 0 auto !important; /* Center the card */\n         padding: 10px !important; /* Reduce padding */\n         border-radius: 8px !important;\n     }\n"
+                },
+                {
+                    "date": 1734111742123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,14 @@\n     color: #ffffff !important; /* White text */\n     padding: 20px !important;\n }\n \n+/* Update input fields inside the login card */\n+.card-body input.form-control, .auth-card input {\n+    background-color: rgba(255, 255, 255, 0.9) !important;\n+    color: #000 !important; /* Black text */\n+    border: 1px solid #ccc !important;\n+}\n \n /* Submit button styling */\n .card-body button, .auth-card button {\n     background-color: #007bff !important;\n"
+                },
+                {
+                    "date": 1734111776676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n /* Default login form styling */\n .card-body, .auth-card, .login-box .card {\n-    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n     padding: 20px !important;\n }\n"
+                },
+                {
+                    "date": 1734111784264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n /* Default login form styling */\n .card-body, .auth-card, .login-box .card {\n+    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n     padding: 20px !important;\n }\n"
+                },
+                {
+                    "date": 1734111799103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n .card-body, .auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n-    padding: 20px !important;\n+    padding: 10px !important;\n }\n \n /* Update input fields inside the login card */\n .card-body input.form-control, .auth-card input {\n"
+                },
+                {
+                    "date": 1734111806326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n .card-body, .auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n-    padding: 10px !important;\n+    padding: 240px !important;\n }\n \n /* Update input fields inside the login card */\n .card-body input.form-control, .auth-card input {\n"
+                },
+                {
+                    "date": 1734111813530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n .card-body, .auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n-    padding: 240px !important;\n+    padding: 20px !important;\n }\n \n /* Update input fields inside the login card */\n .card-body input.form-control, .auth-card input {\n"
+                },
+                {
+                    "date": 1734111839341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,50 +1,30 @@\n-/* Default login form styling */\n-.card-body, .auth-card, .login-box .card {\n+/* Target only the specific login form card */\n+.card-body.auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n     padding: 20px !important;\n }\n \n-/* Update input fields inside the login card */\n-.card-body input.form-control, .auth-card input {\n-    background-color: rgba(255, 255, 255, 0.9) !important;\n-    color: #000 !important; /* Black text */\n-    border: 1px solid #ccc !important;\n-}\n-\n-/* Submit button styling */\n-.card-body button, .auth-card button {\n-    background-color: #007bff !important;\n-    color: #fff !important;\n-    font-weight: bold !important;\n-    border-radius: 5px !important;\n-    padding: 10px !important;\n-    border: none !important;\n-    transition: background-color 0.3s ease !important;\n-}\n-\n-.card-body button:hover, .auth-card button:hover {\n-    background-color: #0056b3 !important;\n-}\n-\n-/* Media query for mobile view (screens less than 768px) */\n+/* Media query for mobile view */\n @media (max-width: 768px) {\n-    .card-body, .auth-card, .login-box .card {\n-        max-width: 80% !important; /* Reduce the card's width */\n+    /* Target the login card only */\n+    .card-body.auth-card, .login-box .card {\n+        max-width: 80% !important; /* Narrower card */\n         margin: 0 auto !important; /* Center the card */\n-        padding: 10px !important; /* Reduce padding */\n+        padding: 10px !important; /* Smaller padding */\n         border-radius: 8px !important;\n     }\n \n-    /* Reduce font size for inputs and buttons */\n-    .card-body input.form-control, .auth-card input {\n+    /* Smaller input fields */\n+    .card-body.auth-card input.form-control, .login-box .card input {\n         font-size: 14px !important;\n         padding: 8px !important;\n     }\n \n-    .card-body button, .auth-card button {\n+    /* Smaller buttons */\n+    .card-body.auth-card button, .login-box .card button {\n         font-size: 14px !important;\n         padding: 8px !important;\n     }\n }\n"
+                },
+                {
+                    "date": 1734111858417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n /* Media query for mobile view */\n @media (max-width: 768px) {\n     /* Target the login card only */\n     .card-body.auth-card, .login-box .card {\n-        max-width: 80% !important; /* Narrower card */\n+        max-width: 100% !important; /* Narrower card */\n         margin: 0 auto !important; /* Center the card */\n         padding: 10px !important; /* Smaller padding */\n         border-radius: 8px !important;\n     }\n"
+                },
+                {
+                    "date": 1734111872226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n /* Media query for mobile view */\n @media (max-width: 768px) {\n     /* Target the login card only */\n     .card-body.auth-card, .login-box .card {\n-        max-width: 100% !important; /* Narrower card */\n+        max-width: 10% !important; /* Narrower card */\n         margin: 0 auto !important; /* Center the card */\n         padding: 10px !important; /* Smaller padding */\n         border-radius: 8px !important;\n     }\n"
+                },
+                {
+                    "date": 1734111886073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n /* Media query for mobile view */\n @media (max-width: 768px) {\n     /* Target the login card only */\n     .card-body.auth-card, .login-box .card {\n-        max-width: 10% !important; /* Narrower card */\n+        max-width: 70% !important; /* Narrower card */\n         margin: 0 auto !important; /* Center the card */\n         padding: 10px !important; /* Smaller padding */\n         border-radius: 8px !important;\n     }\n"
+                },
+                {
+                    "date": 1734111939817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n /* Media query for mobile view */\n @media (max-width: 768px) {\n     /* Target the login card only */\n     .card-body.auth-card, .login-box .card {\n-        max-width: 70% !important; /* Narrower card */\n+        max-width: 80% !important; /* Narrower card */\n         margin: 0 auto !important; /* Center the card */\n         padding: 10px !important; /* Smaller padding */\n         border-radius: 8px !important;\n     }\n"
+                },
+                {
+                    "date": 1734111954909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n /* Media query for mobile view */\n @media (max-width: 768px) {\n     /* Target the login card only */\n     .card-body.auth-card, .login-box .card {\n-        max-width: 80% !important; /* Narrower card */\n+        max-width: 75z% !important; /* Narrower card */\n         margin: 0 auto !important; /* Center the card */\n         padding: 10px !important; /* Smaller padding */\n         border-radius: 8px !important;\n     }\n"
+                },
+                {
+                    "date": 1734205407687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,37 +1,56 @@\n-/* Target only the specific login form card */\n-.card-body.auth-card, .login-box .card {\n+/* Default login form styling */\n+.card-body, .auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n     padding: 20px !important;\n }\n \n-/* Media query for mobile view */\n+/* Update input fields inside the login card */\n+.card-body input.form-control, .auth-card input {\n+    background-color: rgba(255, 255, 255, 0.9) !important;\n+    color: #000 !important; /* Black text */\n+    border: 1px solid #ccc !important;\n+}\n+\n+/* Submit button styling */\n+.card-body button, .auth-card button {\n+    background-color: #007bff !important;\n+    color: #fff !important;\n+    font-weight: bold !important;\n+    border-radius: 5px !important;\n+    padding: 10px !important;\n+    border: none !important;\n+    transition: background-color 0.3s ease !important;\n+}\n+\n+.card-body button:hover, .auth-card button:hover {\n+    background-color: #0056b3 !important;\n+}\n+\n+/* Media query for mobile view (screens less than 768px) */\n @media (max-width: 768px) {\n-    /* Target the login card only */\n-    .card-body.auth-card, .login-box .card {\n-        max-width: 75z% !important; /* Narrower card */\n+    .card-body, .auth-card, .login-box .card {\n+        max-width: 80% !important; /* Reduce the card's width */\n         margin: 0 auto !important; /* Center the card */\n-        padding: 10px !important; /* Smaller padding */\n+        padding: 10px !important; /* Reduce padding */\n         border-radius: 8px !important;\n     }\n \n-    /* Smaller input fields */\n-    .card-body.auth-card input.form-control, .login-box .card input {\n+    /* Reduce font size for inputs and buttons */\n+    .card-body input.form-control, .auth-card input {\n         font-size: 14px !important;\n         padding: 8px !important;\n     }\n \n-    /* Smaller buttons */\n-    .card-body.auth-card button, .login-box .card button {\n+    .card-body button, .auth-card button {\n         font-size: 14px !important;\n         padding: 8px !important;\n     }\n }\n \n \n-\n /* Add the video as a full-screen background */\n #background-video {\n     position: fixed;\n     top: 0;\n"
+                },
+                {
+                    "date": 1734205488123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n /* Default login form styling */\n .card-body, .auth-card, .login-box .card {\n-    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n+    background-color: rgba(0, 0, 0, 0.5) !important; Semi-transparent black\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n     padding: 20px !important;\n }\n"
+                },
+                {
+                    "date": 1734205505664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n /* Default login form styling */\n .card-body, .auth-card, .login-box .card {\n-    background-color: rgba(0, 0, 0, 0.5) !important; Semi-transparent black\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n     padding: 20px !important;\n }\n"
+                },
+                {
+                    "date": 1734205516788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n /* Default login form styling */\n .card-body, .auth-card, .login-box .card {\n+    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n     padding: 20px !important;\n }\n"
+                },
+                {
+                    "date": 1734205527608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,8 @@\n \n /* Update input fields inside the login card */\n .card-body input.form-control, .auth-card input {\n     background-color: rgba(255, 255, 255, 0.9) !important;\n-    color: #000 !important; /* Black text */\n     border: 1px solid #ccc !important;\n }\n \n /* Submit button styling */\n"
+                },
+                {
+                    "date": 1734205549031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n .card-body, .auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n-    padding: 20px !important;\n }\n \n /* Update input fields inside the login card */\n .card-body input.form-control, .auth-card input {\n"
+                },
+                {
+                    "date": 1734205601228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n \n /* Update input fields inside the login card */\n .card-body input.form-control, .auth-card input {\n     background-color: rgba(255, 255, 255, 0.9) !important;\n+    color: #000 !important; /* Black text */\n     border: 1px solid #ccc !important;\n }\n \n /* Submit button styling */\n@@ -30,9 +31,8 @@\n @media (max-width: 768px) {\n     .card-body, .auth-card, .login-box .card {\n         max-width: 80% !important; /* Reduce the card's width */\n         margin: 0 auto !important; /* Center the card */\n-        padding: 10px !important; /* Reduce padding */\n         border-radius: 8px !important;\n     }\n \n     /* Reduce font size for inputs and buttons */\n"
+                },
+                {
+                    "date": 1734205659013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n .card-body, .auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n+    padding: 20px !important;\n }\n \n /* Update input fields inside the login card */\n .card-body input.form-control, .auth-card input {\n@@ -31,8 +32,9 @@\n @media (max-width: 768px) {\n     .card-body, .auth-card, .login-box .card {\n         max-width: 80% !important; /* Reduce the card's width */\n         margin: 0 auto !important; /* Center the card */\n+        padding: 10px !important; /* Reduce padding */\n         border-radius: 8px !important;\n     }\n \n     /* Reduce font size for inputs and buttons */\n"
+                },
+                {
+                    "date": 1734205686532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n /* Default login form styling */\n .card-body, .auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n-    border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n     padding: 20px !important;\n }\n \n"
+                },
+                {
+                    "date": 1734205724310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,55 +1,36 @@\n-/* Default login form styling */\n-.card-body, .auth-card, .login-box .card {\n+/* Target only the specific login form card */\n+.card-body.auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n+    border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n-    padding: 20px !important;\n }\n \n-/* Update input fields inside the login card */\n-.card-body input.form-control, .auth-card input {\n-    background-color: rgba(255, 255, 255, 0.9) !important;\n-    color: #000 !important; /* Black text */\n-    border: 1px solid #ccc !important;\n-}\n-\n-/* Submit button styling */\n-.card-body button, .auth-card button {\n-    background-color: #007bff !important;\n-    color: #fff !important;\n-    font-weight: bold !important;\n-    border-radius: 5px !important;\n-    padding: 10px !important;\n-    border: none !important;\n-    transition: background-color 0.3s ease !important;\n-}\n-\n-.card-body button:hover, .auth-card button:hover {\n-    background-color: #0056b3 !important;\n-}\n-\n-/* Media query for mobile view (screens less than 768px) */\n+/* Media query for mobile view */\n @media (max-width: 768px) {\n-    .card-body, .auth-card, .login-box .card {\n-        max-width: 80% !important; /* Reduce the card's width */\n+    /* Target the login card only */\n+    .card-body.auth-card, .login-box .card {\n+        max-width: 75% !important; /* Narrower card */\n         margin: 0 auto !important; /* Center the card */\n-        padding: 10px !important; /* Reduce padding */\n+        padding: 10px !important; /* Smaller padding */\n         border-radius: 8px !important;\n     }\n \n-    /* Reduce font size for inputs and buttons */\n-    .card-body input.form-control, .auth-card input {\n+    /* Smaller input fields */\n+    .card-body.auth-card input.form-control, .login-box .card input {\n         font-size: 14px !important;\n         padding: 8px !important;\n     }\n \n-    .card-body button, .auth-card button {\n+    /* Smaller buttons */\n+    .card-body.auth-card button, .login-box .card button {\n         font-size: 14px !important;\n         padding: 8px !important;\n     }\n }\n \n \n+\n /* Add the video as a full-screen background */\n #background-video {\n     position: fixed;\n     top: 0;\n"
+                },
+                {
+                    "date": 1734205748698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n .card-body.auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n+    padding: 20px !important;\n }\n \n /* Media query for mobile view */\n @media (max-width: 768px) {\n"
+                },
+                {
+                    "date": 1734205771469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,30 +1,50 @@\n-/* Target only the specific login form card */\n-.card-body.auth-card, .login-box .card {\n+/* Default login form styling */\n+.card-body, .auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n     padding: 20px !important;\n }\n \n-/* Media query for mobile view */\n+/* Update input fields inside the login card */\n+.card-body input.form-control, .auth-card input {\n+    background-color: rgba(255, 255, 255, 0.9) !important;\n+    color: #000 !important; /* Black text */\n+    border: 1px solid #ccc !important;\n+}\n+\n+/* Submit button styling */\n+.card-body button, .auth-card button {\n+    background-color: #007bff !important;\n+    color: #fff !important;\n+    font-weight: bold !important;\n+    border-radius: 5px !important;\n+    padding: 10px !important;\n+    border: none !important;\n+    transition: background-color 0.3s ease !important;\n+}\n+\n+.card-body button:hover, .auth-card button:hover {\n+    background-color: #0056b3 !important;\n+}\n+\n+/* Media query for mobile view (screens less than 768px) */\n @media (max-width: 768px) {\n-    /* Target the login card only */\n-    .card-body.auth-card, .login-box .card {\n-        max-width: 75% !important; /* Narrower card */\n+    .card-body, .auth-card, .login-box .card {\n+        max-width: 80% !important; /* Reduce the card's width */\n         margin: 0 auto !important; /* Center the card */\n-        padding: 10px !important; /* Smaller padding */\n+        padding: 10px !important; /* Reduce padding */\n         border-radius: 8px !important;\n     }\n \n-    /* Smaller input fields */\n-    .card-body.auth-card input.form-control, .login-box .card input {\n+    /* Reduce font size for inputs and buttons */\n+    .card-body input.form-control, .auth-card input {\n         font-size: 14px !important;\n         padding: 8px !important;\n     }\n \n-    /* Smaller buttons */\n-    .card-body.auth-card button, .login-box .card button {\n+    .card-body button, .auth-card button {\n         font-size: 14px !important;\n         padding: 8px !important;\n     }\n }\n"
+                },
+                {
+                    "date": 1734205784501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,8 @@\n \n     /* Reduce font size for inputs and buttons */\n     .card-body input.form-control, .auth-card input {\n         font-size: 14px !important;\n-        padding: 8px !important;\n     }\n \n     .card-body button, .auth-card button {\n         font-size: 14px !important;\n"
+                },
+                {
+                    "date": 1734205790798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n .card-body, .auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n-    padding: 20px !important;\n }\n \n /* Update input fields inside the login card */\n .card-body input.form-control, .auth-card input {\n@@ -39,8 +38,9 @@\n \n     /* Reduce font size for inputs and buttons */\n     .card-body input.form-control, .auth-card input {\n         font-size: 14px !important;\n+        padding: 8px !important;\n     }\n \n     .card-body button, .auth-card button {\n         font-size: 14px !important;\n"
+                },
+                {
+                    "date": 1734205826808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,8 @@\n @media (max-width: 768px) {\n     .card-body, .auth-card, .login-box .card {\n         max-width: 80% !important; /* Reduce the card's width */\n         margin: 0 auto !important; /* Center the card */\n-        padding: 10px !important; /* Reduce padding */\n         border-radius: 8px !important;\n     }\n \n     /* Reduce font size for inputs and buttons */\n"
+                },
+                {
+                    "date": 1734205882620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,48 +1,30 @@\n-/* Default login form styling */\n-.card-body, .auth-card, .login-box .card {\n+/* Target only the specific login form card */\n+.card-body.auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n+    padding: 20px !important;\n }\n \n-/* Update input fields inside the login card */\n-.card-body input.form-control, .auth-card input {\n-    background-color: rgba(255, 255, 255, 0.9) !important;\n-    color: #000 !important; /* Black text */\n-    border: 1px solid #ccc !important;\n-}\n-\n-/* Submit button styling */\n-.card-body button, .auth-card button {\n-    background-color: #007bff !important;\n-    color: #fff !important;\n-    font-weight: bold !important;\n-    border-radius: 5px !important;\n-    padding: 10px !important;\n-    border: none !important;\n-    transition: background-color 0.3s ease !important;\n-}\n-\n-.card-body button:hover, .auth-card button:hover {\n-    background-color: #0056b3 !important;\n-}\n-\n-/* Media query for mobile view (screens less than 768px) */\n+/* Media query for mobile view */\n @media (max-width: 768px) {\n-    .card-body, .auth-card, .login-box .card {\n-        max-width: 80% !important; /* Reduce the card's width */\n+    /* Target the login card only */\n+    .card-body.auth-card, .login-box .card {\n+        max-width: 75% !important; /* Narrower card */\n         margin: 0 auto !important; /* Center the card */\n+        padding: 10px !important; /* Smaller padding */\n         border-radius: 8px !important;\n     }\n \n-    /* Reduce font size for inputs and buttons */\n-    .card-body input.form-control, .auth-card input {\n+    /* Smaller input fields */\n+    .card-body.auth-card input.form-control, .login-box .card input {\n         font-size: 14px !important;\n         padding: 8px !important;\n     }\n \n-    .card-body button, .auth-card button {\n+    /* Smaller buttons */\n+    .card-body.auth-card button, .login-box .card button {\n         font-size: 14px !important;\n         padding: 8px !important;\n     }\n }\n"
+                },
+                {
+                    "date": 1734205905107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n /* Target only the specific login form card */\n .card-body.auth-card, .login-box .card {\n-    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n+    background-color: rgba(1, 1, 1, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n     padding: 20px !important;\n }\n"
+                },
+                {
+                    "date": 1734205928861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n /* Target only the specific login form card */\n .card-body.auth-card, .login-box .card {\n-    background-color: rgba(1, 1, 1, 0.5) !important; /* Semi-transparent black */\n+    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n     padding: 20px !important;\n }\n"
+                },
+                {
+                    "date": 1734205951996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n .card-body.auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n-    padding: 20px !important;\n+    padding: 200px !important;\n }\n \n /* Media query for mobile view */\n @media (max-width: 768px) {\n"
+                },
+                {
+                    "date": 1734205958187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n .card-body.auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n-    padding: 200px !important;\n+    padding: 0px !important;\n }\n \n /* Media query for mobile view */\n @media (max-width: 768px) {\n"
+                },
+                {
+                    "date": 1734205980626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n .card-body.auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n-    padding: 0px !important;\n+    padding: 200px !important;\n }\n \n /* Media query for mobile view */\n @media (max-width: 768px) {\n"
+                },
+                {
+                    "date": 1734206021983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n .card-body.auth-card, .login-box .card {\n     background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black */\n     border-radius: 10px !important;\n     color: #ffffff !important; /* White text */\n-    padding: 200px !important;\n+    padding: 0px !important;\n }\n \n /* Media query for mobile view */\n @media (max-width: 768px) {\n"
+                },
+                {
+                    "date": 1734206040755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     /* Target the login card only */\n     .card-body.auth-card, .login-box .card {\n         max-width: 75% !important; /* Narrower card */\n         margin: 0 auto !important; /* Center the card */\n-        padding: 10px !important; /* Smaller padding */\n+        padding: 0px !important; /* Smaller padding */\n         border-radius: 8px !important;\n     }\n \n     /* Smaller input fields */\n"
+                },
+                {
+                    "date": 1734211787349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,8 @@\n \n \n \n img {\n-    width: 100px !important;\n-    height: auto !important;\n+\n     border-radius: 50%; /* Ensure the image is circular */\n \n }\n"
+                },
+                {
+                    "date": 1734211850599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,8 +49,9 @@\n \n \n \n img {\n-\n+    /* width: 100px !important; */\n+    height: auto !important;\n     border-radius: 50%; /* Ensure the image is circular */\n \n }\n"
+                },
+                {
+                    "date": 1734211902925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,8 @@\n \n \n \n img {\n-    /* width: 100px !important; */\n-    height: auto !important;\n+\n     border-radius: 50%; /* Ensure the image is circular */\n \n }\n"
+                }
+            ],
+            "date": 1733818144603,
+            "name": "Commit-0",
+            "content": "/* Custom CSS for Jazzmin logos */\n.custom-logo-size {\n    max-width: 200px; /* Adjust the width as needed */\n    height: auto;     /* Keeps the aspect ratio */\n}\n"
+        }
+    ]
+}

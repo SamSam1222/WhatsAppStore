@@ -1,0 +1,36 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Add the video as a full-screen background */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Ensure login form and content appear above the video */
+.card {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.85); /* Add transparency for readability */
+    border-radius: 10px;
+}
+
+
+
+
+img {
+    width: 300px !important;
+    height: auto !important;
+    border-radius: 50%; /* Ensure the image is circular */
+
+}

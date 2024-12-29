@@ -1,0 +1,130 @@
+{
+    "sourceFile": "VerifyPro/templates/IDGenie/login.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 28,
+            "patches": [
+                {
+                    "date": 1734894974248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734895058728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n <head>\n   <meta charset=\"UTF-8\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>Glassmorphism Login Form | CodingNepal</title>\n-  <link rel=\"stylesheet\" href=\"style.css\">\n+  <link rel=\"stylesheet\" href=\"loginstyle.css\">\n </head>\n <body>\n   <div class=\"wrapper\">\n     <form action=\"#\">\n"
+                },
+                {
+                    "date": 1734895133491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,10 @@\n   <meta charset=\"UTF-8\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>Glassmorphism Login Form | CodingNepal</title>\n   <link rel=\"stylesheet\" href=\"loginstyle.css\">\n+  <link href=\"{% static 'css/loginstyle.css' %}\" rel=\"stylesheet\">\n+\n </head>\n <body>\n   <div class=\"wrapper\">\n     <form action=\"#\">\n"
+                },
+                {
+                    "date": 1734895146189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+{% load static %}\n+\n <!DOCTYPE html>\n <!-- Coding By CodingNepal - www.codingnepalweb.com -->\n <html>\n <head>\n"
+                },
+                {
+                    "date": 1734895169818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n <head>\n   <meta charset=\"UTF-8\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>Glassmorphism Login Form | CodingNepal</title>\n-  <link rel=\"stylesheet\" href=\"loginstyle.css\">\n   <link href=\"{% static 'css/loginstyle.css' %}\" rel=\"stylesheet\">\n \n </head>\n <body>\n"
+                },
+                {
+                    "date": 1734895567478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n <head>\n   <meta charset=\"UTF-8\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>Glassmorphism Login Form | CodingNepal</title>\n+  <link rel=\"stylesheet\" href=\"loginstyle.css\">\n   <link href=\"{% static 'css/loginstyle.css' %}\" rel=\"stylesheet\">\n \n </head>\n <body>\n"
+                },
+                {
+                    "date": 1734895574600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,8 @@\n   <meta charset=\"UTF-8\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>Glassmorphism Login Form | CodingNepal</title>\n   <link rel=\"stylesheet\" href=\"loginstyle.css\">\n-  <link href=\"{% static 'css/loginstyle.css' %}\" rel=\"stylesheet\">\n \n </head>\n <body>\n   <div class=\"wrapper\">\n"
+                },
+                {
+                    "date": 1734895585394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,13 @@\n-{% load static %}\n-\n <!DOCTYPE html>\n <!-- Coding By CodingNepal - www.codingnepalweb.com -->\n <html>\n <head>\n   <meta charset=\"UTF-8\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>Glassmorphism Login Form | CodingNepal</title>\n   <link rel=\"stylesheet\" href=\"loginstyle.css\">\n+  <link href=\"{% static 'css/loginstyle.css' %}\" rel=\"stylesheet\">\n \n </head>\n <body>\n   <div class=\"wrapper\">\n"
+                },
+                {
+                    "date": 1734895604587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n+{% load static %}\n+\n <!DOCTYPE html>\n <!-- Coding By CodingNepal - www.codingnepalweb.com -->\n <html>\n <head>\n   <meta charset=\"UTF-8\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>Glassmorphism Login Form | CodingNepal</title>\n-  <link rel=\"stylesheet\" href=\"loginstyle.css\">\n   <link href=\"{% static 'css/loginstyle.css' %}\" rel=\"stylesheet\">\n \n </head>\n <body>\n"
+                },
+                {
+                    "date": 1734895921431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,39 +1,34 @@\n-{% load static %}\n+{% extends \"login_base.html\" %}\n \n-<!DOCTYPE html>\n-<!-- Coding By CodingNepal - www.codingnepalweb.com -->\n-<html>\n-<head>\n-  <meta charset=\"UTF-8\">\n-  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n-  <title>Glassmorphism Login Form | CodingNepal</title>\n-  <link href=\"{% static 'css/loginstyle.css' %}\" rel=\"stylesheet\">\n-\n-</head>\n-<body>\n+{% block content %}\n   <div class=\"wrapper\">\n-    <form action=\"#\">\n+    <form method=\"POST\">\n+      {% csrf_token %}\n       <h2>Login</h2>\n-        <div class=\"input-field\">\n-        <input type=\"text\" required>\n+\n+      <div class=\"input-field\">\n+        <input type=\"text\" name=\"username\" required>\n         <label>Enter your email</label>\n       </div>\n+\n       <div class=\"input-field\">\n-        <input type=\"password\" required>\n+        <input type=\"password\" name=\"password\" required>\n         <label>Enter your password</label>\n       </div>\n+\n       <div class=\"forget\">\n         <label for=\"remember\">\n-          <input type=\"checkbox\" id=\"remember\">\n+          <input type=\"checkbox\" id=\"remember\" name=\"remember\">\n           <p>Remember me</p>\n\\ No newline at end of file\n         </label>\n         <a href=\"#\">Forgot password?</a>\n       </div>\n+\n       <button type=\"submit\">Log In</button>\n+\n       <div class=\"register\">\n-        <p>Don't have an account? <a href=\"#\">Register</a></p>\n+        <p>Don't have an account? <a href=\"{% url 'signup' %}\">Register</a></p>\n       </div>\n     </form>\n   </div>\n-</body>\n-</html>\n+{% endblock %}\n"
+                },
+                {
+                    "date": 1734896059019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,5 +30,5 @@\n         <p>Don't have an account? <a href=\"{% url 'signup' %}\">Register</a></p>\n       </div>\n     </form>\n   </div>\n-{% endblock %}\n\\ No newline at end of file\n+{% endblock %}\n"
+                },
+                {
+                    "date": 1734896091564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-{% extends \"login_base.html\" %}\n+{% extends \"base.html\" %}\n \n {% block content %}\n   <div class=\"wrapper\">\n     <form method=\"POST\">\n"
+                },
+                {
+                    "date": 1734896105250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-{% extends \"base.html\" %}\n+{% extends \"login_base.html\" %}\n \n {% block content %}\n   <div class=\"wrapper\">\n     <form method=\"POST\">\n"
+                },
+                {
+                    "date": 1734896223668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-{% extends \"login_base.html\" %}\n+{% extends \"IDGenie/login_base.html\" %}\n \n {% block content %}\n   <div class=\"wrapper\">\n     <form method=\"POST\">\n"
+                },
+                {
+                    "date": 1734896266247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n \n       <button type=\"submit\">Log In</button>\n \n       <div class=\"register\">\n-        <p>Don't have an account? <a href=\"{% url 'signup' %}\">Register</a></p>\n+        <p>Don't have an account? <a href=\"\">Register</a></p>\n       </div>\n     </form>\n   </div>\n {% endblock %}\n"
+                },
+                {
+                    "date": 1734899143304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,34 +1,56 @@\n {% extends \"IDGenie/login_base.html\" %}\n \n {% block content %}\n-  <div class=\"wrapper\">\n-    <form method=\"POST\">\n-      {% csrf_token %}\n-      <h2>Login</h2>\n-\n-      <div class=\"input-field\">\n-        <input type=\"text\" name=\"username\" required>\n-        <label>Enter your email</label>\n-      </div>\n-\n-      <div class=\"input-field\">\n-        <input type=\"password\" name=\"password\" required>\n-        <label>Enter your password</label>\n-      </div>\n-\n-      <div class=\"forget\">\n-        <label for=\"remember\">\n-          <input type=\"checkbox\" id=\"remember\" name=\"remember\">\n-          <p>Remember me</p>\n-        </label>\n-        <a href=\"#\">Forgot password?</a>\n-      </div>\n-\n-      <button type=\"submit\">Log In</button>\n-\n-      <div class=\"register\">\n-        <p>Don't have an account? <a href=\"\">Register</a></p>\n-      </div>\n-    </form>\n-  </div>\n+<div class=\"bg-img\">\n+    <div class=\"content\">\n+       <header>Login Form</header>\n+       <form action=\"#\">\n+          <div class=\"field\">\n+             <span class=\"fa fa-user\"></span>\n+             <input type=\"text\" required placeholder=\"Email or Phone\">\n+          </div>\n+          <div class=\"field space\">\n+             <span class=\"fa fa-lock\"></span>\n+             <input type=\"password\" class=\"pass-key\" required placeholder=\"Password\">\n+             <span class=\"show\">SHOW</span>\n+          </div>\n+          <div class=\"pass\">\n+             <a href=\"#\">Forgot Password?</a>\n+          </div>\n+          <div class=\"field\">\n+             <input type=\"submit\" value=\"LOGIN\">\n+          </div>\n+       </form>\n+       <div class=\"login\">\n+          Or login with\n+       </div>\n+       <div class=\"links\">\n+          <div class=\"facebook\">\n+             <i class=\"fab fa-facebook-f\"><span>Facebook</span></i>\n+          </div>\n+          <div class=\"instagram\">\n+             <i class=\"fab fa-instagram\"><span>Instagram</span></i>\n+          </div>\n+       </div>\n+       <div class=\"signup\">\n+          Don't have account?\n+          <a href=\"#\">Signup Now</a>\n+       </div>\n+    </div>\n+ </div>\n+ <script>\n+    const pass_field = document.querySelector('.pass-key');\n+    const showBtn = document.querySelector('.show');\n+    showBtn.addEventListener('click', function(){\n+     if(pass_field.type === \"password\"){\n+       pass_field.type = \"text\";\n+       showBtn.textContent = \"HIDE\";\n+       showBtn.style.color = \"#3498db\";\n+     }else{\n+       pass_field.type = \"password\";\n+       showBtn.textContent = \"SHOW\";\n+       showBtn.style.color = \"#222\";\n+     }\n+    });\n+ </script>\n {% endblock %}\n"
+                },
+                {
+                    "date": 1734899527643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n {% block content %}\n <div class=\"bg-img\">\n     <div class=\"content\">\n        <header>Login Form</header>\n-       <form action=\"#\">\n+       <form action=\"#\">    \n+          {% csrf_token %}\n           <div class=\"field\">\n              <span class=\"fa fa-user\"></span>\n              <input type=\"text\" required placeholder=\"Email or Phone\">\n           </div>\n"
+                },
+                {
+                    "date": 1734900357958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,10 @@\n        <div class=\"links\">\n           <div class=\"facebook\">\n              <i class=\"fab fa-facebook-f\"><span>Facebook</span></i>\n           </div>\n-          <div class=\"instagram\">\n-             <i class=\"fab fa-instagram\"><span>Instagram</span></i>\n+          <div class=\"google\">\n+             <i class=\"fab fa-google\"><span>Google</span></i>\n           </div>\n        </div>\n        <div class=\"signup\">\n           Don't have account?\n"
+                },
+                {
+                    "date": 1734900729330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,15 +25,16 @@\n        <div class=\"login\">\n           Or login with\n        </div>\n        <div class=\"links\">\n-          <div class=\"facebook\">\n-             <i class=\"fab fa-facebook-f\"><span>Facebook</span></i>\n-          </div>\n-          <div class=\"google\">\n-             <i class=\"fab fa-google\"><span>Google</span></i>\n-          </div>\n-       </div>\n+        <div class=\"facebook\">\n+          <i class=\"fab fa-facebook-f\"></i><span>Facebook</span>\n+        </div>\n+        <div class=\"google\">\n+          <i class=\"fab fa-google\"></i><span>Google</span>\n+        </div>\n+      </div>\n+      \n        <div class=\"signup\">\n           Don't have account?\n           <a href=\"#\">Signup Now</a>\n        </div>\n"
+                },
+                {
+                    "date": 1734900745612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,16 +25,15 @@\n        <div class=\"login\">\n           Or login with\n        </div>\n        <div class=\"links\">\n-        <div class=\"facebook\">\n-          <i class=\"fab fa-facebook-f\"></i><span>Facebook</span>\n-        </div>\n-        <div class=\"google\">\n-          <i class=\"fab fa-google\"></i><span>Google</span>\n-        </div>\n-      </div>\n-      \n+          <div class=\"facebook\">\n+             <i class=\"fab fa-facebook-f\"><span>Facebook</span></i>\n+          </div>\n+          <div class=\"google\">\n+             <i class=\"fab fa-google\"><span>Google</span></i>\n+          </div>\n+       </div>\n        <div class=\"signup\">\n           Don't have account?\n           <a href=\"#\">Signup Now</a>\n        </div>\n"
+                },
+                {
+                    "date": 1734900758041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n           <div class=\"facebook\">\n              <i class=\"fab fa-facebook-f\"><span>Facebook</span></i>\n           </div>\n           <div class=\"google\">\n-             <i class=\"fab fa-google\"><span>Google</span></i>\n+             <i class=\"fab fa-google-g\"><span>Google</span></i>\n           </div>\n        </div>\n        <div class=\"signup\">\n           Don't have account?\n"
+                },
+                {
+                    "date": 1734900763314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n           <div class=\"facebook\">\n              <i class=\"fab fa-facebook-f\"><span>Facebook</span></i>\n           </div>\n           <div class=\"google\">\n-             <i class=\"fab fa-google-g\"><span>Google</span></i>\n+             <i class=\"fab fa-google\"><span>Google</span></i>\n           </div>\n        </div>\n        <div class=\"signup\">\n           Don't have account?\n"
+                },
+                {
+                    "date": 1734902535831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,21 +3,23 @@\n {% block content %}\n <div class=\"bg-img\">\n     <div class=\"content\">\n        <header>Login Form</header>\n-       <form action=\"#\">    \n+       <form method=\"POST\" action=\"{% url 'login' %}\">\n           {% csrf_token %}\n+          \n+          <!-- Displaying the form fields dynamically -->\n           <div class=\"field\">\n              <span class=\"fa fa-user\"></span>\n-             <input type=\"text\" required placeholder=\"Email or Phone\">\n+             {{ form.username }}\n           </div>\n           <div class=\"field space\">\n              <span class=\"fa fa-lock\"></span>\n-             <input type=\"password\" class=\"pass-key\" required placeholder=\"Password\">\n+             {{ form.password }}\n              <span class=\"show\">SHOW</span>\n           </div>\n           <div class=\"pass\">\n-             <a href=\"#\">Forgot Password?</a>\n+             <a href=\"{% url 'password_reset' %}\">Forgot Password?</a>\n           </div>\n           <div class=\"field\">\n              <input type=\"submit\" value=\"LOGIN\">\n           </div>\n@@ -33,25 +35,25 @@\n              <i class=\"fab fa-google\"><span>Google</span></i>\n           </div>\n        </div>\n        <div class=\"signup\">\n-          Don't have account?\n-          <a href=\"#\">Signup Now</a>\n+          Don't have an account?\n+          <a href=\"{% url 'signup' %}\">Signup Now</a>\n        </div>\n     </div>\n  </div>\n  <script>\n     const pass_field = document.querySelector('.pass-key');\n     const showBtn = document.querySelector('.show');\n     showBtn.addEventListener('click', function(){\n-     if(pass_field.type === \"password\"){\n-       pass_field.type = \"text\";\n-       showBtn.textContent = \"HIDE\";\n-       showBtn.style.color = \"#3498db\";\n-     }else{\n-       pass_field.type = \"password\";\n-       showBtn.textContent = \"SHOW\";\n-       showBtn.style.color = \"#222\";\n-     }\n+       if(pass_field.type === \"password\"){\n+           pass_field.type = \"text\";\n+           showBtn.textContent = \"HIDE\";\n+           showBtn.style.color = \"#3498db\";\n+       }else{\n+           pass_field.type = \"password\";\n+           showBtn.textContent = \"SHOW\";\n+           showBtn.style.color = \"#222\";\n+       }\n     });\n  </script>\n {% endblock %}\n"
+                },
+                {
+                    "date": 1734902553279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n {% block content %}\n <div class=\"bg-img\">\n     <div class=\"content\">\n        <header>Login Form</header>\n-       <form method=\"POST\" action=\"{% url 'login' %}\">\n+       <form method=\"POST\" action=\"{% url 'IDGenie/login' %}\">\n           {% csrf_token %}\n           \n           <!-- Displaying the form fields dynamically -->\n           <div class=\"field\">\n"
+                },
+                {
+                    "date": 1734902569273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n {% block content %}\n <div class=\"bg-img\">\n     <div class=\"content\">\n        <header>Login Form</header>\n-       <form method=\"POST\" action=\"{% url 'IDGenie/login' %}\">\n+       <form method=\"POST\" action=\"{% url 'login' %}\">\n           {% csrf_token %}\n           \n           <!-- Displaying the form fields dynamically -->\n           <div class=\"field\">\n"
+                },
+                {
+                    "date": 1734902743300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n {% block content %}\n <div class=\"bg-img\">\n     <div class=\"content\">\n        <header>Login Form</header>\n-       <form method=\"POST\" action=\"{% url 'login' %}\">\n+       <form method=\"POST\" action=\"{% url 'index' %}\">\n           {% csrf_token %}\n           \n           <!-- Displaying the form fields dynamically -->\n           <div class=\"field\">\n"
+                },
+                {
+                    "date": 1734902765905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n {% block content %}\n <div class=\"bg-img\">\n     <div class=\"content\">\n        <header>Login Form</header>\n-       <form method=\"POST\" action=\"{% url 'index' %}\">\n+       <form method=\"POST\" action=\"\">\n           {% csrf_token %}\n           \n           <!-- Displaying the form fields dynamically -->\n           <div class=\"field\">\n"
+                },
+                {
+                    "date": 1734902782250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n              {{ form.password }}\n              <span class=\"show\">SHOW</span>\n           </div>\n           <div class=\"pass\">\n-             <a href=\"{% url 'password_reset' %}\">Forgot Password?</a>\n+             <a href=\"\">Forgot Password?</a>\n           </div>\n           <div class=\"field\">\n              <input type=\"submit\" value=\"LOGIN\">\n           </div>\n"
+                },
+                {
+                    "date": 1734902793368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n           </div>\n        </div>\n        <div class=\"signup\">\n           Don't have an account?\n-          <a href=\"{% url 'signup' %}\">Signup Now</a>\n+          <a href=\"\">Signup Now</a>\n        </div>\n     </div>\n  </div>\n  <script>\n"
+                }
+            ],
+            "date": 1734894974248,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<!-- Coding By CodingNepal - www.codingnepalweb.com -->\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Glassmorphism Login Form | CodingNepal</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  <div class=\"wrapper\">\n    <form action=\"#\">\n      <h2>Login</h2>\n        <div class=\"input-field\">\n        <input type=\"text\" required>\n        <label>Enter your email</label>\n      </div>\n      <div class=\"input-field\">\n        <input type=\"password\" required>\n        <label>Enter your password</label>\n      </div>\n      <div class=\"forget\">\n        <label for=\"remember\">\n          <input type=\"checkbox\" id=\"remember\">\n          <p>Remember me</p>\n        </label>\n        <a href=\"#\">Forgot password?</a>\n      </div>\n      <button type=\"submit\">Log In</button>\n      <div class=\"register\">\n        <p>Don't have an account? <a href=\"#\">Register</a></p>\n      </div>\n    </form>\n  </div>\n</body>\n</html>"
+        }
+    ]
+}

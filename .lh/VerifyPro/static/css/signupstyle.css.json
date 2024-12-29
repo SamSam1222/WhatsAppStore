@@ -1,0 +1,54 @@
+{
+    "sourceFile": "VerifyPro/static/css/signupstyle.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1734904713696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734905215360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   background: url(\"bg.png\"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);\n }\n ::selection{\n   color: #fff;\n-  background: #d43f8d;\n+  background: #3fd4d1;\n }\n .container{\n   width: 330px;\n   background: #fff;\n"
+                },
+                {
+                    "date": 1734905223746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   background: url(\"bg.png\"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);\n }\n ::selection{\n   color: #fff;\n-  background: #3fd4d1;\n+  background: #d43f8d;\n }\n .container{\n   width: 330px;\n   background: #fff;\n"
+                },
+                {
+                    "date": 1734905256834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   align-items: center;\n   justify-content: center;\n   min-height: 100vh;\n   overflow: hidden;\n-  background: url(\"bg.png\"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);\n+  background: url(\"/static/img/wallpaperflare.com_wallpaper.jpg\"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);\n }\n ::selection{\n   color: #fff;\n   background: #d43f8d;\n"
+                },
+                {
+                    "date": 1734905295291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n   align-items: center;\n   justify-content: center;\n   min-height: 100vh;\n   overflow: hidden;\n-  background: url(\"/static/img/wallpaperflare.com_wallpaper.jpg\"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);\n+  background: url(\"/static/img/wallpaperflare.com_wallpaper (1).jpg\"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);\n }\n ::selection{\n   color: #fff;\n   background: #d43f8d;\n"
+                },
+                {
+                    "date": 1734905315862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,10 @@\n }\n body{\n   display: flex;\n   align-items: center;\n+  background-size: cover;\n+\n   justify-content: center;\n   min-height: 100vh;\n   overflow: hidden;\n   background: url(\"/static/img/wallpaperflare.com_wallpaper (1).jpg\"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);\n"
+                },
+                {
+                    "date": 1734905321289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n   font-family: 'Poppins', sans-serif;\n }\n body{\n   display: flex;\n-  align-items: center;\n   background-size: cover;\n \n   justify-content: center;\n   min-height: 100vh;\n"
+                },
+                {
+                    "date": 1734905330190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,9 @@\n   font-family: 'Poppins', sans-serif;\n }\n body{\n   display: flex;\n-  background-size: cover;\n-\n+  align-items: center;\n   justify-content: center;\n   min-height: 100vh;\n   overflow: hidden;\n   background: url(\"/static/img/wallpaperflare.com_wallpaper (1).jpg\"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);\n"
+                },
+                {
+                    "date": 1734905490768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,10 @@\n   justify-content: center;\n   min-height: 100vh;\n   overflow: hidden;\n   background: url(\"/static/img/wallpaperflare.com_wallpaper (1).jpg\"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);\n+  background-position: center;\n+\n }\n ::selection{\n   color: #fff;\n   background: #d43f8d;\n"
+                },
+                {
+                    "date": 1734905626106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,18 +4,18 @@\n   padding: 0;\n   outline: none;\n   font-family: 'Poppins', sans-serif;\n }\n-body{\n+body {\n   display: flex;\n   align-items: center;\n   justify-content: center;\n   min-height: 100vh;\n   overflow: hidden;\n-  background: url(\"/static/img/wallpaperflare.com_wallpaper (1).jpg\"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);\n-  background-position: center;\n+  background: url(\"/static/img/wallpaperflare.com_wallpaper (1).jpg\") no-repeat center center, -webkit-linear-gradient(bottom, #0250c5, #d43f8d);\n+  background-size: cover;  /* Ensures the image covers the entire viewport */\n+}\n \n-}\n ::selection{\n   color: #fff;\n   background: #d43f8d;\n }\n"
+                }
+            ],
+            "date": 1734904713696,
+            "name": "Commit-0",
+            "content": "@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');\n*{\n  margin: 0;\n  padding: 0;\n  outline: none;\n  font-family: 'Poppins', sans-serif;\n}\nbody{\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  min-height: 100vh;\n  overflow: hidden;\n  background: url(\"bg.png\"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);\n}\n::selection{\n  color: #fff;\n  background: #d43f8d;\n}\n.container{\n  width: 330px;\n  background: #fff;\n  text-align: center;\n  border-radius: 5px;\n  padding: 50px 35px 10px 35px;\n}\n.container header{\n  font-size: 35px;\n  font-weight: 600;\n  margin: 0 0 30px 0;\n}\n.container .form-outer{\n  width: 100%;\n  overflow: hidden;\n}\n.container .form-outer form{\n  display: flex;\n  width: 400%;\n}\n.form-outer form .page{\n  width: 25%;\n  transition: margin-left 0.3s ease-in-out;\n}\n.form-outer form .page .title{\n  text-align: left;\n  font-size: 25px;\n  font-weight: 500;\n}\n.form-outer form .page .field{\n  width: 330px;\n  height: 45px;\n  margin: 45px 0;\n  display: flex;\n  position: relative;\n}\nform .page .field .label{\n  position: absolute;\n  top: -30px;\n  font-weight: 500;\n}\nform .page .field input{\n  height: 100%;\n  width: 100%;\n  border: 1px solid lightgrey;\n  border-radius: 5px;\n  padding-left: 15px;\n  font-size: 18px;\n}\nform .page .field select{\n  width: 100%;\n  padding-left: 10px;\n  font-size: 17px;\n  font-weight: 500;\n}\nform .page .field button{\n  width: 100%;\n  height: calc(100% + 5px);\n  border: none;\n  background: #d33f8d;\n  margin-top: -20px;\n  border-radius: 5px;\n  color: #fff;\n  cursor: pointer;\n  font-size: 18px;\n  font-weight: 500;\n  letter-spacing: 1px;\n  text-transform: uppercase;\n  transition: 0.5s ease;\n}\nform .page .field button:hover{\n  background: #000;\n}\nform .page .btns button{\n  margin-top: -20px!important;\n}\nform .page .btns button.prev{\n  margin-right: 3px;\n  font-size: 17px;\n}\nform .page .btns button.next{\n  margin-left: 3px;\n}\n.container .progress-bar{\n  display: flex;\n  margin: 40px 0;\n  user-select: none;\n}\n.container .progress-bar .step{\n  text-align: center;\n  width: 100%;\n  position: relative;\n}\n.container .progress-bar .step p{\n  font-weight: 500;\n  font-size: 18px;\n  color: #000;\n  margin-bottom: 8px;\n}\n.progress-bar .step .bullet{\n  height: 25px;\n  width: 25px;\n  border: 2px solid #000;\n  display: inline-block;\n  border-radius: 50%;\n  position: relative;\n  transition: 0.2s;\n  font-weight: 500;\n  font-size: 17px;\n  line-height: 25px;\n}\n.progress-bar .step .bullet.active{\n  border-color: #d43f8d;\n  background: #d43f8d;\n}\n.progress-bar .step .bullet span{\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.progress-bar .step .bullet.active span{\n  display: none;\n}\n.progress-bar .step .bullet:before,\n.progress-bar .step .bullet:after{\n  position: absolute;\n  content: '';\n  bottom: 11px;\n  right: -51px;\n  height: 3px;\n  width: 44px;\n  background: #262626;\n}\n.progress-bar .step .bullet.active:after{\n  background: #d43f8d;\n  transform: scaleX(0);\n  transform-origin: left;\n  animation: animate 0.3s linear forwards;\n}\n@keyframes animate {\n  100%{\n    transform: scaleX(1);\n  }\n}\n.progress-bar .step:last-child .bullet:before,\n.progress-bar .step:last-child .bullet:after{\n  display: none;\n}\n.progress-bar .step p.active{\n  color: #d43f8d;\n  transition: 0.2s linear;\n}\n.progress-bar .step .check{\n  position: absolute;\n  left: 50%;\n  top: 70%;\n  font-size: 15px;\n  transform: translate(-50%, -50%);\n  display: none;\n}\n.progress-bar .step .check.active{\n  display: block;\n  color: #fff;\n}"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "VerifyPro/IDGenie/apps.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1734816400581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1734816400581,
+            "name": "Commit-0",
+            "content": "from django.apps import AppConfig\n\n\nclass IdgenieConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'IDGenie'\n    \n    def ready(self):\n        import IDGenie.signals  # Import the signals file to register the signals\n"
+        }
+    ]
+}

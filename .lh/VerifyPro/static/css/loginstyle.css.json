@@ -1,0 +1,210 @@
+{
+    "sourceFile": "VerifyPro/static/css/loginstyle.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 48,
+            "patches": [
+                {
+                    "date": 1734895032478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734895387102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,137 +0,0 @@\n-@import url(\"https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap\");\n-\n-* {\n-  margin: 0;\n-  padding: 0;\n-  box-sizing: border-box;\n-  font-family: \"Open Sans\", sans-serif;\n-}\n-\n-body {\n-  display: flex;\n-  align-items: center;\n-  justify-content: center;\n-  min-height: 100vh;\n-  width: 100%;\n-  padding: 0 10px;\n-}\n-\n-body::before {\n-  content: \"\";\n-  position: absolute;\n-  width: 100%;\n-  height: 100%;\n-  background: url(\"https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg\"), #000;\n-  background-position: center;\n-  background-size: cover;\n-}\n-\n-.wrapper {\n-  width: 400px;\n-  border-radius: 8px;\n-  padding: 30px;\n-  text-align: center;\n-  border: 1px solid rgba(255, 255, 255, 0.5);\n-  backdrop-filter: blur(8px);\n-  -webkit-backdrop-filter: blur(8px);\n-}\n-\n-form {\n-  display: flex;\n-  flex-direction: column;\n-}\n-\n-h2 {\n-  font-size: 2rem;\n-  margin-bottom: 20px;\n-  color: #fff;\n-}\n-\n-.input-field {\n-  position: relative;\n-  border-bottom: 2px solid #ccc;\n-  margin: 15px 0;\n-}\n-\n-.input-field label {\n-  position: absolute;\n-  top: 50%;\n-  left: 0;\n-  transform: translateY(-50%);\n-  color: #fff;\n-  font-size: 16px;\n-  pointer-events: none;\n-  transition: 0.15s ease;\n-}\n-\n-.input-field input {\n-  width: 100%;\n-  height: 40px;\n-  background: transparent;\n-  border: none;\n-  outline: none;\n-  font-size: 16px;\n-  color: #fff;\n-}\n-\n-.input-field input:focus~label,\n-.input-field input:valid~label {\n-  font-size: 0.8rem;\n-  top: 10px;\n-  transform: translateY(-120%);\n-}\n-\n-.forget {\n-  display: flex;\n-  align-items: center;\n-  justify-content: space-between;\n-  margin: 25px 0 35px 0;\n-  color: #fff;\n-}\n-\n-#remember {\n-  accent-color: #fff;\n-}\n-\n-.forget label {\n-  display: flex;\n-  align-items: center;\n-}\n-\n-.forget label p {\n-  margin-left: 8px;\n-}\n-\n-.wrapper a {\n-  color: #efefef;\n-  text-decoration: none;\n-}\n-\n-.wrapper a:hover {\n-  text-decoration: underline;\n-}\n-\n-button {\n-  background: #fff;\n-  color: #000;\n-  font-weight: 600;\n-  border: none;\n-  padding: 12px 20px;\n-  cursor: pointer;\n-  border-radius: 3px;\n-  font-size: 16px;\n-  border: 2px solid transparent;\n-  transition: 0.3s ease;\n-}\n-\n-button:hover {\n-  color: #fff;\n-  border-color: #fff;\n-  background: rgba(255, 255, 255, 0.15);\n-}\n-\n-.register {\n-  text-align: center;\n-  margin-top: 30px;\n-  color: #fff;\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734895422795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,137 @@\n+@import url(\"https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap\");\n+\n+* {\n+  margin: 0;\n+  padding: 0;\n+  box-sizing: border-box;\n+  font-family: \"Open Sans\", sans-serif;\n+}\n+\n+body {\n+  display: flex;\n+  align-items: center;\n+  justify-content: center;\n+  min-height: 100vh;\n+  width: 100%;\n+  padding: 0 10px;\n+}\n+\n+body::before {\n+  content: \"\";\n+  position: absolute;\n+  width: 100%;\n+  height: 100%;\n+  background: url(\"https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg\"), #000;\n+  background-position: center;\n+  background-size: cover;\n+}\n+\n+.wrapper {\n+  width: 400px;\n+  border-radius: 8px;\n+  padding: 30px;\n+  text-align: center;\n+  border: 1px solid rgba(255, 255, 255, 0.5);\n+  backdrop-filter: blur(8px);\n+  -webkit-backdrop-filter: blur(8px);\n+}\n+\n+form {\n+  display: flex;\n+  flex-direction: column;\n+}\n+\n+h2 {\n+  font-size: 2rem;\n+  margin-bottom: 20px;\n+  color: #fff;\n+}\n+\n+.input-field {\n+  position: relative;\n+  border-bottom: 2px solid #ccc;\n+  margin: 15px 0;\n+}\n+\n+.input-field label {\n+  position: absolute;\n+  top: 50%;\n+  left: 0;\n+  transform: translateY(-50%);\n+  color: #fff;\n+  font-size: 16px;\n+  pointer-events: none;\n+  transition: 0.15s ease;\n+}\n+\n+.input-field input {\n+  width: 100%;\n+  height: 40px;\n+  background: transparent;\n+  border: none;\n+  outline: none;\n+  font-size: 16px;\n+  color: #fff;\n+}\n+\n+.input-field input:focus~label,\n+.input-field input:valid~label {\n+  font-size: 0.8rem;\n+  top: 10px;\n+  transform: translateY(-120%);\n+}\n+\n+.forget {\n+  display: flex;\n+  align-items: center;\n+  justify-content: space-between;\n+  margin: 25px 0 35px 0;\n+  color: #fff;\n+}\n+\n+#remember {\n+  accent-color: #fff;\n+}\n+\n+.forget label {\n+  display: flex;\n+  align-items: center;\n+}\n+\n+.forget label p {\n+  margin-left: 8px;\n+}\n+\n+.wrapper a {\n+  color: #efefef;\n+  text-decoration: none;\n+}\n+\n+.wrapper a:hover {\n+  text-decoration: underline;\n+}\n+\n+button {\n+  background: #fff;\n+  color: #000;\n+  font-weight: 600;\n+  border: none;\n+  padding: 12px 20px;\n+  cursor: pointer;\n+  border-radius: 3px;\n+  font-size: 16px;\n+  border: 2px solid transparent;\n+  transition: 0.3s ease;\n+}\n+\n+button:hover {\n+  color: #fff;\n+  border-color: #fff;\n+  background: rgba(255, 255, 255, 0.15);\n+}\n+\n+.register {\n+  text-align: center;\n+  margin-top: 30px;\n+  color: #fff;\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734896560407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   content: \"\";\n   position: absolute;\n   width: 100%;\n   height: 100%;\n-  background: url(\"https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg\"), #000;\n+  background: url(\"https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg\") no-repeat center center, #000;\n   background-position: center;\n   background-size: cover;\n }\n \n"
+                },
+                {
+                    "date": 1734896568712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   content: \"\";\n   position: absolute;\n   width: 100%;\n   height: 100%;\n-  background: url(\"https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg\") no-repeat center center, #000;\n+  background: url(\"https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg\"), #000;\n   background-position: center;\n   background-size: cover;\n }\n \n"
+                },
+                {
+                    "date": 1734896579504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   content: \"\";\n   position: absolute;\n   width: 100%;\n   height: 100%;\n-  background: url(\"https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg\"), #000;\n+  background: url(\"https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg\"), #bb6464;\n   background-position: center;\n   background-size: cover;\n }\n \n"
+                },
+                {
+                    "date": 1734896587127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   content: \"\";\n   position: absolute;\n   width: 100%;\n   height: 100%;\n-  background: url(\"https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg\"), #bb6464;\n+  background: url(\"https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg\"), #000;\n   background-position: center;\n   background-size: cover;\n }\n \n"
+                },
+                {
+                    "date": 1734896612316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,16 +16,18 @@\n   padding: 0 10px;\n }\n \n body::before {\n-  content: \"\";\n-  position: absolute;\n-  width: 100%;\n-  height: 100%;\n-  background: url(\"https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg\"), #000;\n-  background-position: center;\n-  background-size: cover;\n-}\n+    content: \"\";\n+    position: absolute;\n+    width: 100%;\n+    height: 100%;\n+    background: url(\"https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg\"), #000;\n+    background-position: center;\n+    background-size: cover;\n+    border: 1px solid red; /* Debugging */\n+  }\n+  \n \n .wrapper {\n   width: 400px;\n   border-radius: 8px;\n"
+                },
+                {
+                    "date": 1734896786438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,18 +16,16 @@\n   padding: 0 10px;\n }\n \n body::before {\n-    content: \"\";\n-    position: absolute;\n-    width: 100%;\n-    height: 100%;\n-    background: url(\"https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg\"), #000;\n-    background-position: center;\n-    background-size: cover;\n-    border: 1px solid red; /* Debugging */\n-  }\n-  \n+  content: \"\";\n+  position: absolute;\n+  width: 100%;\n+  height: 100%;\n+  background: url(\"https://c0.wallpaperflare.com/preview/923/635/648/landscape-photography-of-mountains.jpg\"), #000;\n+  background-position: center;\n+  background-size: cover;\n+}\n \n .wrapper {\n   width: 400px;\n   border-radius: 8px;\n"
+                },
+                {
+                    "date": 1734896944882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,8 @@\n   position: absolute;\n   top: 50%;\n   left: 0;\n   transform: translateY(-50%);\n-  color: #fff;\n   font-size: 16px;\n   pointer-events: none;\n   transition: 0.15s ease;\n }\n"
+                },
+                {
+                    "date": 1734896962687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,8 @@\n   background: transparent;\n   border: none;\n   outline: none;\n   font-size: 16px;\n-  color: #fff;\n }\n \n .input-field input:focus~label,\n .input-field input:valid~label {\n"
+                },
+                {
+                    "date": 1734896981432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -109,9 +109,9 @@\n   text-decoration: underline;\n }\n \n button {\n-  background: #fff;\n+  background: #801818;\n   color: #000;\n   font-weight: 600;\n   border: none;\n   padding: 12px 20px;\n"
+                },
+                {
+                    "date": 1734897001510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,18 +100,17 @@\n   margin-left: 8px;\n }\n \n .wrapper a {\n-  color: #efefef;\n   text-decoration: none;\n }\n \n .wrapper a:hover {\n   text-decoration: underline;\n }\n \n button {\n-  background: #801818;\n+  background: #fff;\n   color: #000;\n   font-weight: 600;\n   border: none;\n   padding: 12px 20px;\n"
+                },
+                {
+                    "date": 1734897032303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   content: \"\";\n   position: absolute;\n   width: 100%;\n   height: 100%;\n-  background: url(\"https://c0.wallpaperflare.com/preview/923/635/648/landscape-photography-of-mountains.jpg\"), #000;\n+  background: url(\"https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg\"), #000;\n   background-position: center;\n   background-size: cover;\n }\n \n@@ -57,8 +57,9 @@\n   position: absolute;\n   top: 50%;\n   left: 0;\n   transform: translateY(-50%);\n+  color: #fff;\n   font-size: 16px;\n   pointer-events: none;\n   transition: 0.15s ease;\n }\n@@ -69,8 +70,9 @@\n   background: transparent;\n   border: none;\n   outline: none;\n   font-size: 16px;\n+  color: #fff;\n }\n \n .input-field input:focus~label,\n .input-field input:valid~label {\n@@ -100,8 +102,9 @@\n   margin-left: 8px;\n }\n \n .wrapper a {\n+  color: #efefef;\n   text-decoration: none;\n }\n \n .wrapper a:hover {\n"
+                },
+                {
+                    "date": 1734897043221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n   position: absolute;\n   top: 50%;\n   left: 0;\n   transform: translateY(-50%);\n-  color: #fff;\n+  color: #a31515;\n   font-size: 16px;\n   pointer-events: none;\n   transition: 0.15s ease;\n }\n"
+                },
+                {
+                    "date": 1734897060839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n   position: absolute;\n   top: 50%;\n   left: 0;\n   transform: translateY(-50%);\n-  color: #a31515;\n+  color: #fff;\n   font-size: 16px;\n   pointer-events: none;\n   transition: 0.15s ease;\n }\n"
+                },
+                {
+                    "date": 1734897119614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   content: \"\";\n   position: absolute;\n   width: 100%;\n   height: 100%;\n-  background: url(\"https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg\"), #000;\n+  background: url(\"https://c4.wallpaperflare.com/wallpaper/846/284/992/lofoten-norway-island-cityscape-wallpaper-preview.jpg\"), #000;\n   background-position: center;\n   background-size: cover;\n }\n \n"
+                },
+                {
+                    "date": 1734897686823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,16 +16,17 @@\n   padding: 0 10px;\n }\n \n body::before {\n-  content: \"\";\n-  position: absolute;\n-  width: 100%;\n-  height: 100%;\n-  background: url(\"https://c4.wallpaperflare.com/wallpaper/846/284/992/lofoten-norway-island-cityscape-wallpaper-preview.jpg\"), #000;\n-  background-position: center;\n-  background-size: cover;\n-}\n+    content: \"\";\n+    position: absolute;\n+    width: 100%;\n+    height: 100%;\n+    background: url(\"{% static 'images/hero-bg.jpg' %}\"), #000;\n+    background-position: center;\n+    background-size: cover;\n+  }\n+  \n \n .wrapper {\n   width: 400px;\n   border-radius: 8px;\n"
+                },
+                {
+                    "date": 1734897798371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     content: \"\";\n     position: absolute;\n     width: 100%;\n     height: 100%;\n-    background: url(\"{% static 'images/hero-bg.jpg' %}\"), #000;\n+    background: url(\"{% static 'img/wallpaperflare.com_wallpaper.jpg' %}\"), #000;\n     background-position: center;\n     background-size: cover;\n   }\n   \n"
+                },
+                {
+                    "date": 1734897855605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     content: \"\";\n     position: absolute;\n     width: 100%;\n     height: 100%;\n-    background: url(\"{% static 'img/wallpaperflare.com_wallpaper.jpg' %}\"), #000;\n+    background: url(\"{% static 'img/3 copy.jpg' %}\"), #000;\n     background-position: center;\n     background-size: cover;\n   }\n   \n"
+                },
+                {
+                    "date": 1734898011423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     content: \"\";\n     position: absolute;\n     width: 100%;\n     height: 100%;\n-    background: url(\"{% static 'img/3 copy.jpg' %}\"), #000;\n+    background: url(\"{% static '/img/3 copy.jpg' %}\"), #000;\n     background-position: center;\n     background-size: cover;\n   }\n   \n"
+                },
+                {
+                    "date": 1734898020826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     content: \"\";\n     position: absolute;\n     width: 100%;\n     height: 100%;\n-    background: url(\"{% static '/img/3 copy.jpg' %}\"), #000;\n+    background: url(\"{% static 'img/3 copy.jpg' %}\"), #000;\n     background-position: center;\n     background-size: cover;\n   }\n   \n"
+                },
+                {
+                    "date": 1734898110533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     content: \"\";\n     position: absolute;\n     width: 100%;\n     height: 100%;\n-    background: url(\"{% static 'img/3 copy.jpg' %}\"), #000;\n+    background: url(\"/static/img/3 copy.jpg\"), #000;\n     background-position: center;\n     background-size: cover;\n   }\n   \n"
+                },
+                {
+                    "date": 1734898127704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     content: \"\";\n     position: absolute;\n     width: 100%;\n     height: 100%;\n-    background: url(\"/static/img/3 copy.jpg\"), #000;\n+    background: url(\"/static/img/wallpaperflare.com_wallpaper (1).jpg\"), #000;\n     background-position: center;\n     background-size: cover;\n   }\n   \n"
+                },
+                {
+                    "date": 1734898273304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,9 @@\n   color: #fff;\n }\n \n #remember {\n-  accent-color: #fff;\n+  accent-color: #aa1717;\n }\n \n .forget label {\n   display: flex;\n"
+                },
+                {
+                    "date": 1734898280711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,9 @@\n   color: #fff;\n }\n \n #remember {\n-  accent-color: #aa1717;\n+  accent-color: #fff;\n }\n \n .forget label {\n   display: flex;\n"
+                },
+                {
+                    "date": 1734898301410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,8 @@\n }\n \n .input-field {\n   position: relative;\n-  border-bottom: 2px solid #ccc;\n   margin: 15px 0;\n }\n \n .input-field label {\n"
+                },
+                {
+                    "date": 1734898308604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,8 +49,9 @@\n }\n \n .input-field {\n   position: relative;\n+  border-bottom: 2px solid #ccc;\n   margin: 15px 0;\n }\n \n .input-field label {\n"
+                },
+                {
+                    "date": 1734898350291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,9 +103,8 @@\n   margin-left: 8px;\n }\n \n .wrapper a {\n-  color: #efefef;\n   text-decoration: none;\n }\n \n .wrapper a:hover {\n"
+                },
+                {
+                    "date": 1734898455466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     content: \"\";\n     position: absolute;\n     width: 100%;\n     height: 100%;\n-    background: url(\"/static/img/wallpaperflare.com_wallpaper (1).jpg\"), #000;\n+    background: url(\"/static/img/wallpaperflare.com_wallpaper.jpg\"), #000;\n     background-position: center;\n     background-size: cover;\n   }\n   \n@@ -103,8 +103,9 @@\n   margin-left: 8px;\n }\n \n .wrapper a {\n+  color: #efefef;\n   text-decoration: none;\n }\n \n .wrapper a:hover {\n"
+                },
+                {
+                    "date": 1734898670910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,138 +1,158 @@\n-@import url(\"https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap\");\n-\n-* {\n+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');\n+*{\n   margin: 0;\n   padding: 0;\n   box-sizing: border-box;\n-  font-family: \"Open Sans\", sans-serif;\n+  user-select: none;\n }\n-\n-body {\n-  display: flex;\n-  align-items: center;\n-  justify-content: center;\n-  min-height: 100vh;\n+.bg-img{\n+  background: url('bg.jpg');\n+  height: 100vh;\n+  background-size: cover;\n+  background-position: center;\n+}\n+.bg-img:after{\n+  position: absolute;\n+  content: '';\n+  top: 0;\n+  left: 0;\n+  height: 100%;\n   width: 100%;\n-  padding: 0 10px;\n+  background: rgba(0,0,0,0.7);\n }\n-\n-body::before {\n-    content: \"\";\n-    position: absolute;\n-    width: 100%;\n-    height: 100%;\n-    background: url(\"/static/img/wallpaperflare.com_wallpaper.jpg\"), #000;\n-    background-position: center;\n-    background-size: cover;\n-  }\n-  \n-\n-.wrapper {\n-  width: 400px;\n-  border-radius: 8px;\n-  padding: 30px;\n+.content{\n+  position: absolute;\n+  top: 50%;\n+  left: 50%;\n+  z-index: 999;\n   text-align: center;\n-  border: 1px solid rgba(255, 255, 255, 0.5);\n-  backdrop-filter: blur(8px);\n-  -webkit-backdrop-filter: blur(8px);\n+  padding: 60px 32px;\n+  width: 370px;\n+  transform: translate(-50%,-50%);\n+  background: rgba(255,255,255,0.04);\n+  box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);\n }\n-\n-form {\n-  display: flex;\n-  flex-direction: column;\n+.content header{\n+  color: white;\n+  font-size: 33px;\n+  font-weight: 600;\n+  margin: 0 0 35px 0;\n+  font-family: 'Montserrat',sans-serif;\n }\n-\n-h2 {\n-  font-size: 2rem;\n-  margin-bottom: 20px;\n-  color: #fff;\n-}\n-\n-.input-field {\n+.field{\n   position: relative;\n-  border-bottom: 2px solid #ccc;\n-  margin: 15px 0;\n+  height: 45px;\n+  width: 100%;\n+  display: flex;\n+  background: rgba(255,255,255,0.94);\n }\n-\n-.input-field label {\n-  position: absolute;\n-  top: 50%;\n-  left: 0;\n-  transform: translateY(-50%);\n-  color: #fff;\n-  font-size: 16px;\n-  pointer-events: none;\n-  transition: 0.15s ease;\n+.field span{\n+  color: #222;\n+  width: 40px;\n+  line-height: 45px;\n }\n-\n-.input-field input {\n+.field input{\n+  height: 100%;\n   width: 100%;\n-  height: 40px;\n   background: transparent;\n   border: none;\n   outline: none;\n+  color: #222;\n   font-size: 16px;\n-  color: #fff;\n+  font-family: 'Poppins',sans-serif;\n }\n-\n-.input-field input:focus~label,\n-.input-field input:valid~label {\n-  font-size: 0.8rem;\n-  top: 10px;\n-  transform: translateY(-120%);\n+.space{\n+  margin-top: 16px;\n }\n-\n-.forget {\n-  display: flex;\n-  align-items: center;\n-  justify-content: space-between;\n-  margin: 25px 0 35px 0;\n-  color: #fff;\n+.show{\n+  position: absolute;\n+  right: 13px;\n+  font-size: 13px;\n+  font-weight: 700;\n+  color: #222;\n+  display: none;\n+  cursor: pointer;\n+  font-family: 'Montserrat',sans-serif;\n }\n-\n-#remember {\n-  accent-color: #fff;\n+.pass-key:valid ~ .show{\n+  display: block;\n }\n-\n-.forget label {\n-  display: flex;\n-  align-items: center;\n+.pass{\n+  text-align: left;\n+  margin: 10px 0;\n }\n-\n-.forget label p {\n-  margin-left: 8px;\n-}\n-\n-.wrapper a {\n-  color: #efefef;\n+.pass a{\n+  color: white;\n   text-decoration: none;\n+  font-family: 'Poppins',sans-serif;\n }\n-\n-.wrapper a:hover {\n+.pass:hover a{\n   text-decoration: underline;\n }\n-\n-button {\n-  background: #fff;\n-  color: #000;\n+.field input[type=\"submit\"]{\n+  background: #3498db;\n+  border: 1px solid #2691d9;\n+  color: white;\n+  font-size: 18px;\n+  letter-spacing: 1px;\n   font-weight: 600;\n-  border: none;\n-  padding: 12px 20px;\n   cursor: pointer;\n-  border-radius: 3px;\n+  font-family: 'Montserrat',sans-serif;\n+}\n+.field input[type=\"submit\"]:hover{\n+  background: #2691d9;\n+}\n+.login{\n+  color: white;\n+  margin: 20px 0;\n+  font-family: 'Poppins',sans-serif;\n+}\n+.links{\n+  display: flex;\n+  cursor: pointer;\n+  color: white;\n+  margin: 0 0 20px 0;\n+}\n+.facebook,.instagram{\n+  width: 100%;\n+  height: 45px;\n+  line-height: 45px;\n+  margin-left: 10px;\n+}\n+.facebook{\n+  margin-left: 0;\n+  background: #4267B2;\n+  border: 1px solid #3e61a8;\n+}\n+.instagram{\n+  background: #E1306C;\n+  border: 1px solid #df2060;\n+}\n+.facebook:hover{\n+  background: #3e61a8;\n+}\n+.instagram:hover{\n+  background: #df2060;\n+}\n+.links i{\n+  font-size: 17px;\n+}\n+i span{\n+  margin-left: 8px;\n+  font-weight: 500;\n+  letter-spacing: 1px;\n   font-size: 16px;\n-  border: 2px solid transparent;\n-  transition: 0.3s ease;\n+  font-family: 'Poppins',sans-serif;\n }\n-\n-button:hover {\n-  color: #fff;\n-  border-color: #fff;\n-  background: rgba(255, 255, 255, 0.15);\n+.signup{\n+  font-size: 15px;\n+  color: white;\n+  font-family: 'Poppins',sans-serif;\n }\n-\n-.register {\n-  text-align: center;\n-  margin-top: 30px;\n-  color: #fff;\n+.signup a{\n+  color: #3498db;\n+  text-decoration: none;\n+}\n+.signup a:hover{\n+  text-decoration: underline;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734899449935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,12 +5,12 @@\n   box-sizing: border-box;\n   user-select: none;\n }\n .bg-img{\n-  background: url('bg.jpg');\n-  height: 100vh;\n-  background-size: cover;\n-  background-position: center;\n+    background: url(\"/static/images/wallpaperflare.com_wallpaper.jpg\");\n+    height: 100vh;\n+    background-size: cover;\n+    background-position: center;\n }\n .bg-img:after{\n   position: absolute;\n   content: '';\n"
+                },
+                {
+                    "date": 1734899576510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   box-sizing: border-box;\n   user-select: none;\n }\n .bg-img{\n-    background: url(\"/static/images/wallpaperflare.com_wallpaper.jpg\");\n+    background: url(\"static/images/wallpaperflare.com_wallpaper.jpg\");\n     height: 100vh;\n     background-size: cover;\n     background-position: center;\n }\n"
+                },
+                {
+                    "date": 1734899927589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,38 +1,47 @@\n @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');\n-*{\n+\n+* {\n   margin: 0;\n   padding: 0;\n   box-sizing: border-box;\n   user-select: none;\n }\n-.bg-img{\n-    background: url(\"static/images/wallpaperflare.com_wallpaper.jpg\");\n-    height: 100vh;\n-    background-size: cover;\n-    background-position: center;\n+\n+.bg-img {\n+  background: url(\"/static/images/hero-bg.jpg\");\n+  height: 100vh;\n+  background-size: cover;\n+  background-position: center;\n+  position: relative; /* Add this */\n }\n-.bg-img:after{\n+\n+.bg-img:after {\n   position: absolute;\n   content: '';\n   top: 0;\n   left: 0;\n   height: 100%;\n   width: 100%;\n-  background: rgba(0,0,0,0.7);\n+  background: rgba(0, 0, 0, 0.7);\n+  z-index: 1; /* Add z-index */\n }\n-.content{\n+\n+.content {\n   position: absolute;\n   top: 50%;\n   left: 50%;\n-  z-index: 999;\n+  z-index: 2; /* Ensure it appears above the overlay */\n   text-align: center;\n   padding: 60px 32px;\n   width: 370px;\n-  transform: translate(-50%,-50%);\n-  background: rgba(255,255,255,0.04);\n-  box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);\n+  transform: translate(-50%, -50%);\n+  background: rgba(255, 255, 255, 0.04);\n+  box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);\n }\n+\n+\n+\n .content header{\n   color: white;\n   font-size: 33px;\n   font-weight: 600;\n"
+                },
+                {
+                    "date": 1734899953886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n   text-align: center;\n   padding: 60px 32px;\n   width: 370px;\n   transform: translate(-50%, -50%);\n-  background: rgba(255, 255, 255, 0.04);\n+  background: rgba(248, 78, 78, 0.04);\n   box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);\n }\n \n \n"
+                },
+                {
+                    "date": 1734899965647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n   text-align: center;\n   padding: 60px 32px;\n   width: 370px;\n   transform: translate(-50%, -50%);\n-  background: rgba(248, 78, 78, 0.04);\n+  background: rgba(255, 255, 255, 0.04);\n   box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);\n }\n \n \n"
+                },
+                {
+                    "date": 1734900009430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   user-select: none;\n }\n \n .bg-img {\n-  background: url(\"/static/images/hero-bg.jpg\");\n+  background: url(\"/static/img/wallpaperflare.com_wallpaper.jpg\");\n   height: 100vh;\n   background-size: cover;\n   background-position: center;\n   position: relative; /* Add this */\n"
+                },
+                {
+                    "date": 1734900422198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -132,18 +132,30 @@\n   margin-left: 0;\n   background: #4267B2;\n   border: 1px solid #3e61a8;\n }\n-.instagram{\n+/* .instagram{\n   background: #E1306C;\n   border: 1px solid #df2060;\n-}\n+} */\n .facebook:hover{\n   background: #3e61a8;\n }\n-.instagram:hover{\n+/* .instagram:hover{\n   background: #df2060;\n-}\n+} */\n+\n+\n+.google {\n+    background: #db4437; /* Google red */\n+    border: 1px solid #b5372a;\n+    color: white;\n+  }\n+  \n+  .google:hover {\n+    background: #b5372a;\n+  }\n+  \n .links i{\n   font-size: 17px;\n }\n i span{\n"
+                },
+                {
+                    "date": 1734900706232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -132,30 +132,19 @@\n   margin-left: 0;\n   background: #4267B2;\n   border: 1px solid #3e61a8;\n }\n-/* .instagram{\n+.google{\n   background: #E1306C;\n-  border: 1px solid #df2060;\n-} */\n+  border: 1px solid #b5373a;\n+  color: white;\n+}\n .facebook:hover{\n   background: #3e61a8;\n }\n-/* .instagram:hover{\n-  background: #df2060;\n-} */\n-\n-\n-.google {\n-    background: #db4437; /* Google red */\n-    border: 1px solid #b5372a;\n-    color: white;\n-  }\n-  \n-  .google:hover {\n-    background: #b5372a;\n-  }\n-  \n+.google:hover{\n+  background: #b5373a;\n+}\n .links i{\n   font-size: 17px;\n }\n i span{\n"
+                },
+                {
+                    "date": 1734901071616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -121,9 +121,9 @@\n   cursor: pointer;\n   color: white;\n   margin: 0 0 20px 0;\n }\n-.facebook,.instagram{\n+.facebook,.google{\n   width: 100%;\n   height: 45px;\n   line-height: 45px;\n   margin-left: 10px;\n"
+                },
+                {
+                    "date": 1734901117413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,6 +163,6 @@\n   color: #3498db;\n   text-decoration: none;\n }\n .signup a:hover{\n-  text-decoration: underline;\n+  text-decoration: none;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734901143543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,6 +163,6 @@\n   color: #3498db;\n   text-decoration: none;\n }\n .signup a:hover{\n-  text-decoration: none;\n+    color: white;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734901287705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,6 +163,6 @@\n   color: #3498db;\n   text-decoration: none;\n }\n .signup a:hover{\n-    color: white;\n+    color: rgb(119, 102, 102);\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734901304959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,6 +163,6 @@\n   color: #3498db;\n   text-decoration: none;\n }\n .signup a:hover{\n-    color: rgb(119, 102, 102);\n+    color: rgb(44, 64, 41);\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734901320449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,6 +163,6 @@\n   color: #3498db;\n   text-decoration: none;\n }\n .signup a:hover{\n-    color: rgb(44, 64, 41);\n+    color: rgb(83, 53, 44);\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734901336471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,6 +163,6 @@\n   color: #3498db;\n   text-decoration: none;\n }\n .signup a:hover{\n-    color: rgb(83, 53, 44);\n+    color: rgb(41, 19, 13);\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734901346426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,6 +163,6 @@\n   color: #3498db;\n   text-decoration: none;\n }\n .signup a:hover{\n-    color: rgb(41, 19, 13);\n+    color: rgb(86, 61, 55);\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734901353276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,6 +163,6 @@\n   color: #3498db;\n   text-decoration: none;\n }\n .signup a:hover{\n-    color: rgb(86, 61, 55);\n+    color: rgb(81, 68, 64);\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734905002871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -163,6 +163,6 @@\n   color: #3498db;\n   text-decoration: none;\n }\n .signup a:hover{\n-    color: rgb(81, 68, 64);\n+    color: rgb(69, 66, 65);\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1734895032478,
+            "name": "Commit-0",
+            "content": "@import url(\"https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap\");\n\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: \"Open Sans\", sans-serif;\n}\n\nbody {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  min-height: 100vh;\n  width: 100%;\n  padding: 0 10px;\n}\n\nbody::before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: url(\"https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg\"), #000;\n  background-position: center;\n  background-size: cover;\n}\n\n.wrapper {\n  width: 400px;\n  border-radius: 8px;\n  padding: 30px;\n  text-align: center;\n  border: 1px solid rgba(255, 255, 255, 0.5);\n  backdrop-filter: blur(8px);\n  -webkit-backdrop-filter: blur(8px);\n}\n\nform {\n  display: flex;\n  flex-direction: column;\n}\n\nh2 {\n  font-size: 2rem;\n  margin-bottom: 20px;\n  color: #fff;\n}\n\n.input-field {\n  position: relative;\n  border-bottom: 2px solid #ccc;\n  margin: 15px 0;\n}\n\n.input-field label {\n  position: absolute;\n  top: 50%;\n  left: 0;\n  transform: translateY(-50%);\n  color: #fff;\n  font-size: 16px;\n  pointer-events: none;\n  transition: 0.15s ease;\n}\n\n.input-field input {\n  width: 100%;\n  height: 40px;\n  background: transparent;\n  border: none;\n  outline: none;\n  font-size: 16px;\n  color: #fff;\n}\n\n.input-field input:focus~label,\n.input-field input:valid~label {\n  font-size: 0.8rem;\n  top: 10px;\n  transform: translateY(-120%);\n}\n\n.forget {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  margin: 25px 0 35px 0;\n  color: #fff;\n}\n\n#remember {\n  accent-color: #fff;\n}\n\n.forget label {\n  display: flex;\n  align-items: center;\n}\n\n.forget label p {\n  margin-left: 8px;\n}\n\n.wrapper a {\n  color: #efefef;\n  text-decoration: none;\n}\n\n.wrapper a:hover {\n  text-decoration: underline;\n}\n\nbutton {\n  background: #fff;\n  color: #000;\n  font-weight: 600;\n  border: none;\n  padding: 12px 20px;\n  cursor: pointer;\n  border-radius: 3px;\n  font-size: 16px;\n  border: 2px solid transparent;\n  transition: 0.3s ease;\n}\n\nbutton:hover {\n  color: #fff;\n  border-color: #fff;\n  background: rgba(255, 255, 255, 0.15);\n}\n\n.register {\n  text-align: center;\n  margin-top: 30px;\n  color: #fff;\n}"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+/* Fullscreen Background Video */
+#background-video {
+    position: fixed; /* Stays in place */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Prevents video distortion */
+}
+
+/* Ensure content is above the video */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white; /* Adjust text color for visibility */
+}
+
+#content-wrapper {
+    position: relative;
+    z-index: 1; /* Content stays above video */
+    padding: 20px;
+}
+
+
+img {
+    width: 300px !important;
+    height: auto !important;
+    border-radius: 50%; /* Ensure the image is circular */
+
+}

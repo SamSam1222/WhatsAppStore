@@ -1,0 +1,229 @@
+{% extends "IDGenie/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+  /* Make iframes responsive */
+  .responsive-iframe-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;  /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      width: 100%;
+      background: #000;
+  }
+
+  .responsive-iframe-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+
+  /* Make images responsive */
+  .responsive-img-wrapper {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+  }
+
+  .entry-content img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  .profile-img {
+    width: 50px;         /* Adjust the size as needed */
+    height: 50px;        /* Keep it square to maintain the round shape */
+    border-radius: 50%;  /* Makes the image round */
+    object-fit: cover;   /* Ensures the image fits within the circle without stretching */
+}
+
+</style>
+<div class="blog-page area-padding">
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <!-- Your Sidebar content -->
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-8 col-sm-8 col-xs-12">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <!-- Blog Post -->
+                        <article class="blog-post-wrapper">
+                            <!-- Your blog post content -->
+                        </article>
+
+                        <!-- Comments Section -->
+                        <div class="single-post-comments">
+                            <div class="comments-area">
+                                <div class="comments-heading">
+                                    <h3>{{ comments.count }} Comments</h3>
+                                </div>
+                                <div id="comments-section" class="comments-list">
+                                    <ul id="comments-list">
+                                        {% for comment in comments %}
+                                        <li id="comment-{{ comment.id }}">
+                                            <div class="comments-details">
+                                                <div class="comments-list-img">
+                                                    {% if comment.author.profile_picture %}
+                                                        <img src="{{ comment.author.profile_picture.url }}" alt="Profile Picture" class="profile-img">
+                                                    {% else %}
+                                                        <img src="{% static 'img/default-profile.jpg' %}" alt="Default Profile Picture" class="profile-img">
+                                                    {% endif %}
+                                                </div>
+                                                <div class="comments-content-wrap">
+                                                    <span>
+                                                        <b><a href="#">{{ comment.author.username }}</a></b>
+                                                        <span class="post-time">{{ comment.created_at|date:"F j, Y at g:i A" }}</span>
+                                                    </span>
+                                                    <p>{{ comment.content }}</p>
+                                                </div>
+                                                <button class="reply-btn" data-comment-id="{{ comment.id }}">Reply</button>
+                                            </div>
+
+                                            <!-- Replies -->
+                                            {% if comment.children.exists %}
+                                            <ul id="replies-{{ comment.id }}">
+                                                {% for reply in comment.children.all %}
+                                                <li>
+                                                    <div class="comments-details">
+                                                        <div class="comments-list-img">
+                                                            {% if reply.author.profile_picture %}
+                                                                <img src="{{ reply.author.profile_picture.url }}" alt="Profile Picture" class="profile-img">
+                                                            {% else %}
+                                                                <img src="{% static 'img/default-profile.jpg' %}" alt="Default Profile Picture" class="profile-img">
+                                                            {% endif %}
+                                                        </div>
+                                                        <div class="comments-content-wrap">
+                                                            <span>
+                                                                <b><a href="#">{{ reply.author.username }}</a></b>
+                                                                <span class="post-time">{{ reply.created_at|date:"F j, Y at g:i A" }}</span>
+                                                            </span>
+                                                            <p>{{ reply.content }}</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                {% endfor %}
+                                            </ul>
+                                            {% endif %}
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Comment Form -->
+                            <div class="comment-respond">
+                                <h3 class="comment-reply-title">Leave a Reply</h3>
+                                <form id="comment-form">
+                                    {% csrf_token %}
+                                    <textarea id="content" name="content" rows="3" placeholder="Write a comment..." required></textarea>
+                                    <input type="hidden" id="parent-id" name="parent_id" value="">
+                                    <button type="submit">Post Comment</button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- End Comments Section -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Script for responsive iframe and images
+    window.onload = function() {
+        var iframes = document.querySelectorAll('iframe');
+        iframes.forEach(function(iframe) {
+            if (iframe.src.includes("youtube.com/embed")) {
+                var wrapper = document.createElement('div');
+                wrapper.classList.add('responsive-iframe-wrapper');
+                iframe.parentNode.insertBefore(wrapper, iframe);
+                wrapper.appendChild(iframe);
+            }
+        });
+
+        var images = document.querySelectorAll('.entry-content img');
+        images.forEach(function(img) {
+            img.classList.add('responsive-img-wrapper');
+        });
+    };
+
+    
+    
+
+    document.getElementById("comment-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const content = document.getElementById("content").value;
+        const parentId = document.getElementById("parent-id").value;
+
+        if (!content) {
+            alert("Comment content cannot be empty.");
+            return;
+        }
+
+        fetch("{% url 'post_comment' blog_post.id %}", {
+            method: "POST",
+            headers: {
+                "X-CSRFToken": "{{ csrf_token }}",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                content: content,
+                parent_id: parentId,
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                alert(data.error);
+            } else {
+                const newComment = `
+                    <li id="comment-${data.id}">
+                        <div class="comments-details">
+                            <div class="comments-list-img">
+                                <img src="{% static 'img/default-profile.jpg' %}" alt="Default Profile Picture" class="profile-img">
+                            </div>
+                            <div class="comments-content-wrap">
+                                <span>
+                                    <b><a href="#">${data.author}</a></b>
+                                    <span class="post-time">${data.created_at}</span>
+                                </span>
+                                <p>${data.content}</p>
+                            </div>
+                            <button class="reply-btn" data-comment-id="${data.id}">Reply</button>
+                        </div>
+                    </li>
+                `;
+                if (parentId) {
+                    document.getElementById(`replies-${parentId}`).innerHTML += newComment;
+                } else {
+                    document.getElementById("comments-list").innerHTML += newComment;
+                }
+                document.getElementById("comment-form").reset();
+            }
+        })
+        .catch(error => console.error("Error:", error));
+    });
+
+    document.querySelectorAll(".reply-btn").forEach(btn => {
+        btn.addEventListener("click", function () {
+            const parentId = this.getAttribute("data-comment-id");
+            document.getElementById("parent-id").value = parentId;
+            document.getElementById("content").focus();
+        });
+    });
+    
+    
+</script>
+
+{% endblock %}

@@ -1,0 +1,81 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const commentForm = document.querySelector('#comment-form'); // Ensure this ID matches
+  const commentInput = document.querySelector('#message-box'); // Updated to match the textarea's ID
+  const commentsContainer = document.querySelector('#comments-container'); // Ensure this container exists
+
+  if (commentForm) {
+      commentForm.addEventListener('submit', async function (event) {
+          event.preventDefault(); // Prevent page reload
+
+          if (!commentsContainer) {
+              console.error('Comments container not found.');
+              return;
+          }
+
+          const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+          const content = commentInput.value.trim();
+
+          if (!content) {
+              alert('Comment cannot be empty.');
+              return;
+          }
+
+          try {
+              const response = await fetch(commentForm.action, {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/x-www-form-urlencoded',
+                      'X-CSRFToken': csrfToken, // CSRF Token
+                      'X-Requested-With': 'XMLHttpRequest', // AJAX indicator
+                  },
+                  body: new URLSearchParams({
+                      'content': content,
+                      'csrfmiddlewaretoken': csrfToken,
+                  }),
+              });
+
+              if (!response.ok) {
+                  const errorData = await response.json();
+                  throw new Error(errorData.error || 'An error occurred.');
+              }
+
+              const data = await response.json();
+              console.log('New Comment:', data);
+
+              // Add the new comment dynamically with the profile picture
+              const newComment = document.createElement('li');
+              newComment.classList.add('threaded-comments');
+              newComment.innerHTML = `
+                  <div class="comments-details">
+                      <div class="comments-list-img">
+                          <img src="${data.profile_picture_url || '/static/img/default-profile.jpg'}" alt="Profile Picture" class="profile-img">
+                      </div>
+                      <div class="comments-content-wrap">
+                          <span>
+                              <b><a href="#">${data.author}</a></b>
+                              <span class="post-time">${data.created_at}</span>
+                          </span>
+                          <p>${data.content}</p>
+                      </div>
+                  </div>
+              `;
+
+              // Prepend the new comment to the comments container
+              commentsContainer.prepend(newComment);
+
+              // Force the image to reload if necessary (to handle caching issues)
+              const newImage = newComment.querySelector('img');
+              newImage.onload = function() {
+                  // Optionally log or do something after the image is loaded
+              };
+              newImage.src = newImage.src;  // Forces reload by resetting the src
+
+              // Clear the input field
+              commentInput.value = '';
+          } catch (error) {
+              console.error('Error:', error.message);
+              alert(error.message);
+          }
+      });
+  }
+});

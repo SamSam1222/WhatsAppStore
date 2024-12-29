@@ -1,0 +1,22 @@
+{
+    "sourceFile": "VerifyPro/IDGenie/signals.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1734816340097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734880070481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,10 @@\n def create_user_profile(sender, instance, created, **kwargs):\n     if created:\n         Profile.objects.create(user=instance)\n \n+\n+\n # Signal to save the profile whenever the user is saved (e.g., after updating)\n @receiver(post_save, sender=User)\n def save_user_profile(sender, instance, **kwargs):\n     instance.profile.save()\n"
+                }
+            ],
+            "date": 1734816340097,
+            "name": "Commit-0",
+            "content": "# signals.py\n\nfrom django.db.models.signals import post_save\nfrom django.dispatch import receiver\nfrom django.contrib.auth.models import User\nfrom .models import Profile  # Import the Profile model\n\n# Signal to create a profile whenever a new user is created\n@receiver(post_save, sender=User)\ndef create_user_profile(sender, instance, created, **kwargs):\n    if created:\n        Profile.objects.create(user=instance)\n\n# Signal to save the profile whenever the user is saved (e.g., after updating)\n@receiver(post_save, sender=User)\ndef save_user_profile(sender, instance, **kwargs):\n    instance.profile.save()\n"
+        }
+    ]
+}

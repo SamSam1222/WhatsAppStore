@@ -1,0 +1,70 @@
+{
+    "sourceFile": "VerifyPro/static/css/ckeditor_custom.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1734641289344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734641523562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n /* Custom CKEditor styles */\n .cke_editable {\n-    background-color: #f0f0f0;  /* Light gray background */\n+    background-color: #982d2d;  /* Light gray background */\n     color: #333;  /* Dark text */\n     font-family: Arial, sans-serif;  /* Font family */\n     font-size: 16px;  /* Font size */\n }\n"
+                },
+                {
+                    "date": 1734641948612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n .cke_editable {\n     background-color: #982d2d;  /* Light gray background */\n     color: #333;  /* Dark text */\n     font-family: Arial, sans-serif;  /* Font family */\n-    font-size: 16px;  /* Font size */\n+    font-size: 160px;  /* Font size */\n }\n"
+                },
+                {
+                    "date": 1734641975688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n /* Custom CKEditor styles */\n .cke_editable {\n     background-color: #982d2d;  /* Light gray background */\n-    color: #333;  /* Dark text */\n+    color: #bd1010;  /* Dark text */\n     font-family: Arial, sans-serif;  /* Font family */\n-    font-size: 160px;  /* Font size */\n+    font-size: 16px;  /* Font size */\n }\n"
+                },
+                {
+                    "date": 1734642008722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n-/* Custom CKEditor styles */\n-.cke_editable {\n-    background-color: #982d2d;  /* Light gray background */\n-    color: #bd1010;  /* Dark text */\n-    font-family: Arial, sans-serif;  /* Font family */\n-    font-size: 16px;  /* Font size */\n+/* Force background change */\n+body, .cke_contents {\n+    background-color: #f0f0f0 !important;  /* Use your desired color */\n+    color: #333333 !important;  /* Optional: Change text color too */\n }\n"
+                },
+                {
+                    "date": 1734642057587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n-/* Force background change */\n-body, .cke_contents {\n-    background-color: #f0f0f0 !important;  /* Use your desired color */\n-    color: #333333 !important;  /* Optional: Change text color too */\n+/* Custom CKEditor styles */\n+.cke_editable {\n+    background-color: #982d2d !important;  /* Light gray background */\n+    color: #bd1010 !important;  /* Dark text */\n+    font-family: Arial, sans-serif;  /* Font family */\n+    font-size: 16px;  /* Font size */\n }\n"
+                },
+                {
+                    "date": 1734642527503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,41 @@\n-/* Custom CKEditor styles */\n-.cke_editable {\n-    background-color: #982d2d !important;  /* Light gray background */\n-    color: #bd1010 !important;  /* Dark text */\n-    font-family: Arial, sans-serif;  /* Font family */\n-    font-size: 16px;  /* Font size */\n+/* ckeditor_custom.css */\n+\n+/* Set body background color to white */\n+body {\n+    background-color: #ffffff;\n+    font-family: \"Calibri\", sans-serif;  /* Using the Calibri font like Microsoft Word */\n+    font-size: 14px;  /* Similar font size to Word's default */\n+    line-height: 1.5;\n+    margin: 10px;\n }\n+\n+/* Additional customization for fonts and text appearance */\n+h1, h2, h3, h4, h5, h6 {\n+    font-family: \"Calibri\", sans-serif;\n+    font-weight: bold;\n+}\n+\n+p {\n+    font-family: \"Calibri\", sans-serif;\n+    font-size: 14px;\n+    color: #333333;  /* Dark gray text color like Word */\n+    line-height: 1.5;\n+}\n+\n+/* Ensure links are styled */\n+a {\n+    color: #1a0dab;\n+    text-decoration: none;\n+}\n+\n+/* Add table styling */\n+table {\n+    border-collapse: collapse;\n+    width: 100%;\n+}\n+\n+th, td {\n+    border: 1px solid #d3d3d3;\n+    padding: 8px;\n+    text-align: left;\n+}\n"
+                },
+                {
+                    "date": 1734642555192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n /* ckeditor_custom.css */\n \n /* Set body background color to white */\n body {\n-    background-color: #ffffff;\n+    background-color: #912828;\n     font-family: \"Calibri\", sans-serif;  /* Using the Calibri font like Microsoft Word */\n     font-size: 14px;  /* Similar font size to Word's default */\n     line-height: 1.5;\n     margin: 10px;\n"
+                },
+                {
+                    "date": 1734642562883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n /* ckeditor_custom.css */\n \n /* Set body background color to white */\n body {\n-    background-color: #912828;\n+    background-color: #912828 !important;\n     font-family: \"Calibri\", sans-serif;  /* Using the Calibri font like Microsoft Word */\n     font-size: 14px;  /* Similar font size to Word's default */\n     line-height: 1.5;\n     margin: 10px;\n"
+                },
+                {
+                    "date": 1734643393827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n \n /* Set body background color to white */\n body {\n     background-color: #912828 !important;\n-    font-family: \"Calibri\", sans-serif;  /* Using the Calibri font like Microsoft Word */\n     font-size: 14px;  /* Similar font size to Word's default */\n     line-height: 1.5;\n     margin: 10px;\n }\n"
+                },
+                {
+                    "date": 1734643426439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,8 @@\n     font-weight: bold;\n }\n \n p {\n-    font-family: \"Calibri\", sans-serif;\n     font-size: 14px;\n     color: #333333;  /* Dark gray text color like Word */\n     line-height: 1.5;\n }\n"
+                },
+                {
+                    "date": 1734643444495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,34 +6,4 @@\n     font-size: 14px;  /* Similar font size to Word's default */\n     line-height: 1.5;\n     margin: 10px;\n }\n-\n-/* Additional customization for fonts and text appearance */\n-h1, h2, h3, h4, h5, h6 {\n-    font-family: \"Calibri\", sans-serif;\n-    font-weight: bold;\n-}\n-\n-p {\n-    font-size: 14px;\n-    color: #333333;  /* Dark gray text color like Word */\n-    line-height: 1.5;\n-}\n-\n-/* Ensure links are styled */\n-a {\n-    color: #1a0dab;\n-    text-decoration: none;\n-}\n-\n-/* Add table styling */\n-table {\n-    border-collapse: collapse;\n-    width: 100%;\n-}\n-\n-th, td {\n-    border: 1px solid #d3d3d3;\n-    padding: 8px;\n-    text-align: left;\n-}\n"
+                },
+                {
+                    "date": 1734643483767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n /* ckeditor_custom.css */\n \n /* Set body background color to white */\n-body {\n+body .contentsCss{\n     background-color: #912828 !important;\n     font-size: 14px;  /* Similar font size to Word's default */\n     line-height: 1.5;\n     margin: 10px;\n"
+                },
+                {
+                    "date": 1734643514798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +0,0 @@\n-/* ckeditor_custom.css */\n-\n-/* Set body background color to white */\n-body .contentsCss{\n-    background-color: #912828 !important;\n-    font-size: 14px;  /* Similar font size to Word's default */\n-    line-height: 1.5;\n-    margin: 10px;\n-}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1734641289344,
+            "name": "Commit-0",
+            "content": "/* Custom CKEditor styles */\n.cke_editable {\n    background-color: #f0f0f0;  /* Light gray background */\n    color: #333;  /* Dark text */\n    font-family: Arial, sans-serif;  /* Font family */\n    font-size: 16px;  /* Font size */\n}\n"
+        }
+    ]
+}

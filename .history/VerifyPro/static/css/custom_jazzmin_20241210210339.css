@@ -1,0 +1,12 @@
+.custom-logo-size img {
+    width: 10px !important; 
+    height: auto !important; 
+}
+
+
+img {
+    width: 30px !important;
+    height: auto !important;
+    border-radius: 50%; /* Ensure the image is circular */
+
+}

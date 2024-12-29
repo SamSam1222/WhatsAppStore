@@ -1,0 +1,102 @@
+{
+    "sourceFile": "VerifyPro/IDGenie/urls.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 21,
+            "patches": [
+                {
+                    "date": 1732961947326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1732962001848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n from django.urls import path, include\n-from IDGenie.views import index, blogpost_view\n+from IDGenie.views import index, blogpost\n from . import views\n app_name =\"IDGenie\"\n \n urlpatterns = [\n@@ -8,8 +8,8 @@\n     # HomePage URL  \n     path('', index, name = 'index'),\n     \n     #Blog Post URL\n-    path('blogpost/', blogpost_view, name = 'blogpost'),\n+    path('blogpost/', blogpost, name = 'blogpost'),\n     \n     \n ]\n"
+                },
+                {
+                    "date": 1733569093243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,16 @@\n from django.urls import path, include\n-from IDGenie.views import index, blogpost\n+from IDGenie.views import index, blog\n from . import views\n+\n app_name =\"IDGenie\"\n \n urlpatterns = [\n     \n     # HomePage URL  \n-    path('', index, name = 'index'),\n+    path('', views.index, name= 'index'),\n     \n     #Blog Post URL\n-    path('blogpost/', blogpost, name = 'blogpost'),\n+    path('blog/', views.blogpost, name= 'blog'),\n     \n     \n ]\n"
+                },
+                {
+                    "date": 1733569176448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,11 @@\n \n urlpatterns = [\n     \n     # HomePage URL  \n-    path('', views.index, name= 'index'),\n+    path('', views.index, name='index'),\n     \n     #Blog Post URL\n-    path('blog/', views.blogpost, name= 'blog'),\n+    path('blog/', views.blogpost, name='blog'),\n     \n     \n ]\n"
+                },
+                {
+                    "date": 1733569330934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n from django.urls import path, include\n-from IDGenie.views import index, blog\n+# from IDGenie.views import index, blog\n from . import views\n \n app_name =\"IDGenie\"\n \n"
+                },
+                {
+                    "date": 1733569933456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,11 @@\n     # HomePage URL  \n     path('', views.index, name='index'),\n     \n     #Blog Post URL\n-    path('blog/', views.blogpost, name='blog'),\n+    path('blog/', views.blogpost, name='blog'), # BLog List View\n     \n     \n+    \n+    \n+    \n ]\n"
+                },
+                {
+                    "date": 1733570127292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,9 @@\n     path('', views.index, name='index'),\n     \n     #Blog Post URL\n     path('blog/', views.blogpost, name='blog'), # BLog List View\n+    path('blog/<int:post_id>/', views.blog_detail, name='blog_detail'), # BLog detail View\n     \n     \n     \n-    \n-    \n ]\n"
+                },
+                {
+                    "date": 1734209731944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,13 +6,15 @@\n \n urlpatterns = [\n     \n     # HomePage URL  \n-    path('', views.index, name='index'),\n+    path('index/', views.index, name='index'),\n     \n     #Blog Post URL\n     path('blog/', views.blogpost, name='blog'), # BLog List View\n+    \n     path('blog/<int:post_id>/', views.blog_detail, name='blog_detail'), # BLog detail View\n     \n+    path('create/', views.create_blog_post, name='create_blog_post'), # Blog create view    \n     \n     \n ]\n"
+                },
+                {
+                    "date": 1734209980054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n urlpatterns = [\n     \n     # HomePage URL  \n-    path('index/', views.index, name='index'),\n+    path('', views.index, name='index'),\n     \n     #Blog Post URL\n     path('blog/', views.blogpost, name='blog'), # BLog List View\n     \n"
+                },
+                {
+                    "date": 1734209997576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n from django.urls import path, include\n-# from IDGenie.views import index, blog\n+from IDGenie.views import index, blog\n from . import views\n \n app_name =\"IDGenie\"\n \n"
+                },
+                {
+                    "date": 1734210102465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n from django.urls import path, include\n-from IDGenie.views import index, blog\n+from IDGenie.views import index\n from . import views\n \n app_name =\"IDGenie\"\n \n"
+                },
+                {
+                    "date": 1734210160431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n from django.urls import path, include\n-from IDGenie.views import index\n-from . import views\n+# from IDGenie.views import index, blog\n+from .import views\n \n app_name =\"IDGenie\"\n \n urlpatterns = [\n"
+                },
+                {
+                    "date": 1734210171103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n from django.urls import path, include\n # from IDGenie.views import index, blog\n from .import views\n \n-app_name =\"IDGenie\"\n \n urlpatterns = [\n     \n     # HomePage URL  \n"
+                },
+                {
+                    "date": 1734210372232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n from django.urls import path, include\n # from IDGenie.views import index, blog\n from .import views\n \n+app_name =\"IDGenie\"\n \n urlpatterns = [\n     \n     # HomePage URL  \n"
+                },
+                {
+                    "date": 1734590518432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,13 +8,15 @@\n     \n     # HomePage URL  \n     path('', views.index, name='index'),\n     \n+    \n+    path('blog/<int:pk>/', views.blog_detail, name='blog_detail'), # BLog detail View\n+    \n     #Blog Post URL\n-    path('blog/', views.blogpost, name='blog'), # BLog List View\n+    path('blog/', views.blogpost, name='blog_list'), # BLog List View\n     \n-    path('blog/<int:post_id>/', views.blog_detail, name='blog_detail'), # BLog detail View\n     \n-    path('create/', views.create_blog_post, name='create_blog_post'), # Blog create view    \n+    # path('create/', views.create_blog_post, name='create_blog_post'), # Blog create view    \n     \n     \n ]\n"
+                },
+                {
+                    "date": 1734814551642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n from django.urls import path, include\n # from IDGenie.views import index, blog\n from .import views\n+from .admin import admin_site \n \n app_name =\"IDGenie\"\n \n urlpatterns = [\n@@ -17,6 +18,6 @@\n     \n     \n     # path('create/', views.create_blog_post, name='create_blog_post'), # Blog create view    \n     \n-    \n+    path(\"admin/\", admin_site.urls),\n ]\n"
+                },
+                {
+                    "date": 1734814596940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n from django.urls import path, include\n # from IDGenie.views import index, blog\n from .import views\n-from .admin import admin_site \n \n app_name =\"IDGenie\"\n \n urlpatterns = [\n@@ -18,6 +17,6 @@\n     \n     \n     # path('create/', views.create_blog_post, name='create_blog_post'), # Blog create view    \n     \n-    path(\"admin/\", admin_site.urls),\n+    \n ]\n"
+                },
+                {
+                    "date": 1734881538333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,11 @@\n     #Blog Post URL\n     path('blog/', views.blogpost, name='blog_list'), # BLog List View\n     \n     \n-    # path('create/', views.create_blog_post, name='create_blog_post'), # Blog create view    \n+    # path('create/', views.create_blog_post, name='create_blog_post'), # Blog create view  \n     \n+    path(\"api/user/avatar/\", views.get_user_avatar, name=\"get_user_avatar\"),\n+  \n     \n+    \n ]\n"
+                },
+                {
+                    "date": 1734894889251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n from django.urls import path, include\n # from IDGenie.views import index, blog\n from .import views\n+from .views import login_view, signup_view\n \n app_name =\"IDGenie\"\n \n urlpatterns = [\n@@ -20,6 +21,10 @@\n     \n     path(\"api/user/avatar/\", views.get_user_avatar, name=\"get_user_avatar\"),\n   \n     \n+    # Login url\n+    path('login/', login_view, name='login'),\n     \n+    # SignUp Url\n+    path('signup/', signup_view, name='signup'),\n ]\n"
+                },
+                {
+                    "date": 1734903745857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n from django.urls import path, include\n # from IDGenie.views import index, blog\n from .import views\n-from .views import login_view, signup_view\n+from .views import login_view, signup_view, custom_logout\n \n app_name =\"IDGenie\"\n \n urlpatterns = [\n@@ -26,5 +26,9 @@\n     path('login/', login_view, name='login'),\n     \n     # SignUp Url\n     path('signup/', signup_view, name='signup'),\n+    \n+    # Login Out URL\n+    path('logout/', custom_logout, name='logout'),\n+\n ]\n"
+                },
+                {
+                    "date": 1734985924609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n from django.urls import path, include\n # from IDGenie.views import index, blog\n from .import views\n-from .views import login_view, signup_view, custom_logout\n+from .views import login_view, signup, custom_logout\n \n app_name =\"IDGenie\"\n \n urlpatterns = [\n@@ -25,9 +25,9 @@\n     # Login url\n     path('login/', login_view, name='login'),\n     \n     # SignUp Url\n-    path('signup/', signup_view, name='signup'),\n+    path('signup/', signup, name='signup'),\n     \n     # Login Out URL\n     path('logout/', custom_logout, name='logout'),\n \n"
+                },
+                {
+                    "date": 1735324237240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,34 +1,35 @@\n from django.urls import path, include\n # from IDGenie.views import index, blog\n from .import views\n-from .views import login_view, signup, custom_logout\n+from .views import login_view, signup_view, custom_logout\n \n app_name =\"IDGenie\"\n \n urlpatterns = [\n     \n     # HomePage URL  \n     path('', views.index, name='index'),\n     \n-    \n+    path('update-thumbs/', views.update_thumbs, name='update_thumbs'),\n+\n     path('blog/<int:pk>/', views.blog_detail, name='blog_detail'), # BLog detail View\n     \n     #Blog Post URL\n     path('blog/', views.blogpost, name='blog_list'), # BLog List View\n     \n     \n     # path('create/', views.create_blog_post, name='create_blog_post'), # Blog create view  \n     \n-    path(\"api/user/avatar/\", views.get_user_avatar, name=\"get_user_avatar\"),\n   \n     \n     # Login url\n     path('login/', login_view, name='login'),\n     \n+    # Login Out URL\n+    path('logout/', custom_logout, name='logout'),\n+    \n     # SignUp Url\n-    path('signup/', signup, name='signup'),\n+    path('signup/', signup_view, name='signup'),\n     \n-    # Login Out URL\n-    path('logout/', custom_logout, name='logout'),\n \n ]\n"
+                }
+            ],
+            "date": 1732961947326,
+            "name": "Commit-0",
+            "content": "from django.urls import path, include\nfrom IDGenie.views import index, blogpost_view\nfrom . import views\napp_name =\"IDGenie\"\n\nurlpatterns = [\n    \n    # HomePage URL  \n    path('', index, name = 'index'),\n    \n    #Blog Post URL\n    path('blogpost/', blogpost_view, name = 'blogpost'),\n    \n    \n]\n"
+        }
+    ]
+}

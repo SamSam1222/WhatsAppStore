@@ -1,0 +1,10 @@
+/* Resize the login logo */
+.custom-logo-size {
+    width: 150px !important;
+    height: auto !important;
+}
+
+/* General logo tweaks */
+.img-circle {
+    border-radius: 0; /* Remove rounded corners if any */
+}

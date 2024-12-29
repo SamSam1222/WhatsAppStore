@@ -1,0 +1,7 @@
+/* Custom CKEditor styles */
+.cke_editable {
+    background-color: #982d2d;  /* Light gray background */
+    color: #bd1010;  /* Dark text */
+    font-family: Arial, sans-serif;  /* Font family */
+    font-size: 16px;  /* Font size */
+}

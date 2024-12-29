@@ -1,0 +1,5 @@
+/* Force background change */
+body, .cke_contents {
+    background-color: #f0f0f0 !important;  /* Use your desired color */
+    color: #333333 !important;  /* Optional: Change text color too */
+}

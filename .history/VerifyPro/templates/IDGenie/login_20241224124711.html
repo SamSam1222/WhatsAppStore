@@ -1,0 +1,99 @@
+{% extends "IDGenie/login_base.html" %}
+
+{% block content %}
+<style>
+   /* Styling for success and error messages */
+   .messages ul {
+       list-style: none;
+       padding: 0;
+       margin: 0;
+   }
+   
+   .messages .message {
+       padding: 10px;
+       margin-bottom: 10px;
+       border-radius: 5px;
+   }
+   
+   .messages .success {
+       background-color: #d4edda;
+       color: #155724;
+   }
+   
+   .messages .error {
+       background-color: #f8d7da;
+       color: #721c24;
+   }
+   
+</style>
+
+
+<div class="bg-img">
+
+    <div class="content">
+       <header>Login Form</header>
+           <!-- Displaying messages -->
+    <div class="messages">
+      {% if messages %}
+          <ul>
+              {% for message in messages %}
+                  <li class="message {% if message.tags %}{{ message.tags }}{% endif %}">
+                      {{ message }}
+                  </li>
+              {% endfor %}
+          </ul>
+      {% endif %}
+  </div>
+       <form method="POST" action="">
+          {% csrf_token %}
+          
+          <!-- Displaying the form fields dynamically -->
+          <div class="field">
+             <span class="fa fa-user"></span>
+             {{ form.username }}
+          </div>
+          <div class="field space">
+             <span class="fa fa-lock"></span>
+             {{ form.password }}
+             <span class="show">SHOW</span>
+          </div>
+          <div class="pass">
+             <a href="">Forgot Password?</a>
+          </div>
+          <div class="field">
+             <input type="submit" value="LOGIN">
+          </div>
+       </form>
+       <div class="login">
+          Or login with
+       </div>
+       <div class="links">
+          <div class="facebook">
+             <i class="fab fa-facebook-f"><span>Facebook</span></i>
+          </div>
+          <div class="google">
+             <i class="fab fa-google"><span>Google</span></i>
+          </div>
+       </div>
+       <div class="signup">
+          Don't have an account?
+          <a href="{% url 'IDGenie:signup' %}">Signup Now</a>
+       </div>
+    </div>
+ </div>
+ <script>
+    const pass_field = document.querySelector('.pass-key');
+    const showBtn = document.querySelector('.show');
+    showBtn.addEventListener('click', function(){
+       if(pass_field.type === "password"){
+           pass_field.type = "text";
+           showBtn.textContent = "HIDE";
+           showBtn.style.color = "#3498db";
+       }else{
+           pass_field.type = "password";
+           showBtn.textContent = "SHOW";
+           showBtn.style.color = "#222";
+       }
+    });
+ </script>
+{% endblock %}

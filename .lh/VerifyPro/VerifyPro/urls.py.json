@@ -1,0 +1,78 @@
+{
+    "sourceFile": "VerifyPro/VerifyPro/urls.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1732312707650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1732312725717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,4 +28,15 @@\n     path('', include('IDGenie.urls')),\n     \n     path('admin/', admin.site.urls),\n ]\n+\n+\n+\n+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)\n+\n+\n+from django.conf import settings\n+from django.conf.urls.static import static\n+if settings.DEBUG:\n+    urlpatterns += static(settings.MEDIA_URL,\n+                          document_root=settings.MEDIA_ROOT)\n"
+                },
+                {
+                    "date": 1733899113124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,11 +24,12 @@\n \n \n urlpatterns = [\n     # This is the url that helps take the user to the landing page\n+    path('admin/', admin.site.urls),\n+    \n     path('', include('IDGenie.urls')),\n     \n-    path('admin/', admin.site.urls),\n ]\n \n \n \n"
+                },
+                {
+                    "date": 1733899526439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,12 +24,11 @@\n \n \n urlpatterns = [\n     # This is the url that helps take the user to the landing page\n-    path('admin/', admin.site.urls),\n-    \n     path('', include('IDGenie.urls')),\n     \n+    path('admin/', admin.site.urls),\n ]\n \n \n \n"
+                },
+                {
+                    "date": 1734208039063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \n \n urlpatterns = [\n     # This is the url that helps take the user to the landing page\n-    path('', include('IDGenie.urls')),\n+    path('', include('IDGenie.urls', namespace='IDGenie')),\n     \n     path('admin/', admin.site.urls),\n ]\n \n"
+                },
+                {
+                    "date": 1734209240435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \n \n urlpatterns = [\n     # This is the url that helps take the user to the landing page\n-    path('', include('IDGenie.urls', namespace='IDGenie')),\n+    path('', include('IDGenie.urls')),\n     \n     path('admin/', admin.site.urls),\n ]\n \n"
+                },
+                {
+                    "date": 1734209247445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \n \n urlpatterns = [\n     # This is the url that helps take the user to the landing page\n-    path('', include('IDGenie.urls')),\n+    path('index/', include('IDGenie.urls')),\n     \n     path('admin/', admin.site.urls),\n ]\n \n"
+                },
+                {
+                    "date": 1734209312094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \n \n urlpatterns = [\n     # This is the url that helps take the user to the landing page\n-    path('index/', include('IDGenie.urls')),\n+    path('', include('IDGenie.urls')),\n     \n     path('admin/', admin.site.urls),\n ]\n \n"
+                },
+                {
+                    "date": 1734210078285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,12 +23,13 @@\n \n \n \n urlpatterns = [\n+    path('admin/', admin.site.urls),\n+    \n     # This is the url that helps take the user to the landing page\n     path('', include('IDGenie.urls')),\n     \n-    path('admin/', admin.site.urls),\n ]\n \n \n \n"
+                },
+                {
+                    "date": 1734210355727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,13 +23,12 @@\n \n \n \n urlpatterns = [\n-    path('admin/', admin.site.urls),\n-    \n     # This is the url that helps take the user to the landing page\n     path('', include('IDGenie.urls')),\n     \n+    path('admin/', admin.site.urls),\n ]\n \n \n \n"
+                },
+                {
+                    "date": 1734596965108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,21 @@\n     # This is the url that helps take the user to the landing page\n     path('', include('IDGenie.urls')),\n     \n     path('admin/', admin.site.urls),\n+    \n+    # CKEditor settings\n+CKEDITOR_UPLOAD_PATH = \"uploads/\"  # Path where uploaded images and files will be stored\n+CKEDITOR_CONFIGS = {\n+    'default': {\n+        'toolbar': 'Full',  # Or use another toolbar option like 'Basic', 'Standard', etc.\n+        'height': 300,  # Set the height of the CKEditor\n+        'width': '100%',  # Set the width to 100% of the container\n+        'filebrowserUploadUrl': '/ckeditor/upload/',  # URL for file uploads (if using 'ckeditor_uploader')\n+        'filebrowserImageUploadUrl': '/ckeditor/upload/',  # URL for image uploads\n+    }\n+}\n+\n ]\n \n \n \n"
+                },
+                {
+                    "date": 1734596981738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,21 +27,13 @@\n     # This is the url that helps take the user to the landing page\n     path('', include('IDGenie.urls')),\n     \n     path('admin/', admin.site.urls),\n+    # other paths\n+    path('ckeditor/', include('ckeditor_uploader.urls')),  # For CKEditor file uploads\n+\n     \n-    # CKEditor settings\n-CKEDITOR_UPLOAD_PATH = \"uploads/\"  # Path where uploaded images and files will be stored\n-CKEDITOR_CONFIGS = {\n-    'default': {\n-        'toolbar': 'Full',  # Or use another toolbar option like 'Basic', 'Standard', etc.\n-        'height': 300,  # Set the height of the CKEditor\n-        'width': '100%',  # Set the width to 100% of the container\n-        'filebrowserUploadUrl': '/ckeditor/upload/',  # URL for file uploads (if using 'ckeditor_uploader')\n-        'filebrowserImageUploadUrl': '/ckeditor/upload/',  # URL for image uploads\n-    }\n-}\n-\n+    \n ]\n \n \n \n"
+                },
+                {
+                    "date": 1734598764140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,13 +27,11 @@\n     # This is the url that helps take the user to the landing page\n     path('', include('IDGenie.urls')),\n     \n     path('admin/', admin.site.urls),\n-    # other paths\n-    path('ckeditor/', include('ckeditor_uploader.urls')),  # For CKEditor file uploads\n+    \n+    path('ckeditor/upload/', upload, name='ckeditor_upload'),\n \n-    \n-    \n ]\n \n \n \n"
+                },
+                {
+                    "date": 1734598784300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n from . import settings\n import IDGenie\n from django.conf.urls.static import static\n from django.conf.urls import include\n+from ckeditor_5.views import upload\n \n \n \n urlpatterns = [\n"
+                },
+                {
+                    "date": 1734634127779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,8 @@\n from . import settings\n import IDGenie\n from django.conf.urls.static import static\n from django.conf.urls import include\n-from ckeditor_5.views import upload\n \n \n \n urlpatterns = [\n@@ -29,9 +28,10 @@\n     path('', include('IDGenie.urls')),\n     \n     path('admin/', admin.site.urls),\n     \n-    path('ckeditor/upload/', upload, name='ckeditor_upload'),\n+    # CKEditor Uploader URLs (needed for file uploads)\n+    path('ckeditor/', include('ckeditor_uploader.urls')),\n \n ]\n \n \n"
+                },
+                {
+                    "date": 1734644627558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,19 +19,21 @@\n from . import settings\n import IDGenie\n from django.conf.urls.static import static\n from django.conf.urls import include\n+from ckeditor_uploader import views as ckeditor_views\n \n \n \n+\n urlpatterns = [\n     # This is the url that helps take the user to the landing page\n     path('', include('IDGenie.urls')),\n     \n     path('admin/', admin.site.urls),\n     \n     # CKEditor Uploader URLs (needed for file uploads)\n-    path('ckeditor/', include('ckeditor_uploader.urls')),\n+    path('ckeditor/upload/', ckeditor_views.upload, name='ckeditor_upload'),\n \n ]\n \n \n"
+                }
+            ],
+            "date": 1732312707650,
+            "name": "Commit-0",
+            "content": "\"\"\"\nURL configuration for VerifyPro project.\n\nThe `urlpatterns` list routes URLs to views. For more information please see:\n    https://docs.djangoproject.com/en/4.2/topics/http/urls/\nExamples:\nFunction views\n    1. Add an import:  from my_app import views\n    2. Add a URL to urlpatterns:  path('', views.home, name='home')\nClass-based views\n    1. Add an import:  from other_app.views import Home\n    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')\nIncluding another URLconf\n    1. Import the include() function: from django.urls import include, path\n    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))\n\"\"\"\nfrom django.contrib import admin\nfrom django.urls import path\nfrom . import settings\nimport IDGenie\nfrom django.conf.urls.static import static\nfrom django.conf.urls import include\n\n\n\nurlpatterns = [\n    # This is the url that helps take the user to the landing page\n    path('', include('IDGenie.urls')),\n    \n    path('admin/', admin.site.urls),\n]\n"
+        }
+    ]
+}

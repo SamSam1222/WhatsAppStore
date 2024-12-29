@@ -1,0 +1,58 @@
+{
+    "sourceFile": "VerifyPro/templates/IDGenie/login_base.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1734895924319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734896024523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,13 @@\n <head>\n   <meta charset=\"UTF-8\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>{% block title %}My Site{% endblock %}</title>\n-  <link rel=\"stylesheet\" href=\"{% static 'css/style.css' %}\">\n+  <link rel=\"stylesheet\" href=\"{% static 'css/loginstyle.css' %}\">\n </head>\n <body>\n   {% block content %}\n \n-  \n+\n   {% endblock %}\n </body>\n </html>\n"
+                },
+                {
+                    "date": 1734896248534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+{% load static %}\n+\n <!DOCTYPE html>\n <html lang=\"en\">\n <head>\n   <meta charset=\"UTF-8\">\n"
+                },
+                {
+                    "date": 1734896313317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,12 @@\n {% load static %}\n-\n <!DOCTYPE html>\n <html lang=\"en\">\n <head>\n   <meta charset=\"UTF-8\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>{% block title %}My Site{% endblock %}</title>\n-  <link rel=\"stylesheet\" href=\"{% static 'css/loginstyle.css' %}\">\n+  <link rel=\"stylesheet\" href=\"{% static 'css/style.css' %}\">\n </head>\n <body>\n   {% block content %}\n \n"
+                },
+                {
+                    "date": 1734896347311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n <head>\n   <meta charset=\"UTF-8\">\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n   <title>{% block title %}My Site{% endblock %}</title>\n-  <link rel=\"stylesheet\" href=\"{% static 'css/style.css' %}\">\n+  <link rel=\"stylesheet\" href=\"{% static 'css/loginstyle.css' %}\">\n </head>\n <body>\n   {% block content %}\n \n"
+                },
+                {
+                    "date": 1734899227030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,17 @@\n-{% load static %}\n <!DOCTYPE html>\n-<html lang=\"en\">\n-<head>\n-  <meta charset=\"UTF-8\">\n-  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n-  <title>{% block title %}My Site{% endblock %}</title>\n-  <link rel=\"stylesheet\" href=\"{% static 'css/loginstyle.css' %}\">\n-</head>\n-<body>\n-  {% block content %}\n+<!-- Created By CodingNepal -->\n+<html lang=\"en\" dir=\"ltr\">\n+   <head>\n+      <meta charset=\"utf-8\">\n+      <title>{% block title %}My Site{% endblock %}</title>\n+      <link rel=\"stylesheet\" href=\"{% static 'css/loginstyle.css' %}\">\n+      <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css\"/>\n+   </head>\n+   <body>\n \n+    {% block content %}\n \n-  {% endblock %}\n-</body>\n-</html>\n+\n+    {% endblock %}\n+   </body>\n+</html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1734899316122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+{% load static %}\n+\n <!DOCTYPE html>\n <!-- Created By CodingNepal -->\n <html lang=\"en\" dir=\"ltr\">\n    <head>\n"
+                },
+                {
+                    "date": 1734900827600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,17 @@\n       <meta charset=\"utf-8\">\n       <title>{% block title %}My Site{% endblock %}</title>\n       <link rel=\"stylesheet\" href=\"{% static 'css/loginstyle.css' %}\">\n       <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css\"/>\n+      <div class=\"links\">\n+        <div class=\"facebook\">\n+          <i class=\"fab fa-facebook-f\"></i><span>Facebook</span>\n+        </div>\n+        <div class=\"google\">\n+          <i class=\"fab fa-google\"></i><span>Google</span>\n+        </div>\n+      </div>\n+      \n    </head>\n    <body>\n \n     {% block content %}\n"
+                },
+                {
+                    "date": 1734900987303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,17 +7,10 @@\n       <meta charset=\"utf-8\">\n       <title>{% block title %}My Site{% endblock %}</title>\n       <link rel=\"stylesheet\" href=\"{% static 'css/loginstyle.css' %}\">\n       <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css\"/>\n-      <div class=\"links\">\n-        <div class=\"facebook\">\n-          <i class=\"fab fa-facebook-f\"></i><span>Facebook</span>\n-        </div>\n-        <div class=\"google\">\n-          <i class=\"fab fa-google\"></i><span>Google</span>\n-        </div>\n-      </div>\n-      \n+      <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css\" rel=\"stylesheet\">\n+\n    </head>\n    <body>\n \n     {% block content %}\n"
+                },
+                {
+                    "date": 1734900999300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n    <head>\n       <meta charset=\"utf-8\">\n       <title>{% block title %}My Site{% endblock %}</title>\n       <link rel=\"stylesheet\" href=\"{% static 'css/loginstyle.css' %}\">\n-      <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css\"/>\n       <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css\" rel=\"stylesheet\">\n \n    </head>\n    <body>\n"
+                },
+                {
+                    "date": 1734901008733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n    <head>\n       <meta charset=\"utf-8\">\n       <title>{% block title %}My Site{% endblock %}</title>\n       <link rel=\"stylesheet\" href=\"{% static 'css/loginstyle.css' %}\">\n-      <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css\" rel=\"stylesheet\">\n-\n+      <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css\"/>\n+      \n    </head>\n    <body>\n \n     {% block content %}\n"
+                }
+            ],
+            "date": 1734895924319,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>{% block title %}My Site{% endblock %}</title>\n  <link rel=\"stylesheet\" href=\"{% static 'css/style.css' %}\">\n</head>\n<body>\n  {% block content %}\n\n  \n  {% endblock %}\n</body>\n</html>\n"
+        }
+    ]
+}

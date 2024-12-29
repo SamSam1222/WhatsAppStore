@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      {% comment %} <title>{% block title %}My Site{% endblock %}</title> {% endcomment %}
+
+      <title>eBusiness Hub</title>
+            <!-- Favicons -->
+      <link href="{% static 'img/favicon.png' %}" rel="icon">
+      <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+      <link rel="stylesheet" href="{% static 'css/loginstyle.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      
+   </head>
+   <body>
+
+    {% block content %}
+
+
+    {% endblock %}
+   </body>
+</html>

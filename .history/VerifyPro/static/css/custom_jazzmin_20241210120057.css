@@ -1,0 +1,14 @@
+body {
+    background-image: url('/static/images/your-background.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+
+img {
+    width: 300px !important;
+    height: auto !important;
+    border-radius: 50%; /* Ensure the image is circular */
+
+}
