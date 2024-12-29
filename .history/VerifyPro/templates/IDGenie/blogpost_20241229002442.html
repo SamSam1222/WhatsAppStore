@@ -1,0 +1,267 @@
+{% extends "IDGenie/base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+  /* Ensure all images are the same size on the blog posts page */
+.single-blog-img img {
+  width: 100%; /* Ensure the image takes up full width of its container */
+  height: 350px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensure the image covers the space without distortion */
+  object-position: center; /* Center the image within the container */
+}
+
+/* Optional: Adjust height for responsiveness */
+@media (max-width: 768px) {
+  .single-blog-img img {
+    height: 200px; /* Adjust height on smaller screens */
+  }
+}
+
+</style>
+
+
+
+  <div class="blog-page area-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <div class="page-head-blog">
+            <div class="single-blog-page">
+              <!-- search option start -->
+              <form action="#">
+                <div class="search-option">
+                  <input type="text" placeholder="Search...">
+                  <button class="button" type="submit">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                </div>
+              </form>
+              <!-- search option end -->
+            </div>
+            <div class="single-blog-page">
+              <!-- recent start -->
+              <div class="left-blog">
+                <h4>recent post</h4>
+                <div class="recent-post">
+                  <!-- start single post -->
+                  <div class="recent-single-post">
+                    <div class="post-img">
+                      <a href="#">
+												   <img src="{% static 'img/blog/1.jpg' %}" alt="">
+												</a>
+                    </div>
+                    <div class="pst-content">
+                      <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
+                    </div>
+                  </div>
+                  <!-- End single post -->
+                  <!-- start single post -->
+                  <div class="recent-single-post">
+                    <div class="post-img">
+                      <a href="#">
+												   <img src="{% static 'img/blog/2.jpg' %}" alt="">
+												</a>
+                    </div>
+                    <div class="pst-content">
+                      <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
+                    </div>
+                  </div>
+                  <!-- End single post -->
+                  <!-- start single post -->
+                  <div class="recent-single-post">
+                    <div class="post-img">
+                      <a href="#">
+												   <img src="{% static 'img/blog/3.jpg' %}" alt="">
+												</a>
+                    </div>
+                    <div class="pst-content">
+                      <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
+                    </div>
+                  </div>
+                  <!-- End single post -->
+                  <!-- start single post -->
+                  <div class="recent-single-post">
+                    <div class="post-img">
+                      <a href="#">
+												   <img src="{% static 'img/blog/4.jpg' %}" alt="">
+												</a>
+                    </div>
+                    <div class="pst-content">
+                      <p><a href="#"> Redug Lerse dolor sit amet consect adipis elit.</a></p>
+                    </div>
+                  </div>
+                  <!-- End single post -->
+                </div>
+              </div>
+              <!-- recent end -->
+            </div>
+            <div class="single-blog-page">
+              <div class="left-blog">
+                <h4>categories</h4>
+                <ul>
+                  <li>
+                    <a href="#">Portfolio</a>
+                  </li>
+                  <li>
+                    <a href="#">Project</a>
+                  </li>
+                  <li>
+                    <a href="#">Design</a>
+                  </li>
+                  <li>
+                    <a href="#">wordpress</a>
+                  </li>
+                  <li>
+                    <a href="#">Joomla</a>
+                  </li>
+                  <li>
+                    <a href="#">Html</a>
+                  </li>
+                  <li>
+                    <a href="#">Website</a>
+                  </li>
+                </ul>
+              </div>
+            {% comment %} </div>
+            <div class="single-blog-page">
+              <div class="left-blog">
+                <h4>archive</h4>
+                <ul>
+                  <li>
+                    <a href="#">07 July 2016</a>
+                  </li>
+                  <li>
+                    <a href="#">29 June 2016</a>
+                  </li>
+                  <li>
+                    <a href="#">13 May 2016</a>
+                  </li>
+                  <li>
+                    <a href="#">20 March 2016</a>
+                  </li>
+                  <li>
+                    <a href="#">09 Fabruary 2016</a>
+                  </li>
+                </ul>
+              </div>
+            </div> {% endcomment %}
+            <div class="single-blog-page">
+              <div class="left-tags blog-tags">
+                <div class="popular-tag left-side-tags left-blog">
+                  <h4>popular tags</h4>
+                  <ul>
+                    <li>
+                      <a href="#">Portfolio</a>
+                    </li>
+                    <li>
+                      <a href="#">Project</a>
+                    </li>
+                    <li>
+                      <a href="#">Design</a>
+                    </li>
+                    <li>
+                      <a href="#">Website</a>
+                    </li>
+                    <li>
+                      <a href="#">Joomla</a>
+                    </li>
+                    <li>
+                      <a href="#">Html</a>
+                    </li>
+                    <li>
+                      <a href="#">wordpress</a>
+                    </li>
+                    <li>
+                      <a href="#">Masonry</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End left sidebar -->
+
+
+
+      <!-- Start single blog -->
+      <div class="col-md-8 col-sm-8 col-xs-12">
+        <div class="row">
+          <!-- Loop through paginated blog posts -->
+          {% for post in page_obj %}
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="single-blog">
+              <!-- Blog Image -->
+              <div class="single-blog-img">
+                <a href="{% url 'IDGenie:blog_detail' post.id %}">
+                  {% if post.image %}
+                  <img src="{{ post.image.url }}" alt="{{ post.title }}">
+                  {% else %}
+                  <img src="{% static 'img/default_image.jpg' %}" alt="Default Image">
+                  {% endif %}
+                </a>
+              </div>
+
+              <!-- Blog Meta -->
+              <div class="blog-meta">
+                <span class="comments-type">
+                  <i class="fa fa-comment-o"></i>
+                  <a href="{% url 'IDGenie:blog_detail' post.id %}">{{ post.comments.count }} comments</a>
+                </span>
+                <span class="date-type">
+                  <i class="fa fa-calendar"></i>{{ post.created_at|date:"Y-m-d / H:i:s" }}
+                </span>
+              </div>
+
+              <!-- Blog Title and Content -->
+              <div class="blog-text">
+                <h4>
+                  <a href="{% url 'IDGenie:blog_detail' post.id %}">{{ post.title }}</a>
+                </h4>
+                <div>
+                  <!-- Render CKEditor content safely -->
+                  {{ post.content|safe|truncatewords_html:30 }}
+                </div>
+              </div>
+
+              <!-- Read More Button -->
+              <span>
+                <a href="{% url 'IDGenie:blog_detail' post.id %}" class="ready-btn">Read more</a>
+              </span>
+            </div>
+          </div>
+          {% endfor %}
+
+          <!-- Pagination Controls -->
+          <div class="blog-pagination" style="text-align: center;">
+            <ul class="pagination" style="display: inline-block; list-style: none; padding: 0;">
+              {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}">&lt;</a></li>
+              {% else %}
+                <li class="disabled"><a href="#">&lt;</a></li>
+              {% endif %}
+          
+              {% for num in page_obj.paginator.page_range %}
+                {% if num >= page_obj.number|add:-2 and num <= page_obj.number|add:2 %}
+                  <li class="{% if page_obj.number == num %}active{% endif %}">
+                    <a href="?page={{ num }}">{{ num }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+          
+              {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}">&gt;</a></li>
+              {% else %}
+                <li class="disabled"><a href="#">&gt;</a></li>
+              {% endif %}
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+{% endblock %}

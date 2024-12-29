@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 98,
+            "activePatchIndex": 109,
             "patches": [
                 {
                     "date": 1732961842027,
@@ -400,6 +400,50 @@
                 {
                     "date": 1735338205399,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -162,17 +162,18 @@\n     if request.method == 'POST' and request.headers.get('x-requested-with') == 'XMLHttpRequest':\n         if request.user.is_authenticated:\n             content = request.POST.get('content', '').strip()\n             if content:\n+                # Create a new comment\n                 comment = Comment.objects.create(\n                     blog_post=blog_post,\n                     author=request.user,\n                     content=content\n                 )\n \n                 profile_picture_url = request.user.profile_picture.url if request.user.profile_picture else None\n \n-                # Return the created comment's details as a JSON response\n+                # Return the created comment's details and thumbs counts as a JSON response\n                 return JsonResponse({\n                     'comment_id': comment.id,\n                     'author': comment.author.username,\n                     'content': comment.content,\n"
+                },
+                {
+                    "date": 1735456649173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n     return render(request, 'IDGenie/index.html', {'blog_posts': blog_posts})\n \n \n def blogpost(request):\n-    blog_posts = BlogPost.objects.all()\n+    blog_posts = BlogPost.objects.order_by('-created_at')[:5]  # Fetch the latest 5 posts\n     return render(request, 'IDGenie/blogpost.html', {'blog_posts': blog_posts})\n \n \n \n"
+                },
+                {
+                    "date": 1735456935249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n     return render(request, 'IDGenie/index.html', {'blog_posts': blog_posts})\n \n \n def blogpost(request):\n-    blog_posts = BlogPost.objects.order_by('-created_at')[:5]  # Fetch the latest 5 posts\n+    blog_posts = BlogPost.objects.all()\n     return render(request, 'IDGenie/blogpost.html', {'blog_posts': blog_posts})\n \n \n \n"
+                },
+                {
+                    "date": 1735458001612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,18 +28,22 @@\n     return render(request, 'IDGenie/index.html', {'blog_posts': blog_posts})\n \n \n def blogpost(request):\n-    blog_posts = BlogPost.objects.all()\n-    return render(request, 'IDGenie/blogpost.html', {'blog_posts': blog_posts})\n+    blog_posts = Blog.objects.all().order_by('-created_at')  # Order by newest first\n+    paginator = Paginator(blog_posts, 3)  # Show 3 posts per page\n+    page_number = request.GET.get('page')  # Get the page number from the request\n+    page_obj = paginator.get_page(page_number)  # Get the page object\n \n+    return render(request, 'IDGenie/blog_list.html', {'page_obj': page_obj})\n \n \n \n \n \n \n \n+\n # Login code\n \n def login_view(request):\n     if request.method == 'POST':\n"
+                },
+                {
+                    "date": 1735458025506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n from django.http import JsonResponse\n from django.views.decorators.csrf import csrf_exempt\n from .models import Comment, UserCommentVote\n from django.contrib.auth.decorators import login_required\n+from django.core.paginator import Paginator\n \n # views.py\n \n # Create your views here.\n"
+                },
+                {
+                    "date": 1735458269376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,22 +29,20 @@\n     return render(request, 'IDGenie/index.html', {'blog_posts': blog_posts})\n \n \n def blogpost(request):\n-    blog_posts = Blog.objects.all().order_by('-created_at')  # Order by newest first\n+    blog_posts = BlogPost.objects.all().order_by('-created_at')  # Order by newest first\n     paginator = Paginator(blog_posts, 3)  # Show 3 posts per page\n-    page_number = request.GET.get('page')  # Get the page number from the request\n-    page_obj = paginator.get_page(page_number)  # Get the page object\n+    page_number = request.GET.get('page')  # Get the current page number from the request\n+    page_obj = paginator.get_page(page_number)  # Get the blog posts for the current page\n \n-    return render(request, 'IDGenie/blog_list.html', {'page_obj': page_obj})\n+    return render(request, 'IDGenie/blogpost.html', {'page_obj': page_obj})\n \n \n \n \n \n \n-\n-\n # Login code\n \n def login_view(request):\n     if request.method == 'POST':\n"
+                },
+                {
+                    "date": 1735459534920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n \n \n def blogpost(request):\n     blog_posts = BlogPost.objects.all().order_by('-created_at')  # Order by newest first\n-    paginator = Paginator(blog_posts, 3)  # Show 3 posts per page\n+    paginator = Paginator(blog_posts, 1)  # Show 3 posts per page\n     page_number = request.GET.get('page')  # Get the current page number from the request\n     page_obj = paginator.get_page(page_number)  # Get the blog posts for the current page\n \n     return render(request, 'IDGenie/blogpost.html', {'page_obj': page_obj})\n"
+                },
+                {
+                    "date": 1735459576446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n \n \n def blogpost(request):\n     blog_posts = BlogPost.objects.all().order_by('-created_at')  # Order by newest first\n-    paginator = Paginator(blog_posts, 1)  # Show 3 posts per page\n+    paginator = Paginator(blog_posts, 3)  # Show 3 posts per page\n     page_number = request.GET.get('page')  # Get the current page number from the request\n     page_obj = paginator.get_page(page_number)  # Get the blog posts for the current page\n \n     return render(request, 'IDGenie/blogpost.html', {'page_obj': page_obj})\n"
+                },
+                {
+                    "date": 1735460145054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n \n \n def blogpost(request):\n     blog_posts = BlogPost.objects.all().order_by('-created_at')  # Order by newest first\n-    paginator = Paginator(blog_posts, 3)  # Show 3 posts per page\n+    paginator = Paginator(blog_posts, 5)  # Show 3 posts per page\n     page_number = request.GET.get('page')  # Get the current page number from the request\n     page_obj = paginator.get_page(page_number)  # Get the blog posts for the current page\n \n     return render(request, 'IDGenie/blogpost.html', {'page_obj': page_obj})\n"
+                },
+                {
+                    "date": 1735460177862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n \n \n def blogpost(request):\n     blog_posts = BlogPost.objects.all().order_by('-created_at')  # Order by newest first\n-    paginator = Paginator(blog_posts, 5)  # Show 3 posts per page\n+    paginator = Paginator(blog_posts, 1)  # Show 3 posts per page\n     page_number = request.GET.get('page')  # Get the current page number from the request\n     page_obj = paginator.get_page(page_number)  # Get the blog posts for the current page\n \n     return render(request, 'IDGenie/blogpost.html', {'page_obj': page_obj})\n"
+                },
+                {
+                    "date": 1735460245570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n \n \n def blogpost(request):\n     blog_posts = BlogPost.objects.all().order_by('-created_at')  # Order by newest first\n-    paginator = Paginator(blog_posts, 1)  # Show 3 posts per page\n+    paginator = Paginator(blog_posts, 3)  # Show 3 posts per page\n     page_number = request.GET.get('page')  # Get the current page number from the request\n     page_obj = paginator.get_page(page_number)  # Get the blog posts for the current page\n \n     return render(request, 'IDGenie/blogpost.html', {'page_obj': page_obj})\n"
+                },
+                {
+                    "date": 1735460263537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n \n \n def blogpost(request):\n     blog_posts = BlogPost.objects.all().order_by('-created_at')  # Order by newest first\n-    paginator = Paginator(blog_posts, 3)  # Show 3 posts per page\n+    paginator = Paginator(blog_posts, 2)  # Show 3 posts per page\n     page_number = request.GET.get('page')  # Get the current page number from the request\n     page_obj = paginator.get_page(page_number)  # Get the blog posts for the current page\n \n     return render(request, 'IDGenie/blogpost.html', {'page_obj': page_obj})\n"
                 }
             ],
             "date": 1732961842027,

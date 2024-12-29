@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 83,
+            "activePatchIndex": 98,
             "patches": [
                 {
                     "date": 1732345622103,
@@ -340,6 +340,66 @@
                 {
                     "date": 1735323065237,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,13 +30,13 @@\n   <link href=\"{% static 'lib/venobox/venobox.css' %}\" rel=\"stylesheet\">\n \n  \n   <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script> \n-  <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css\" rel=\"stylesheet\">\n \n \n   <!-- Nivo Slider Theme -->\n   <link href=\"{% static 'css/nivo-slider-theme.css' %}\" rel=\"stylesheet\">\n+  <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\" rel=\"stylesheet\">\n \n   <!-- Main Stylesheet File -->\n   <link href=\"{% static 'css/style.css' %}\" rel=\"stylesheet\">\n \n"
+                },
+                {
+                    "date": 1735446753700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n \n \n   <!-- Nivo Slider Theme -->\n   <link href=\"{% static 'css/nivo-slider-theme.css' %}\" rel=\"stylesheet\">\n-  <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\" rel=\"stylesheet\">\n+  {% comment %} <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\" rel=\"stylesheet\"> {% endcomment %}\n \n   <!-- Main Stylesheet File -->\n   <link href=\"{% static 'css/style.css' %}\" rel=\"stylesheet\">\n \n"
+                },
+                {
+                    "date": 1735446811267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n \n \n   <!-- Nivo Slider Theme -->\n   <link href=\"{% static 'css/nivo-slider-theme.css' %}\" rel=\"stylesheet\">\n-  {% comment %} <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\" rel=\"stylesheet\"> {% endcomment %}\n+  <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\" rel=\"stylesheet\">\n \n   <!-- Main Stylesheet File -->\n   <link href=\"{% static 'css/style.css' %}\" rel=\"stylesheet\">\n \n"
+                },
+                {
+                    "date": 1735447051948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,11 @@\n   <link href=\"{% static 'lib/animate/animate.min.css' %}\" rel=\"stylesheet\">\n   <link href=\"{% static 'lib/venobox/venobox.css' %}\" rel=\"stylesheet\">\n \n  \n-  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script> \n+  {% comment %} <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>  {% endcomment %}\n+  <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0-beta.2/jquery.min.js\" integrity=\"sha512-JobWAqYk5CSjWuVV3mxgS+MmccJqkrBaDhk8SKS1BW+71dJ9gzascwzW85UwGhxiSyR7Pxhu50k+Nl3+o5I49A==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"></script>\n+  \n \n \n   <!-- Nivo Slider Theme -->\n   <link href=\"{% static 'css/nivo-slider-theme.css' %}\" rel=\"stylesheet\">\n"
+                },
+                {
+                    "date": 1735447097400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,10 +29,9 @@\n   <link href=\"{% static 'lib/animate/animate.min.css' %}\" rel=\"stylesheet\">\n   <link href=\"{% static 'lib/venobox/venobox.css' %}\" rel=\"stylesheet\">\n \n  \n-  {% comment %} <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>  {% endcomment %}\n-  <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0-beta.2/jquery.min.js\" integrity=\"sha512-JobWAqYk5CSjWuVV3mxgS+MmccJqkrBaDhk8SKS1BW+71dJ9gzascwzW85UwGhxiSyR7Pxhu50k+Nl3+o5I49A==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"></script>\n+  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script> \n   \n \n \n   <!-- Nivo Slider Theme -->\n"
+                },
+                {
+                    "date": 1735447171769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,8 @@\n   <link href=\"{% static 'lib/animate/animate.min.css' %}\" rel=\"stylesheet\">\n   <link href=\"{% static 'lib/venobox/venobox.css' %}\" rel=\"stylesheet\">\n \n  \n-  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script> \n   \n \n \n   <!-- Nivo Slider Theme -->\n"
+                },
+                {
+                    "date": 1735447265477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,14 +29,13 @@\n   <link href=\"{% static 'lib/animate/animate.min.css' %}\" rel=\"stylesheet\">\n   <link href=\"{% static 'lib/venobox/venobox.css' %}\" rel=\"stylesheet\">\n \n  \n-  \n+  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script> \n \n \n   <!-- Nivo Slider Theme -->\n   <link href=\"{% static 'css/nivo-slider-theme.css' %}\" rel=\"stylesheet\">\n-  <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\" rel=\"stylesheet\">\n \n   <!-- Main Stylesheet File -->\n   <link href=\"{% static 'css/style.css' %}\" rel=\"stylesheet\">\n \n"
+                },
+                {
+                    "date": 1735447336139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,9 @@\n \n \n   <!-- Nivo Slider Theme -->\n   <link href=\"{% static 'css/nivo-slider-theme.css' %}\" rel=\"stylesheet\">\n+  <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\" rel=\"stylesheet\">\n \n   <!-- Main Stylesheet File -->\n   <link href=\"{% static 'css/style.css' %}\" rel=\"stylesheet\">\n \n"
+                },
+                {
+                    "date": 1735447350249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,8 @@\n \n \n   <!-- Nivo Slider Theme -->\n   <link href=\"{% static 'css/nivo-slider-theme.css' %}\" rel=\"stylesheet\">\n-  <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\" rel=\"stylesheet\">\n \n   <!-- Main Stylesheet File -->\n   <link href=\"{% static 'css/style.css' %}\" rel=\"stylesheet\">\n \n"
+                },
+                {
+                    "date": 1735447870130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,11 @@\n   <link href=\"{% static 'img/apple-touch-icon.png' %}\" rel=\"apple-touch-icon\">\n \n   <!-- Google Fonts -->\n   <link href=\"https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900\" rel=\"stylesheet\">\n+  <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\" rel=\"stylesheet\">\n \n+\n   <!-- Bootstrap CSS File -->\n   <link href=\"{% static 'lib/bootstrap/css/bootstrap.min.css' %}\" rel=\"stylesheet\">\n \n   <!-- Libraries CSS Files -->\n"
+                },
+                {
+                    "date": 1735449566694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,17 @@\n \n   <!-- Responsive Stylesheet File -->\n   <link href=\"{% static 'css/responsive.css' %}\" rel=\"stylesheet\">\n \n+\n+<!-- Swiper CSS -->\n+<link rel=\"stylesheet\" href=\"https://unpkg.com/swiper/swiper-bundle.min.css\">\n+\n+<!-- Swiper JS -->\n+<script src=\"https://unpkg.com/swiper/swiper-bundle.min.js\"></script>\n+\n+\n+\n   <!-- =======================================================\n     Theme Name: eBusiness\n     Theme URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/\n     Author: BootstrapMade.com\n"
+                },
+                {
+                    "date": 1735449659108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -340,7 +340,40 @@\n   <!-- Contact Form JavaScript File -->\n   <script src=\"{% static 'contactform/contactform.js' %}\"></script>\n \n   <script src=\"{% static 'js/main.js' %}\"></script>\n+\n+  <script>\n+    document.addEventListener('DOMContentLoaded', function () {\n+      new Swiper('.swiper-container', {\n+        loop: true,\n+        slidesPerView: 3,\n+        spaceBetween: 30,\n+        pagination: {\n+          el: '.swiper-pagination',\n+          clickable: true,\n+        },\n+        navigation: {\n+          nextEl: '.swiper-button-next',\n+          prevEl: '.swiper-button-prev',\n+        },\n+        breakpoints: {\n+          640: {\n+            slidesPerView: 1,\n+            spaceBetween: 10,\n+          },\n+          768: {\n+            slidesPerView: 2,\n+            spaceBetween: 20,\n+          },\n+          1024: {\n+            slidesPerView: 3,\n+            spaceBetween: 30,\n+          },\n+        },\n+      });\n+    });\n+  </script>\n+  \n </body>\n \n </html>\n"
+                },
+                {
+                    "date": 1735449740177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,17 +43,8 @@\n \n   <!-- Responsive Stylesheet File -->\n   <link href=\"{% static 'css/responsive.css' %}\" rel=\"stylesheet\">\n \n-\n-<!-- Swiper CSS -->\n-<link rel=\"stylesheet\" href=\"https://unpkg.com/swiper/swiper-bundle.min.css\">\n-\n-<!-- Swiper JS -->\n-<script src=\"https://unpkg.com/swiper/swiper-bundle.min.js\"></script>\n-\n-\n-\n   <!-- =======================================================\n     Theme Name: eBusiness\n     Theme URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/\n     Author: BootstrapMade.com\n@@ -340,40 +331,7 @@\n   <!-- Contact Form JavaScript File -->\n   <script src=\"{% static 'contactform/contactform.js' %}\"></script>\n \n   <script src=\"{% static 'js/main.js' %}\"></script>\n-\n-  <script>\n-    document.addEventListener('DOMContentLoaded', function () {\n-      new Swiper('.swiper-container', {\n-        loop: true,\n-        slidesPerView: 3,\n-        spaceBetween: 30,\n-        pagination: {\n-          el: '.swiper-pagination',\n-          clickable: true,\n-        },\n-        navigation: {\n-          nextEl: '.swiper-button-next',\n-          prevEl: '.swiper-button-prev',\n-        },\n-        breakpoints: {\n-          640: {\n-            slidesPerView: 1,\n-            spaceBetween: 10,\n-          },\n-          768: {\n-            slidesPerView: 2,\n-            spaceBetween: 20,\n-          },\n-          1024: {\n-            slidesPerView: 3,\n-            spaceBetween: 30,\n-          },\n-        },\n-      });\n-    });\n-  </script>\n-  \n </body>\n \n </html>\n"
+                },
+                {
+                    "date": 1735450249733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,14 @@\n \n   <!-- Responsive Stylesheet File -->\n   <link href=\"{% static 'css/responsive.css' %}\" rel=\"stylesheet\">\n \n+  <!-- Swiper CSS -->\n+<link rel=\"stylesheet\" href=\"https://unpkg.com/swiper/swiper-bundle.min.css\">\n+\n+<!-- Swiper JS -->\n+<script src=\"https://unpkg.com/swiper/swiper-bundle.min.js\"></script>\n+\n   <!-- =======================================================\n     Theme Name: eBusiness\n     Theme URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/\n     Author: BootstrapMade.com\n"
+                },
+                {
+                    "date": 1735452126382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -317,9 +317,9 @@\n       </div>\n     </div>\n   </footer>\n \n-  <a href=\"#\" class=\"back-to-top\"><i class=\"fa fa-chevron-up\"></i></a>\n+  {% comment %} <a href=\"#\" class=\"back-to-top\"><i class=\"fa fa-chevron-up\"></i></a> {% endcomment %}\n \n   <!-- JavaScript Libraries -->\n   <script src=\"{% static 'lib/jquery/jquery.min.js' %}\"></script>\n   <script src=\"{% static 'lib/bootstrap/js/bootstrap.min.js' %}\"></script>\n"
+                },
+                {
+                    "date": 1735452134551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -317,9 +317,9 @@\n       </div>\n     </div>\n   </footer>\n \n-  {% comment %} <a href=\"#\" class=\"back-to-top\"><i class=\"fa fa-chevron-up\"></i></a> {% endcomment %}\n+  <a href=\"#\" class=\"back-to-top\"><i class=\"fa fa-chevron-up\"></i></a>\n \n   <!-- JavaScript Libraries -->\n   <script src=\"{% static 'lib/jquery/jquery.min.js' %}\"></script>\n   <script src=\"{% static 'lib/bootstrap/js/bootstrap.min.js' %}\"></script>\n"
                 }
             ],
             "date": 1732345622103,
